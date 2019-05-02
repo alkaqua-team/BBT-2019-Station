@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-//use Illuminate\Http\Request;
 use App\Station;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 
 class StationController extends Controller
 {
@@ -18,9 +18,9 @@ class StationController extends Controller
         return view('station.success');
     }
 
-    public function save()
+    public function save(Request $request)
     {
-        /* if ($request->isMethod('POST')) {
+        if ($request->isMethod('POST')) {
             $this->validate($request, [
                 'Station.passenger1' => ['required', 'min:2', 'max:20', 'regex:/^[\x{4e00}-\x{9fa5}]+$/u'],
                 'Station.passenger2' => ['min:2', 'max:20', 'regex:/^[\x{4e00}-\x{9fa5}]+$/u'],
@@ -46,14 +46,14 @@ class StationController extends Controller
             } else {
                 return redirect()->back();
             }
-        } */
-        $passenger1 = $_POST['passenger1'];
+        }
+        /* $passenger1 = $_POST['passenger1'];
         $passenger2 = $_POST['passenger2'];
         $passenger3 = $_POST['passenger3'];
         $destination = $_POST['destination'];
         $comment = $_POST['comment'];
         DB::insert('insert into station(passenger1,passenger2,passenger3,destination,comment,created_at) values(?,?,?,?,?,?)', [
             $passenger1, $passenger2, $passenger3, $destination, $comment, now(),
-        ]);
+        ]); */
     }
 }
