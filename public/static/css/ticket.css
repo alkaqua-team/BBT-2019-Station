@@ -1,0 +1,38 @@
+*{
+    margin:0;
+    padding:0;
+    height:100%;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.ticket-picture{
+    margin: auto;
+    height: 40%;
+    width: 50%;
+    border:1px solid;
+}
+.events-introduction{
+    height: 15%;
+    display: flex;
+    justify-content: space-around;
+}
+.more-information{
+    position: relative;
+    margin:0;
+    right:0;
+    width: 15%;
+}
+.buttons{
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+}
+button{
+    width: 30%;
+    height:30%;
+    margin-left: 35%;
+    margin-bottom:5%;
+}
