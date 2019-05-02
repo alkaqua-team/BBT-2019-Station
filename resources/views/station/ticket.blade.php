@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('static/css/ticket.css')}}">
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript" src="{{asset('static/js/config.js')}}"></script>
-    <script type="text/javascript" src="{{asset('static/js/functClass.js')}}"></script>
+    <!-- <script type="text/javascript" src="{{asset('static/js/functClass.js')}}"></script> -->
     <script type="text/javascript" src="{{asset('static/js/ticket.js')}}"></script>
     <meta name="description" content="生成车票页面">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">

@@ -34,7 +34,7 @@
 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript" src="{{asset('static/js/config.js')}}"></script>
 <script type="text/javascript" src="{{asset('static/js/index.js')}}"></script>
-<script type="text/javascript" src="{{asset('static/js/functClass.js')}}"></script>
+<!-- <script type="text/javascript" src="{{asset('static/js/functClass.js')}}"></script> -->
 <script type="text/javascript" src="{{asset('static/js/bootstrap.min.js')}}"></script>
 
 </html>
