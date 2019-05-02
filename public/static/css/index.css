@@ -28,7 +28,7 @@ input{
     width: auto;
     resize: none;
 }
-button{
+.create-ticket{
     width: 40%;
     height: 7%;
     margin-top: 2%;

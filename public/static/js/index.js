@@ -3,7 +3,7 @@ var passagers = new Array();
 $(function () {
     $("#add").click(function () {
         var add = "<div class='input-box' id='passager" + i + "'>乘客</br><input type='text' id='passager-name" +
-            i + "name='Station[passenger" + i + "]><div class='add' id='reduce" + i + "' onclick='reduce(" + i + ")'>-</div></div>";
+            i + "name='Station[passenger" + i + "]><div class='create-ticket add' id='reduce" + i + "' onclick='reduce(" + i + ")'>-</div></div>";
         if (i < 4) {
             $("#passager" + (i - 1)).after(add)
             i++;

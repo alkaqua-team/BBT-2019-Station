@@ -21,13 +21,13 @@
         <div class="container">
             <div class="input-box" id="passager1">乘客</br><input type="text" name="Station[passenger1]"
                     id="passager-name1">
-                <div class="add" id="add">+</div>
+                <div class="add create-ticket" id="add">+</div>
             </div>
             <div class="input-box">目的地</br><input type="text" name="Station[destination]" id="destination"></div>
             <div class="input-box">想说的话</br><textarea name="Station[comment]" rows="7" cols="50" class="message"
                     id="message"></textarea></div>
         </div>
-        <input type="submit" id="create-ticket" value="生成车票">
+        <input class="create-ticket" type="submit" id="create-ticket" value="生成车票">
     </form>
 </body>
 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
