@@ -1,7 +1,7 @@
 //打算五一好好学一下canvas
 $(function () {
     $("#finish").click(function () {
-        window.location.href = host + "/templates/success.html";
+        window.location.href ="success";
     })
 })
 

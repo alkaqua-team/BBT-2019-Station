@@ -1,5 +1,5 @@
 $(function () {
     $("button").click(function () {
-        window.location.href = host + "/templates/draw.html";
+        window.location.href = "draw";
     });
 });

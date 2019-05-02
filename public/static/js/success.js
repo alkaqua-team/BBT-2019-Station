@@ -7,9 +7,9 @@ var pic = [
 $(function () {
     $(".success-pic").css("background-image", "url(" + pic[randomNumber(4)] + ")")
     $("#write-information").click(function () {
-        window.location.href = host +"/templates/index.html";
+        window.location.href = "index";
     })
     $("#reselect").click(function () {
-        window.location.href = host + "/templates/draw.html";
+        window.location.href = "draw";
     })
 })

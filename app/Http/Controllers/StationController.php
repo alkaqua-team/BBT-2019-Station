@@ -18,6 +18,21 @@ class StationController extends Controller
         return view('station.success');
     }
 
+    public function draw()
+    {
+        return view('station.draw');
+    }
+
+    public function ticket()
+    {
+        return view('station.ticket');
+    }
+
+    public function portal()
+    {
+        return view('station.portal');
+    }
+
     public function save(Request $request)
     {
         if ($request->isMethod('POST')) {
