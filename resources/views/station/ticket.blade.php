@@ -36,9 +36,9 @@
         <div class="trainL"></div>
         <div class="QRcode"></div>
         <div class="buttons">
-            <button>保存图片</button>
-            <button>修改信息</button>
-            <button>返回首页</button>
+            <button id="save">保存图片</button>
+            <button id="update">修改信息</button>
+            <button id="return">返回首页</button>
         </div>
     </div>
 </body>
