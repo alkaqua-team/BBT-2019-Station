@@ -18,7 +18,7 @@
 
 <body>
     <div class="container">
-        <div class="station-picture">车站.jpg</div>
+        <div class="train-picture"></div>
         <button class="entrance" id="entrance">搭乘列车</button>
     </div>
 </body>

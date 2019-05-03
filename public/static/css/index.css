@@ -36,9 +36,13 @@ input{
     outline: none;
 }
 .add{
+    border:1px solid black;
     margin-top: 0;
-    margin-left: 3%;
+    margin-left: 0;
+    margin-right:30%;
+    float: right;
     border-radius: 50%;
     width: 20px;
     height: 20px;
+    text-align: center;
 }

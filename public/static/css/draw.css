@@ -30,3 +30,14 @@ button {
     width: 30%;
     outline: none;
 }
+.color-select{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    height: 10%;
+    position: relative;
+    bottom: 11%;
+}
+.color{
+    width: 9%;
+}
