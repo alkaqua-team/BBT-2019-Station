@@ -5,7 +5,7 @@ $(function () {
     $("#finish").click(function () {
         window.location.href = "success";
     })
-    $("#repaint").click(function(){
+    $("#repaint").click(function () {
         location.reload();
     })
 })
@@ -14,7 +14,7 @@ let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 canvas.height = height;
 canvas.width = width;
-    listenToUser(canvas);
+listenToUser(canvas);
 
 function listenToUser(canvas) {
     let painting = false;
@@ -65,7 +65,7 @@ function listenToUser(canvas) {
 
         canvas.ontouchend = function () {
             painting = false;
-            canvas.ontouchstart = function(){};
+            canvas.ontouchstart = function () {};
         }
     } else {
         canvas.onmousedown = function (e) {
@@ -94,12 +94,12 @@ function listenToUser(canvas) {
 
         canvas.onmouseup = function () {
             painting = false;
-            canvas.onmousedown = function(){}
+            canvas.onmousedown = function () {}
         };
 
         canvas.mouseleave = function () {
             painting = false;
-            canvas.onmousedown = function(){}
+            canvas.onmousedown = function () {}
         }
     }
 }
@@ -120,4 +120,3 @@ function drawLine(x1, y1, x2, y2) {
     ctx.stroke();
     ctx.closePath();
 }
-

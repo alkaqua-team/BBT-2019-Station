@@ -18,14 +18,26 @@
 
 <body>
     <div class="container">
-        <div class="ticket-picture"></div>
-        <div class="events-introduction">
-            <div class="text">可凭此车票到指定地点换取活动票哦</div>
-            <button class="more-information">。。。</button>
+        <div class="countPassagers">恭喜你成为第 位搭上列车的乘客</div>
+        <div class="stationName">
+            <div class="start"></div>
+            <div class="startEnglish"></div>
+            <div class="trainName"></div>
+            <div class="arrow1"></div>
+            <div class="arrow2"></div>
+            <div class="destination"></div>
+            <div class="destinationEnglish"></div>
         </div>
+        <div class="trainR"></div>
+        <div class="Passagermessage">
+            <div class="passager"></div>
+            <div class="message"></div>
+        </div>
+        <div class="trainL"></div>
+        <div class="QRcode"></div>
         <div class="buttons">
             <button>保存图片</button>
-            <button>修改车票信息</button>
+            <button>修改信息</button>
             <button>返回首页</button>
         </div>
     </div>

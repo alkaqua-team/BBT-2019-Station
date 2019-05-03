@@ -14,17 +14,18 @@
     <meta name="viewport" content="user-scalable=no, width=device-width">
     <meta name="full-screen" content="true">
 </head>
+
 <body>
     <div class="container">
         <div class="introduction">请在下方一笔绘制图案，</br>测测会搭上哪班列车？</div>
-        <canvas id="canvas"  style="border: 1px solid black;">
-    </canvas>
+        <canvas id="canvas" style="border: 1px solid black;">
+        </canvas>
         <div class="color-select">
             <button class="color" id="red">red</button>
-            <button class="color"  id="blue">blue</button>
-            <button class="color"  id="black">black</button>
-            <button class="color"  id="green">green</button>
-            <button class="color"  id="purple">purple</button>
+            <button class="color" id="blue">blue</button>
+            <button class="color" id="black">black</button>
+            <button class="color" id="green">green</button>
+            <button class="color" id="purple">purple</button>
         </div>
         <div class="buttons">
             <button class="repaint" id="repaint">重画</button>
@@ -33,4 +34,5 @@
     </div>
     <script type="text/javascript" src="{{asset('static/js/draw.js')}}"></script>
 </body>
+
 </html>
