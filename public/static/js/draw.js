@@ -44,7 +44,7 @@ function listenToUser(canvas) {
             let x = e.touches[0].clientX;
             let y = e.touches[0].lientY;
             ctx.strokeStyle="#F7A44F";
-            ctx.rect(20,165,265,110);
+            ctx.rect(40,240,320,150);
             ctx.clip()
             lastPoint = {
                 "x": x,

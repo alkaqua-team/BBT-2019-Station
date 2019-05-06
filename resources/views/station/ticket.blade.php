@@ -35,15 +35,10 @@ $data = DB::table('station')->where('id', $key)->get();
         </div>
         <div class="trainR"></div>
         <div class="Passagermessage">
-<<<<<<< HEAD
             <div class="passager"></div>
             <div class="passager-name">lll mmm</div>
             <div class="message"></div>
             <div class="message-input">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-=======
-            <div class="passager"></div>{{$data->pluck('passenger1')[0]}} {{$data->pluck('passenger2')[0]?$data->pluck('passenger2')[0]:""}} {{$data->pluck('passenger3')[0]?$data->pluck('passenger3')[0]:""}}
-            <div class="message"></div>{{$data->pluck('comment')[0]}}
->>>>>>> 162300280415922147b65b8584454a4bf1d346bc
         </div>
         <div class="trainL"></div>
         <div class="QRcode"></div>
