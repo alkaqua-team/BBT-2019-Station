@@ -22,20 +22,20 @@ function listenToUser(canvas) {
         x: undefined,
         y: undefined
     };
-    $("#red").click(function () {
-        ctx.strokeStyle = "red";
+    $("#orange").click(function () {
+        ctx.strokeStyle = "#F7A44F";
     })
-    $("#blue").click(function () {
-        ctx.strokeStyle = "blue";
-    })
-    $("#black").click(function () {
-        ctx.strokeStyle = "black";
-    })
-    $("#purple").click(function () {
-        ctx.strokeStyle = "purple";
+    $("#yellow").click(function () {
+        ctx.strokeStyle = "#F7ED4F";
     })
     $("#green").click(function () {
-        ctx.strokeStyle = "green";
+        ctx.strokeStyle = "#C0F54E";
+    })
+    $("#blue1").click(function () {
+        ctx.strokeStyle = "#4DF3E5";
+    })
+    $("#blue2").click(function () {
+        ctx.strokeStyle = "#4C68F1";
     })
 
     if (document.body.ontouchstart !== undefined) { //两个表达式的类型不相同
@@ -43,6 +43,9 @@ function listenToUser(canvas) {
             painting = true;
             let x = e.touches[0].clientX;
             let y = e.touches[0].lientY;
+            ctx.strokeStyle="#F7A44F";
+            ctx.rect(20,165,265,110);
+            ctx.clip()
             lastPoint = {
                 "x": x,
                 "y": y

@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: url("../pictures/3.png");
+    background-image: url("../pictures/6-2.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -170,7 +170,7 @@ button{
     bottom:20%;
 }
 .QRcode{
-    background-image: url("../pictures/5.png");
+    background-image: url("../pictures/6-1.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 12.5%;
@@ -178,4 +178,22 @@ button{
     position: absolute;
     right: 12%;
     bottom: 21%;
+}
+.passager-name{
+    height: 19%;
+    width: 60%;
+    position: absolute;
+    left: 19%;
+    font-size: 11px;
+    color:#FFFFFF;
+}
+.message-input{
+    width: 80%;
+    height: 60%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 11px;
+    color:#FFFFFF;
+    word-break: break-all;
 }

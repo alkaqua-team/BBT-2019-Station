@@ -8,22 +8,29 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background-image: url("../pictures/5-1.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 .success-pic {
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    margin-top: 20%;
+    margin-top: 48%;
     width: 50%;
     height: 30%;
-    border: 1px solid;
+    width: 32%;
+    height: 25.5%;
+    margin-left: 8.5%;
+    margin-right: 8.5%;
 }
 
 .success-text {
     text-align: center;
-    font-size: 21px;
-    width: 60%;
-    height: 10%;
+    width: 53%;
+    height: 3%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 .buttons {
@@ -37,4 +44,23 @@ button {
     margin: auto;
     height: 30%;
     width: 70%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+.write-information{
+    background-image: url("../pictures/5-3.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color:#EAEAEA;
+    font-size: 18px;
+    font-family: "Microsoft YaHei Regular";
+}
+.reselect{
+    background-image: url("../pictures/5-2.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color:#EAEAEA;
+    font-size: 18px;
+    font-family: "Microsoft YaHei Regular";
 }

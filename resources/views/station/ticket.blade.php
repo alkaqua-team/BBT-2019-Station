@@ -31,7 +31,9 @@
         <div class="trainR"></div>
         <div class="Passagermessage">
             <div class="passager"></div>
+            <div class="passager-name">lll mmm</div>
             <div class="message"></div>
+            <div class="message-input">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
         </div>
         <div class="trainL"></div>
         <div class="QRcode"></div>

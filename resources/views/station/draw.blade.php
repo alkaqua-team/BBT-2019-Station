@@ -21,15 +21,15 @@
         <canvas id="canvas">
         </canvas>
         <div class="color-select">
-            <button class="color" id="red">red</button>
-            <button class="color" id="blue">blue</button>
-            <button class="color" id="black">black</button>
-            <button class="color" id="green">green</button>
-            <button class="color" id="purple">purple</button>
+            <button class="color" id="orange"></button>
+            <button class="color" id="yellow"></button>
+            <button class="color" id="green"></button>
+            <button class="color" id="blue1"></button>
+            <button class="color" id="blue2"></button>
         </div>
         <div class="buttons">
-            <button class="repaint" id="repaint">重画</button>
-            <button class="finish" id="finish">完成</button>
+            <button class="finish" id="finish">完 成</button>
+            <button class="repaint" id="repaint">重 画</button>
         </div>
     </div>
     <script type="text/javascript" src="{{asset('static/js/draw.js')}}"></script>

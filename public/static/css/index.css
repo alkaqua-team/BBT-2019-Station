@@ -1,48 +1,93 @@
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     height: 100%;
 }
-.title{
-    margin-top: 15%;
-    margin-left: 10%;
+
+.title {
+    padding-top: 15%;
+    padding-left: 10%;
     height: 10%;
+    color: #51637F;
 }
-.container{
-    margin-left: 10%;
+
+.background {
+    background-image: url("../pictures/7-1.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.containerr {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 100%;
+    height: 80%;
+    padding-right: 34px;
+    padding-left: 34px;
+    margin-right: auto;
+    margin-left: auto;
 }
-.input-box{
+
+.input-box {
     margin-top: 15%;
     height: 5%;
 }
-input{
+
+input {
     width: 60%;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    outline: none;
+    border-radius: 10px;
 }
-.message{
+
+.message {
     line-height: normal;
     height: auto;
     width: 100%;
     resize: none;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    outline: none;
+    border-radius: 10px;
 }
-.create-ticket{
+
+.create-ticket {
     width: 40%;
     height: 7%;
     margin-top: 2%;
     margin-left: 30%;
     outline: none;
 }
-.add{
-    border:1px solid black;
+
+.create {
+    background-color: #EA8C98;
+    color: #EAEAEA;
+    font-size: 18px;
+}
+
+.add {
     margin-top: 0;
     margin-left: 0;
-    margin-right:30%;
+    margin-right: 30%;
     float: right;
     border-radius: 50%;
     width: 20px;
     height: 20px;
-    text-align: center;
+    background-image: url("../pictures/7-2.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.reduce {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 30%;
+    float: right;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-image: url("../pictures/7-3.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }

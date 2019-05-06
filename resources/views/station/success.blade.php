@@ -19,9 +19,9 @@
 <body>
     <div class="container">
         <div class="success-pic"></div>
-        <div class="success-text">恭喜你成功搭乘XX号</div>
+        <div class="success-text"></div>
         <div class="buttons">
-            <button class="write-information" id="write-information">填写信息</button>
+            <button class="write-information" id="write-information">填写车票</button>
             <button class="reselect" id="reselect">重新选择</button>
         </div>
     </div>
