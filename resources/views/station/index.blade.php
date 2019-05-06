@@ -16,6 +16,7 @@
 
 <body>
     @include('common.message')
+<<<<<<< HEAD
     <form name="create" method="post" class="background" action="{{url('station/save')}}">
         <div class="title">快来填写信息</br>制作专属车票吧</div>
         {{ csrf_field() }}
@@ -25,6 +26,18 @@
             </div>
             <div class="input-box">目的地</br><input type="text" name="Station[destination]" id="destination"></div>
             <div class="input-box">想说的话</br><textarea name="Station[comment]" rows="7" cols="50" class="message" id="message"></textarea></div>
+=======
+    <form name="create"method="post" action="{{url('station/save')}}">
+    {{ csrf_field() }}
+        <div class="container">
+            <div class="input-box" id="passager1">乘客</br><input type="text" name="Station[passenger1]"
+                    id="passager-name1"value="{{old('Station')['passenger1']}}">
+                <div class="add create-ticket" id="add">+</div>
+            </div>
+            <div class="input-box">目的地</br><input type="text" name="Station[destination]" id="destination"value="{{old('Station')['destination']}}"></div>
+            <div class="input-box">想说的话</br><textarea name="Station[comment]" rows="7" cols="50" class="message"
+                    id="message">{{old('Station')['comment']}}</textarea></div>
+>>>>>>> 162300280415922147b65b8584454a4bf1d346bc
         </div>
         <input class="create-ticket create" type="submit" id="create-ticket" value="生成车票">
     </form>
