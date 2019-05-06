@@ -22,8 +22,8 @@
     position: absolute;
     left: 0;
     bottom: 23.4%;
-    animation: moveright 8s forwards;
-    animation-timing-function: linear;
+    animation: moveright 4s forwards;
+    animation-timing-function: ease-out;
     overflow: hidden !important;
 }
 
@@ -33,14 +33,21 @@
     }
 
     to {
-        left: 100%;
-        display: none;
+        left: -40%;
+        display: block;
     }
 }
 
 .entrance {
-    height: 10%;
-    width: 30%;
+    height: 5%;
+    width: 33%;
     position: absolute;
-    bottom: 5%;
+    bottom: 8%;
+    background-color: #EA8C98;
+    color: #EAEAEA;
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    outline:none;
 }

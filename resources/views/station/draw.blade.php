@@ -18,8 +18,7 @@
 <body>
     <div class="container">
         <div class="introduction">请在下方一笔绘制图案，</br>测测会搭上哪班列车？</div>
-        <div class="drawing-board"></div>
-        <canvas id="canvas"></canvas>
+        <canvas class="drawing-board" id="canvas"></canvas>
         <div class="color-select">
             <button class="color" id="orange"></button>
             <button class="color" id="yellow"></button>
@@ -28,8 +27,8 @@
             <button class="color" id="blue2"></button>
         </div>
         <div class="buttons">
-            <button class="finish" id="finish">完 成</button>
-            <button class="repaint" id="repaint">重 画</button>
+            <button class="finish button" id="finish">完 成</button>
+            <button class="repaint button" id="repaint">重 画</button>
         </div>
     </div>
     <script type="text/javascript" src="{{asset('static/js/draw.js')}}"></script>

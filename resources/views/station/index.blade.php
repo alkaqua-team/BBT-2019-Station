@@ -17,10 +17,10 @@
 <body>
     @include('common.message')
     <form name="create" method="post" class="background" action="{{url('station/save')}}">
-        <div class="title">快来填写信息</br>制作专属车票吧</div>
         {{ csrf_field() }}
         <div class="containerr">
-            <div class="input-box" id="passager1">乘客</br><input type="text" name="Station[passenger1]" id="passager-name1" value="{{old('Station')['passenger1']}}">>
+        <div class="title">快来填写信息</br>制作专属车票吧</div>
+            <div class="input-box" id="passager1">乘客</br><input type="text" name="Station[passenger1]" id="passager-name1" value="{{old('Station')['passenger1']}}">
                 <div class="add create-ticket" id="add"></div>
             </div>
             <div class="input-box">目的地</br><input type="text" name="Station[destination]" id="destination" value="{{old('Station')['destination']}}"></div>

@@ -1,19 +1,41 @@
-//打算五一好好学一下canvas
 const height = document.documentElement.clientHeight;
 const width = document.documentElement.clientWidth;
+var color = "#F7A44F";
 $(function () {
     $("#finish").click(function () {
         window.location.href = "success";
     })
     $("#repaint").click(function (e) {
-        location.reload();
+        e.preventDefault();
+        ctx.clearRect(0,0,width,height);  
+        listenToUser(canvas)
+    })                                           //???
+    $("#orange").click(function () {
+        color = "#F7A44F";
+        // ctx.strokeStyle = "#F7A44F";
+    })
+    $("#yellow").click(function () {
+        color = "#F7ED4F";
+        ctx.strokeStyle = "#F7ED4F";
+    })
+    $("#green").click(function () {
+        color = "#C0F54E";
+        ctx.strokeStyle = "#C0F54E";
+    })
+    $("#blue1").click(function () {
+        color = "#4DF3E5";
+        ctx.strokeStyle = "#4DF3E5";
+    })
+    $("#blue2").click(function () {
+        color = "#4C68F1";
+        ctx.strokeStyle = "#4C68F1";
     })
 })
 
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 canvas.height = height;
-canvas.width = width*0.9;
+canvas.width = width * 0.9;
 listenToUser(canvas);
 
 function listenToUser(canvas) {
@@ -22,29 +44,14 @@ function listenToUser(canvas) {
         x: undefined,
         y: undefined
     };
-    $("#orange").click(function () {
-        ctx.strokeStyle = "#F7A44F";
-    })
-    $("#yellow").click(function () {
-        ctx.strokeStyle = "#F7ED4F";
-    })
-    $("#green").click(function () {
-        ctx.strokeStyle = "#C0F54E";
-    })
-    $("#blue1").click(function () {
-        ctx.strokeStyle = "#4DF3E5";
-    })
-    $("#blue2").click(function () {
-        ctx.strokeStyle = "#4C68F1";
-    })
 
     if (document.body.ontouchstart !== undefined) { //两个表达式的类型不相同
         canvas.ontouchstart = function (e) {
             painting = true;
             let x = e.touches[0].clientX;
             let y = e.touches[0].lientY;
-            ctx.strokeStyle="#F7A44F";
-            ctx.rect(40,240,320,150);
+            ctx.rect(0.066 * width, 0.28 * height, 0.73 * width, 0.20 * height);
+            ctx.strokeStyle =color;
             ctx.clip()
             lastPoint = {
                 "x": x,

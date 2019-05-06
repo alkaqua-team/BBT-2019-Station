@@ -6,9 +6,9 @@
 
 .title {
     padding-top: 15%;
-    padding-left: 10%;
-    height: 10%;
+    height: 18%;
     color: #51637F;
+    font-size: 16px;
 }
 
 .background {
@@ -20,8 +20,6 @@
 .containerr {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    height: 80%;
     padding-right: 34px;
     padding-left: 34px;
     margin-right: auto;
@@ -29,12 +27,14 @@
 }
 
 .input-box {
-    margin-top: 15%;
-    height: 5%;
+    margin-top: 4%;
+    height: 10%;
+    width: 100%;
 }
 
 input {
-    width: 60%;
+    height: 50%;
+    width: 75%;
     background: rgba(255, 255, 255, 0.8);
     border: none;
     outline: none;
@@ -44,7 +44,7 @@ input {
 .message {
     line-height: normal;
     height: auto;
-    width: 100%;
+    width: 75%;
     resize: none;
     background: rgba(255, 255, 255, 0.8);
     border: none;
@@ -64,12 +64,14 @@ input {
     background-color: #EA8C98;
     color: #EAEAEA;
     font-size: 18px;
+    position: absolute;
+    bottom: 1%;
 }
 
 .add {
     margin-top: 0;
     margin-left: 0;
-    margin-right: 30%;
+    margin-right:15%;
     float: right;
     border-radius: 50%;
     width: 20px;
@@ -82,7 +84,7 @@ input {
 .reduce {
     margin-top: 0;
     margin-left: 0;
-    margin-right: 30%;
+    margin-right: 15%;
     float: right;
     border-radius: 50%;
     width: 20px;

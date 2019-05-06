@@ -9,7 +9,7 @@
     justify-content: center;
     background-image: url("../pictures/6-2.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: contain;
 }
 .ticket-picture{
     margin: auto;
@@ -173,19 +173,20 @@ button{
     background-image: url("../pictures/6-1.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    width: 12.5%;
-    height: 7%;
+    width: 47pt;
+    height:47pt;
     position: absolute;
     right: 12%;
     bottom: 21%;
 }
 .passager-name{
-    height: 19%;
-    width: 60%;
+    height: 38%;
+    width: 55%;
     position: absolute;
     left: 19%;
     font-size: 11px;
     color:#FFFFFF;
+    word-break: break-all;
 }
 .message-input{
     width: 80%;

@@ -21,8 +21,8 @@
         <div class="success-pic"></div>
         <div class="success-text"></div>
         <div class="buttons">
-            <button class="write-information" id="write-information" type="button">填写车票</button>
-            <button class="reselect" id="reselect">重新选择</button>
+            <button class="write-information button" id="write-information" type="button">填写车票</button>
+            <button class="reselect button" id="reselect">重新选择</button>
         </div>
     </div>
 </body>
