@@ -18,8 +18,8 @@
 <body>
     <div class="container">
         <div class="introduction">请在下方一笔绘制图案，</br>测测会搭上哪班列车？</div>
-        <canvas id="canvas">
-        </canvas>
+        <div class="drawing-board"></div>
+        <canvas id="canvas"></canvas>
         <div class="color-select">
             <button class="color" id="orange"></button>
             <button class="color" id="yellow"></button>

@@ -5,7 +5,7 @@ $(function () {
     $("#finish").click(function () {
         window.location.href = "success";
     })
-    $("#repaint").click(function () {
+    $("#repaint").click(function (e) {
         location.reload();
     })
 })
@@ -13,7 +13,7 @@ $(function () {
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 canvas.height = height;
-canvas.width = width;
+canvas.width = width*0.9;
 listenToUser(canvas);
 
 function listenToUser(canvas) {

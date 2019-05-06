@@ -36,9 +36,9 @@ $data = DB::table('station')->where('id', $key)->get();
         <div class="trainR"></div>
         <div class="Passagermessage">
             <div class="passager"></div>
-            <div class="passager-name">lll mmm</div>
+            <div class="passager-name">{{$data->pluck('passenger1')[0]}} {{$data->pluck('passenger2')[0]?$data->pluck('passenger2')[0]:""}} {{$data->pluck('passenger3')[0]?$data->pluck('passenger3')[0]:""}}</div>
             <div class="message"></div>
-            <div class="message-input">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+            <div class="message-input">{{$data->pluck('comment')[0]}}</div>
         </div>
         <div class="trainL"></div>
         <div class="QRcode"></div>
