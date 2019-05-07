@@ -23,8 +23,11 @@
             <div class="input-box" id="passager1">乘客</br><input type="text" name="Station[passenger1]" id="passager-name1" value="{{old('Station')['passenger1']}}">
                 <div class="add create-ticket" id="add"></div>
             </div>
+            <div class="errmsg" id="errmsg1"></div>
             <div class="input-box">目的地</br><input type="text" name="Station[destination]" id="destination" value="{{old('Station')['destination']}}"></div>
-            <div class="input-box">想说的话</br><textarea name="Station[comment]" rows="7" cols="50" class="message" id="message">{{old('Station')['comment']}}</textarea></div>
+            <div class="errmsg"></div>
+            <div class="input-box" style="height: 22%;">想说的话</br><textarea name="Station[comment]" rows="7" cols="50" class="message" id="message">{{old('Station')['comment']}}</textarea></div>
+            <div class="errmsg"></div>
         </div>
         <input class="create-ticket create" type="submit" id="create-ticket" value="生成车票">
     </form>

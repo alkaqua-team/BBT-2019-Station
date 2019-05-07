@@ -1,9 +1,10 @@
-*{
-    margin:0;
-    padding:0;
-    height:100%;
+* {
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
-.container{
+
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,53 +12,64 @@
     background-repeat: no-repeat;
     background-size: contain;
 }
-.ticket-picture{
+
+.ticket-picture {
     margin: auto;
     height: 40%;
     width: 50%;
-    border:1px solid;
+    border: 1px solid;
 }
-.events-introduction{
+
+.events-introduction {
     height: 15%;
     display: flex;
     justify-content: space-around;
 }
-.more-information{
+
+.more-information {
     position: relative;
-    margin:0;
-    right:0;
+    margin: 0;
+    right: 0;
     width: 15%;
 }
-.buttons{
+
+.buttons {
     height: 15%;
     display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 42%;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 2%;
+    width: 100%;
 }
-button{
+
+button {
+    margin-right: 35%;
     width: 30%;
     margin-left: 35%;
-    margin-bottom:2%;
+    margin-bottom: 2%;
+    height: 30%;
 }
-.countPassagers{
+
+.countPassagers {
     font-family: "QingYuan Regular";
     font-size: 12px;
     color: #D98247;
     height: auto;
     position: absolute;
-    left: 9%;
+    left: 10%;
     top: 46%;
     overflow: hidden;
 }
-.stationName{
+
+.stationName {
     left: 16%;
     height: 6%;
     width: 65%;
     position: absolute;
     top: 50%;
 }
-.start{
+
+.start {
     background-image: url("../pictures/2-1.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -66,7 +78,8 @@ button{
     position: absolute;
     left: 2%;
 }
-.startEnglish{
+
+.startEnglish {
     background-image: url("../pictures/2-2.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -75,7 +88,8 @@ button{
     position: absolute;
     bottom: 0;
 }
-.trainName{
+
+.trainName {
     background-image: url("../pictures/2-5.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -85,7 +99,8 @@ button{
     top: 0;
     left: 41%;
 }
-.arrow1{
+
+.arrow1 {
     background-image: url("../pictures/2-3.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -95,7 +110,8 @@ button{
     top: 44%;
     left: 38%;
 }
-.arrow2{
+
+.arrow2 {
     background-image: url("../pictures/2-4.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -105,7 +121,8 @@ button{
     left: 55%;
     position: absolute;
 }
-.destination{
+
+.destination {
     background-image: url("../pictures/2-7.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -115,7 +132,8 @@ button{
     right: 0;
     position: absolute;
 }
-.destinationEnglish{
+
+.destinationEnglish {
     background-image: url("../pictures/2-6.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -125,76 +143,84 @@ button{
     bottom: 0;
     right: 0;
 }
-.trainR{
+
+.trainR {
     background-image: url("../pictures/T2.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    width:38.6%;
+    width: 38.6%;
     height: 4%;
     position: absolute;
     right: 0;
     bottom: 38%;
 }
-.Passagermessage{
+
+.Passagermessage {
     height: 11%;
     width: 58%;
     position: absolute;
     bottom: 30%;
     left: 16%;
 }
-.passager{
+
+.passager {
     background-image: url("../pictures/3-1.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 16%;
     height: 19%;
     position: absolute;
-    top:0;
+    top: 0;
 }
-.message{
+
+.message {
     background-image: url("../pictures/3-2.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 16%;
     height: 19%;
     position: absolute;
-    top:40%;
+    top: 40%;
 }
-.trainL{
+
+.trainL {
     width: 60%;
     background-image: url("../pictures/T1.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    height:6%;
+    height: 6%;
     position: absolute;
-    bottom:20%;
+    bottom: 20%;
 }
-.QRcode{
+
+.QRcode {
     background-image: url("../pictures/6-1.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 47pt;
-    height:47pt;
+    height: 47pt;
     position: absolute;
     right: 12%;
     bottom: 21%;
 }
-.passager-name{
+
+.passager-name {
     height: 38%;
     width: 55%;
     position: absolute;
     left: 19%;
     font-size: 11px;
-    color:#FFFFFF;
+    color: #FFFFFF;
     word-break: break-all;
 }
-.message-input{
+
+.message-input {
     width: 80%;
     height: 60%;
     position: absolute;
     bottom: 0;
     right: 0;
     font-size: 11px;
-    color:#FFFFFF;
+    color: #FFFFFF;
     word-break: break-all;
 }

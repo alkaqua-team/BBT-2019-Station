@@ -3,12 +3,12 @@ var passagers = new Array();
 $(function () {
     $("#add").click(function () {
         var add = "<div class='input-box' id='passager" + i + "'>乘客</br><input type='text' id='passager-name" +
-            i + "name='Station[passenger" + i + "]><div class='create-ticket reduce' id='reduce" + i + "' onclick='reduce(" + i + ")'></div></div>";
+            i + "name='Station[passenger" + i + "]><div class='create-ticket reduce' id='reduce" + i + "' onclick='reduce(" + i + ")'></div></div><div class='errmsg' id='errmsg" + i + "'></div>";
         if (i < 4) {
-            $("#passager" + (i - 1)).after(add)
+            $("#errmsg" + (i - 1)).after(add)
             i++;
         } else {
-            alert("最多只能有三位乘客噢~")
+            // alert("最多只能有三位乘客噢~")
         }
     })
 
@@ -60,13 +60,16 @@ function reduce(j) {
     if (j == 2) {
         if ($("#passager3").attr("id")) {
             $("#passager3").remove();
+            $("#errmsg3").remove();
             i--;
         } else {
             $("#passager2").remove();
+            $("#errmsg2").remove();
             i--;
         }
     } else {
         $("#passager3").remove();
+        $("#errmsg3").remove();
         i--
     }
 }
