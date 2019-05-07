@@ -61,16 +61,16 @@ class StationController extends Controller
             ]
         ); */
             $validator = \Validator::make($request->input(), [
-                'Station.passenger1' => ['required', 'min:2', 'max:20', 'regex:/^[\x{4e00}-\x{9fa5}]+$/u'],
-                'Station.passenger2' => ['min:2', 'max:20', 'regex:/^[\x{4e00}-\x{9fa5}]+$/u'],
-                'Station.passenger3' => ['min:2', 'max:20', 'regex:/^[\x{4e00}-\x{9fa5}]+$/u'],
-                'Station.destination' => ['required', 'min:1', 'max:20', 'regex:/^[\x{4e00}-\x{9fa5}]+$/u'],
+                'Station.passenger1' => ['required', 'min:2', 'max:20', 'regex:/^(?:[\u4e00-\u9fa5]+)(?:·[\u4e00-\u9fa5]+)*$|^[a-zA-Z]+\s?[\.·\-()a-zA-Z]*[a-zA-Z]+$'],
+                'Station.passenger2' => ['max:20', 'regex:/^(?:[\u4e00-\u9fa5]+)(?:·[\u4e00-\u9fa5]+)*$|^[a-zA-Z]+\s?[\.·\-()a-zA-Z]*[a-zA-Z]+$'],
+                'Station.passenger3' => ['max:20', 'regex:/^(?:[\u4e00-\u9fa5]+)(?:·[\u4e00-\u9fa5]+)*$|^[a-zA-Z]+\s?[\.·\-()a-zA-Z]*[a-zA-Z]+$'],
+                'Station.destination' => ['required', 'min:1', 'max:20', 'regex:/^(?:[\u4e00-\u9fa5]+)(?:·[\u4e00-\u9fa5]+)*$|^[a-zA-Z]+\s?[\.·\-()a-zA-Z]*[a-zA-Z]+$'],
                 'Station.comment' => ['required', 'min:1', 'max:200'],
             ], [
                 'required' => ':attribute 为必填项',
                 'min' => ':attribute 长度不符合要求',
                 'max' => ':attribute 内容过长',
-                'regex' => ':attribute 必须为汉字',
+                'regex' => ':attribute 格式不正确（注：只能包含中文或英文，中文中可以包含 · ，英文中可以包含 . · - ）',
             ], [
                 'Station.passenger1' => '乘客1',
                 'Station.passenger2' => '乘客2',
@@ -84,7 +84,8 @@ class StationController extends Controller
             $data = $request->input('Station');
             if (Station::create($data)) {
                 $key = DB::table('station')->where('passenger1', $data['passenger1'])->pluck('id')[0];
-            session()->put('key', $key);
+                session()->put('key', $key);
+
                 return redirect('station/ticket')->withInput();
             } else {
                 return redirect()->back();
@@ -144,13 +145,13 @@ class StationController extends Controller
                 return redirect()->back()->withErrors($validator)->withInput();
             }
             $data = $request->input('Station');
-            $station=Station::find(session()->get('key'));
-            $station->passenger1=$data['passenger1'];
-            $station->passenger2=$data['passenger2'];
-            $station->passenger3=$data['passenger3'];
-            $station->destination=$data['destination'];
-            $station->comment=$data['comment'];
-            if ($station->save()){
+            $station = Station::find(session()->get('key'));
+            $station->passenger1 = $data['passenger1'];
+            $station->passenger2 = $data['passenger2'];
+            $station->passenger3 = $data['passenger3'];
+            $station->destination = $data['destination'];
+            $station->comment = $data['comment'];
+            if ($station->save()) {
                 return redirect('station/ticket')->withInput();
             } else {
                 return redirect()->back();

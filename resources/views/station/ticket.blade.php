@@ -1,6 +1,6 @@
 <?php
-$num = DB::table('station')->count();
 $key = session()->get('key');
+$num = DB::table('station')->where('id', '<=', $key)->count();
 $data = DB::table('station')->where('id', $key)->get();
 ?>
 <!DOCTYPE html>
