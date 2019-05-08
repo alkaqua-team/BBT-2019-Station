@@ -61,10 +61,10 @@ class StationController extends Controller
             ]
         ); */
             $validator = \Validator::make($request->input(), [
-                'Station.passenger1' => ['required', 'min:2', 'max:20', 'regex:/^(?:[\u4e00-\u9fa5]+)(?:·[\u4e00-\u9fa5]+)*$|^[a-zA-Z]+\s?[\.·\-()a-zA-Z]*[a-zA-Z]+$'],
-                'Station.passenger2' => ['max:20', 'regex:/^(?:[\u4e00-\u9fa5]+)(?:·[\u4e00-\u9fa5]+)*$|^[a-zA-Z]+\s?[\.·\-()a-zA-Z]*[a-zA-Z]+$'],
-                'Station.passenger3' => ['max:20', 'regex:/^(?:[\u4e00-\u9fa5]+)(?:·[\u4e00-\u9fa5]+)*$|^[a-zA-Z]+\s?[\.·\-()a-zA-Z]*[a-zA-Z]+$'],
-                'Station.destination' => ['required', 'min:1', 'max:20', 'regex:/^(?:[\u4e00-\u9fa5]+)(?:·[\u4e00-\u9fa5]+)*$|^[a-zA-Z]+\s?[\.·\-()a-zA-Z]*[a-zA-Z]+$'],
+                'Station.passenger1' => ['required', 'min:2', 'max:20', 'regex:/^(?:[\u4e00-\u9fa5]+)(?:·[\u4e00-\u9fa5]+)*$|^[a-zA-Z]+\s?[\.·\-()a-zA-Z]*[a-zA-Z]+$/'],
+                'Station.passenger2' => ['max:20', 'regex:/^(?:[\u4e00-\u9fa5]+)(?:·[\u4e00-\u9fa5]+)*$|^[a-zA-Z]+\s?[\.·\-()a-zA-Z]*[a-zA-Z]+$/'],
+                'Station.passenger3' => ['max:20', 'regex:/^(?:[\u4e00-\u9fa5]+)(?:·[\u4e00-\u9fa5]+)*$|^[a-zA-Z]+\s?[\.·\-()a-zA-Z]*[a-zA-Z]+$/'],
+                'Station.destination' => ['required', 'min:1', 'max:20', 'regex:/^(?:[\u4e00-\u9fa5]+)(?:·[\u4e00-\u9fa5]+)*$|^[a-zA-Z]+\s?[\.·\-()a-zA-Z]*[a-zA-Z]+$/'],
                 'Station.comment' => ['required', 'min:1', 'max:200'],
             ], [
                 'required' => ':attribute 为必填项',
