@@ -1,7 +1,7 @@
 <?php
 $key = session()->get('key');
 $data = DB::table('station')->where('id', $key)->get();
-?>
+?> 
 <!DOCTYPE html>
 <html>
 
