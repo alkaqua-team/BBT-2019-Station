@@ -1,19 +1,14 @@
-<?php
-$key = session()->get('key');
-$num = DB::table('station')->where('id', '<=', $key)->count();
-$data = DB::table('station')->where('id', $key)->get();
-?>
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="UTF-8" />
     <title>生成车票页面</title>
-    <link rel="stylesheet" type="text/css" href="{{asset('static/css/ticket.css')}}">
+    <link rel="stylesheet" type="text/css" href="static/css/ticket.css">
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript" src="{{asset('static/js/config.js')}}"></script>
+    <script type="text/javascript" src="static/js/config.js"></script>
     <!-- <script type="text/javascript" src="{{asset('static/js/functClass.js')}}"></script> -->
-    <script type="text/javascript" src="{{asset('static/js/ticket.js')}}"></script>
+    <script type="text/javascript" src="static/js/ticket.js"></script>
     <meta name="description" content="生成车票页面">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta name="screen-orientation" content="portrait">
@@ -23,7 +18,7 @@ $data = DB::table('station')->where('id', $key)->get();
 
 <body>
     <div class="container">
-        <div class="countPassagers">恭喜你成为第{{$num}}位搭上列车的乘客</div>
+        <div class="countPassagers">恭喜你成为第位搭上列车的乘客</div>
         <div class="stationName">
             <div class="start"></div>
             <div class="startEnglish"></div>
@@ -36,9 +31,9 @@ $data = DB::table('station')->where('id', $key)->get();
         <div class="trainR"></div>
         <div class="Passagermessage">
             <div class="passager"></div>
-            <div class="passager-name">{{$data->pluck('passenger1')[0]}} {{$data->pluck('passenger2')[0]?$data->pluck('passenger2')[0]:""}} {{$data->pluck('passenger3')[0]?$data->pluck('passenger3')[0]:""}}</div>
+            <div class="passager-name"></div>
             <div class="message"></div>
-            <div class="message-input">{{$data->pluck('comment')[0]}}</div>
+            <div class="message-input"></div>
         </div>
         <div class="trainL"></div>
         <div class="QRcode"></div>
