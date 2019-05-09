@@ -3,39 +3,34 @@ const width = document.documentElement.clientWidth;
 var color = "#F7A44F";
 $(function () {
     $("#finish").click(function () {
-        window.location.href = "success";
+        window.location.href = "../html/success.html";
     })
-    $("#repaint").click(function (e) {
-        e.preventDefault();
-        ctx.clearRect(0,0,width,height);  
-        listenToUser(canvas)
-    })                                           //???
     $("#orange").click(function () {
         color = "#F7A44F";
-        // ctx.strokeStyle = "#F7A44F";
     })
     $("#yellow").click(function () {
         color = "#F7ED4F";
-        ctx.strokeStyle = "#F7ED4F";
     })
     $("#green").click(function () {
         color = "#C0F54E";
-        ctx.strokeStyle = "#C0F54E";
     })
     $("#blue1").click(function () {
         color = "#4DF3E5";
-        ctx.strokeStyle = "#4DF3E5";
     })
     $("#blue2").click(function () {
         color = "#4C68F1";
-        ctx.strokeStyle = "#4C68F1";
     })
+    $("#repaint").click(function (e) {
+        e.preventDefault();
+        ctx.clearRect(0, 0, width, height);
+        listenToUser(canvas)
+    }) 
 })
 
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 canvas.height = height;
-canvas.width = width * 0.9;
+canvas.width = width;
 listenToUser(canvas);
 
 function listenToUser(canvas) {
@@ -51,7 +46,7 @@ function listenToUser(canvas) {
             let x = e.touches[0].clientX;
             let y = e.touches[0].lientY;
             ctx.rect(0.066 * width, 0.28 * height, 0.73 * width, 0.20 * height);
-            ctx.strokeStyle =color;
+            ctx.strokeStyle = color;
             ctx.clip()
             lastPoint = {
                 "x": x,
