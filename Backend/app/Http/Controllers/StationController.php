@@ -177,7 +177,7 @@ class StationController extends Controller
         $destination = htmlspecialchars($_POST['destination']);
         $comment = htmlspecialchars($_POST['comment']);
         DB::table('station')->where('id', session()->get('key'))->update(
-            ['passenger2' => $passenger2, 'passenger3' => $passenger3, 'destination' => $destination, 'comment' => $comment, 'updated_at' => now()]
+            ['passenger1'=>$passenger1,'passenger2' => $passenger2, 'passenger3' => $passenger3, 'destination' => $destination, 'comment' => $comment, 'updated_at' => now()]
         );
         $result = [
             'errcode' => 0,
