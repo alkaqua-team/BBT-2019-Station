@@ -62,7 +62,6 @@ function Is(style, str) {
             }
             break;
     }
-    break;
 }
 function getval(str) {
     var string = document.getElementById(str);

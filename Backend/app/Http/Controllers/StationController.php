@@ -91,28 +91,23 @@ class StationController extends Controller
             return redirect()->back();
         } */
         //}
+        $timezone = 'Asia/Shanghai';
+        date_default_timezone_set($timezone);
         $passenger1 = htmlspecialchars($_POST['passenger1']);
         $passenger2 = htmlspecialchars($_POST['passenger2']);
         $passenger3 = htmlspecialchars($_POST['passenger3']);
         $destination = htmlspecialchars($_POST['destination']);
         $comment = htmlspecialchars($_POST['comment']);
-        if (DB::table('station')->where('passenger1', $passenger1)->count() == 0) {
-            DB::insert('insert into station(passenger1,passenger2,passenger3,destination,comment,created_at) values(?,?,?,?,?,?)', [
+        DB::insert('insert into station(passenger1,passenger2,passenger3,destination,comment,created_at) values(?,?,?,?,?,?)', [
             $passenger1, $passenger2, $passenger3, $destination, $comment, now(),
         ]);
-            $key = DB::table('station')->where('passenger1', $passenger1)->pluck('id')[0];
-            session()->put('key', $key);
-            $result = [
+        $key = DB::table('station')->where('passenger1', $passenger1)->pluck('id')[0];
+        session_start();
+        $_SESSION['id'] = $key;
+        $result = [
                 'errcode' => 0,
             ];
-            echo json_encode($result);
-        } else {
-            $result = [
-                'errcode' => 120,
-                'errmsg' => '已填写车票！',
-            ];
-            echo json_encode($result);
-        }
+        echo json_encode($result);
     }
 
     public function modify(Request $request)
@@ -171,13 +166,15 @@ class StationController extends Controller
             return redirect()->back();
         } */
         //}
+        $timezone = 'Asia/Shanghai';
+        date_default_timezone_set($timezone);
         $passenger1 = htmlspecialchars($_POST['passenger1']);
         $passenger2 = htmlspecialchars($_POST['passenger2']);
         $passenger3 = htmlspecialchars($_POST['passenger3']);
         $destination = htmlspecialchars($_POST['destination']);
         $comment = htmlspecialchars($_POST['comment']);
-        DB::table('station')->where('id', session()->get('key'))->update(
-            ['passenger1'=>$passenger1,'passenger2' => $passenger2, 'passenger3' => $passenger3, 'destination' => $destination, 'comment' => $comment, 'updated_at' => now()]
+        DB::table('station')->where('id', $_SESSION['id'])->update(
+            ['passenger1' => $passenger1, 'passenger2' => $passenger2, 'passenger3' => $passenger3, 'destination' => $destination, 'comment' => $comment, 'updated_at' => now()]
         );
         $result = [
             'errcode' => 0,

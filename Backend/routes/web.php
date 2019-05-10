@@ -10,14 +10,14 @@
 |
 */
 Route::group(['middleware' => ['web']], function () {
-    Route::any('station/index', ['uses' => 'StationController@index']);
-    Route::any('station/save', ['uses' => 'StationController@save']);
-    Route::any('station/success', ['uses' => 'StationController@success']);
-    Route::any('station/draw', ['uses' => 'StationController@draw']);
-    Route::any('station/ticket', ['uses' => 'StationController@ticket']);
-    Route::any('station/portal', ['uses' => 'StationController@portal']);
-    Route::any('station/update', ['uses' => 'StationController@update']);
-    Route::any('station/modify', ['uses' => 'StationController@modify']);
+    //Route::any('station/index', ['uses' => 'StationController@index']);
+    Route::post('station/save', ['uses' => 'StationController@save']);
+    //Route::any('station/success', ['uses' => 'StationController@success']);
+    //Route::any('station/draw', ['uses' => 'StationController@draw']);
+    //Route::any('station/ticket', ['uses' => 'StationController@ticket']);
+    //Route::any('station/portal', ['uses' => 'StationController@portal']);
+    //Route::any('station/update', ['uses' => 'StationController@update']);
+    Route::post('station/modify', ['uses' => 'StationController@modify']);
 });
 Route::get('/', function () {
     return view('welcome');
