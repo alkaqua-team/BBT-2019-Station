@@ -58,7 +58,12 @@ $(function () {
                         $('#errmsg_back').html(res.errmsg);
                     }
                 },
-                error: function () { }
+                error: function () { if (!errcode) {
+                    window.location.href = 'ticket.html';
+                }
+                else {
+                    $('#errmsg_back').html(res.errmsg);
+                } }
             })
         }
     })
@@ -107,7 +112,12 @@ $(function () {
                         $('#errmsg_back').html(res.errmsg);
                     }
                 },
-                error: function () { }
+                error: function () { if (!errcode) {
+                    window.location.href = 'ticket.html';
+                }
+                else {
+                    $('#errmsg_back').html(res.errmsg);
+                } }
             })
         }
     })

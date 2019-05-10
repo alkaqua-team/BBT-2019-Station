@@ -5,14 +5,14 @@ function Is(style, str) {
             if (str.length != 0) {
                 if (!Reg.test(str)) {
                     $("#errsmg_passenger1").html("乘客格式不正确（注：只能包含中文或英文，中文中可以包含 · ，英文中可以包含 . · - ）");
-                    $('#passager-name1').value(str);
+                    $('#passager-name1').val(str);
                     return false;
                 }
                 else return true;
             }
             else {
                 $("#errmsg_passenger1").html("信息未完善，请填完!");
-                $('#passager-name1').value(str);
+                $('#passager-name1').val(str);
                 return false;
             }
             break;
@@ -20,7 +20,7 @@ function Is(style, str) {
             if (str.length != 0) {
                 if (!Reg.test(str)) {
                     $("#errsmg_passenger2").html("乘客格式不正确（注：只能包含中文或英文，中文中可以包含 · ，英文中可以包含 . · - ）");
-                    $('#passager-name2').value(str);
+                    $('#passager-name2').val(str);
                     return false;
                 }
                 else return true;
@@ -31,7 +31,7 @@ function Is(style, str) {
             if (str.length != 0) {
                 if (!Reg.test(str)) {
                     $("#errsmg_passenger3").html("乘客格式不正确（注：只能包含中文或英文，中文中可以包含 · ，英文中可以包含 . · - ）");
-                    $('#passager-name3').value(str);
+                    $('#passager-name3').val(str);
                     return false;
                 }
                 else return true;
@@ -42,13 +42,13 @@ function Is(style, str) {
             if (str.length != 0) {
                 if (!Reg.test(str)) {
                     $("#errmsg_destination").html("目的地格式不正确（注：只能包含中文或英文，中文中可以包含 · ，英文中可以包含 . · - ）");
-                    $('#destination').value(str);
+                    $('#destination').val(str);
                     return false;
                 }
                 else return true;
             } else {
                 $("#errmsg_destination").html("信息未完善，请填完!");
-                $('#destination').value(str);
+                $('#destination').val(str);
                 return false;
             }
             break;
