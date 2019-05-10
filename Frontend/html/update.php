@@ -51,7 +51,7 @@ $arr = mysqli_fetch_array($query);
                 id="message"><?php echo $arr['comment']; ?></textarea></div>
     </div>
     <div class="errmsg" id="errmsg_comment"></div>
-    <input class="create-ticket" type="submit" id="create-ticket" value="修改车票">
+    <input class="create-ticket" type="submit" id="update-ticket" value="修改车票">
 </body>
 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript" src="../static/js/config.js"></script>
