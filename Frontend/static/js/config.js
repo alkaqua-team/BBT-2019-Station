@@ -4,7 +4,7 @@ function Is(style, str) {
         case 'passenger1':
             if (str.length != 0) {
                 if (!Reg.test(str)) {
-                    $("#errsmg_passenger1").html("乘客格式不正确（注：只能包含中文或英文，中文中可以包含 · ，英文中可以包含 . · - ）");
+                    $("#errmsg_passenger1").html("乘客格式不正确（注：只能包含中文或英文，中文中可以包含 · ，英文中可以包含 . · - ）");
                     $('#passager-name1').val(str);
                     return false;
                 }
@@ -19,7 +19,7 @@ function Is(style, str) {
         case 'passenger2':
             if (str.length != 0) {
                 if (!Reg.test(str)) {
-                    $("#errsmg_passenger2").html("乘客格式不正确（注：只能包含中文或英文，中文中可以包含 · ，英文中可以包含 . · - ）");
+                    $("#errmsg_passenger2").html("乘客格式不正确（注：只能包含中文或英文，中文中可以包含 · ，英文中可以包含 . · - ）");
                     $('#passager-name2').val(str);
                     return false;
                 }
@@ -30,7 +30,7 @@ function Is(style, str) {
         case 'passenger3':
             if (str.length != 0) {
                 if (!Reg.test(str)) {
-                    $("#errsmg_passenger3").html("乘客格式不正确（注：只能包含中文或英文，中文中可以包含 · ，英文中可以包含 . · - ）");
+                    $("#errmsg_passenger3").html("乘客格式不正确（注：只能包含中文或英文，中文中可以包含 · ，英文中可以包含 . · - ）");
                     $('#passager-name3').val(str);
                     return false;
                 }
