@@ -19,12 +19,12 @@ body {
     justify-content: center;
     background-image: url("../pictures/2-1.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: contain;
 }
 
 .drawing-board {
     background: url("../pictures/2-2.png");
-    background-size:100% 100%;
+    background-size:contain;
 }
 
 .buttons {
@@ -32,7 +32,7 @@ body {
     display: flex;
     flex-direction: column;
     position: absolute;
-    bottom: 2%;
+    bottom: 4%;
 }
 
 .button {
@@ -47,6 +47,7 @@ body {
 
 .finish {
     background-color: #EA8C98;
+    margin-bottom: 6%;
 }
 
 .repaint {
