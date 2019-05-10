@@ -28,17 +28,15 @@ body {
 }
 
 .buttons {
-    flex-wrap: wrap;
     width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     position: absolute;
     bottom: 2%;
 }
 
 .button {
-    margin-left: 8%;
-    margin-right: 8%;
+    margin:1% auto;
     width: 36%;
     font-size: 18px;
     font-family: "Microsoft YaHei Regular";
@@ -49,7 +47,6 @@ body {
 
 .finish {
     background-color: #EA8C98;
-    margin-bottom: 6%;
 }
 
 .repaint {
@@ -66,15 +63,17 @@ button {
 .color-select {
     display: flex;
     justify-content: space-around;
-    width: 70%;
+    width: 60%;
     position: absolute;
     top: 70%;
+    left: 0;
+    margin-left: 25%;
 }
 
 .color {
     border: none;
-    width: 27px;
-    height: 27px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
 }
 
