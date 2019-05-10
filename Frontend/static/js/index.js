@@ -6,7 +6,7 @@ $(function () {
         var add = "<div class='input-box' id='passager" + i + "'>乘客</br><input type='text' id='passager-name" +
             i + "name='Station[passenger" + i + "]><div class='create-ticket reduce' id='reduce" + i + "' onclick='reduce(" + i + ")'></div></div><div class='errmsg' id='errmsg_passenger" + i + "'></div>";
         if (i < 4) {
-            $("#errmsg" + (i - 1)).after(add)
+            $("#errmsg_passenger" + (i - 1)).after(add)
             i++;
         } else {
             // alert("最多只能有三位乘客噢~")
@@ -126,16 +126,16 @@ function reduce(j) {
     if (j == 2) {
         if ($("#passager3").attr("id")) {
             $("#passager3").remove();
-            $("#errmsg3").remove();
+            $("#errmsg_passenger3").remove();
             i--;
         } else {
             $("#passager2").remove();
-            $("#errmsg2").remove();
+            $("#errmsg_passenger2").remove();
             i--;
         }
     } else {
         $("#passager3").remove();
-        $("#errmsg3").remove();
+        $("#errmsg_passenger3").remove();
         i--
     }
 }

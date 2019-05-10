@@ -94,8 +94,7 @@ input {
     background-repeat: no-repeat;
 }
 .errmsg{
-    height: 3%;
-    color:red;
-    font-size:15px;
-    /* background-color: #EA8C98; */
+    height: 30px;
+    color: red;
+    font-size: 12px;
 }
