@@ -22,9 +22,9 @@ $(function () {
     $(".success-pic").css("background-image", "url(" + pic1[randomNum] + ")")
     $(".success-text").css("background-image", "url(" + pic2[randomNum] + ")")
     $("#write-information").click(function () {
-        window.location.href = "../html/index.html";
+        window.location.href = "./index.html";
     })
     $("#reselect").click(function () {
-        window.location.href = "../html/draw.html";
+        window.location.href = "./draw.html";
     })
 })

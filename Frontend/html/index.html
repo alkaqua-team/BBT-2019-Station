@@ -16,7 +16,6 @@
 
 <body>
     <!-- @include('common.message') -->
-    {{ csrf_field() }}
     <div class="containerr">
         <div class="title">快来填写信息</br>制作专属车票吧</div>
         <div class="input-box" id="passager1">乘客</br><input type="text" name="Station[passenger1]" id="passager-name1"
@@ -29,7 +28,6 @@
         <div class="input-box" style="height: 22%;">想说的话</br><textarea name="Station[comment]" rows="7" cols="50"
                 class="message" id="message"></textarea></div>
         <div class="errmsg" id="errmsg_comment"></div>
-        <div class="errmsg" id="errmsg_back"></div>
     </div>
     <input class="create-ticket create" type="submit" id="create-ticket" value="生成车票">
 

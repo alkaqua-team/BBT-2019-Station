@@ -1,8 +1,8 @@
 $(function () {
     $("#update").click(function () {
-        window.location.href = "update";
+        window.location.href = "./update.html";
     })
     $("#return").click(function () {
-        window.location.href = "portal";
+        window.location.href = "./portal.html";
     })
 })
