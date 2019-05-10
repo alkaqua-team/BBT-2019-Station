@@ -98,3 +98,9 @@ input {
     color: red;
     font-size: 12px;
 }
+.text-errmsg{
+    width: 26%;
+    position: absolute;
+    right: 0;
+    bottom: 22%;
+}
