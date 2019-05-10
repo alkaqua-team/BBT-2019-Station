@@ -7,28 +7,30 @@ body {
 
 .container {
     height: 100%;
+    /* width: 100%; */
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     background-image: url(../pictures/3-1.png);
-    background-size: contain;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
 .success-pic {
     background-repeat: no-repeat;
     background-size: contain;
-    width: 25%;
-    margin-top: 48%;
-    margin-left: 8.5%;
-    margin-right: 8.5%;
+    height: 119pt;
+    width: 82pt;
+    margin: 0 auto;
 }
 
 .success-text {
-    width: 60%;
-    height: 3%;
+    width: 160pt;
+    height: 18pt;
     background-repeat: no-repeat;
     background-size: contain;
+    margin:10% auto;
+    margin-bottom: 25%;
 }
 
 .buttons {

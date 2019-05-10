@@ -11,7 +11,7 @@ body {
     justify-content: center;
     background-image: url(../pictures/1-1.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100% 100%;
 }
 
 .train-picture {
@@ -21,7 +21,7 @@ body {
     bottom: 25%;
     background-image: url(../pictures/1-2.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100% 100%;
     animation: moveright 4s forwards;
     animation-timing-function: ease-out;
     overflow: hidden !important;

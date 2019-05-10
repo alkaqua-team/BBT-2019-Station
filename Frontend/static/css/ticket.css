@@ -4,50 +4,34 @@
     height: 100%;
 }
 
-.container {
+.canvas {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-image: url("../pictures/6-2.png");
-    background-repeat: no-repeat;
+    background-image: url("../pictures/5-1.png");
     background-size: contain;
-}
-
-.ticket-picture {
-    margin: auto;
-    height: 40%;
-    width: 50%;
-    border: 1px solid;
-}
-
-.events-introduction {
-    height: 15%;
-    display: flex;
-    justify-content: space-around;
-}
-
-.more-information {
-    position: relative;
-    margin: 0;
-    right: 0;
-    width: 15%;
+    background-repeat: no-repeat;
 }
 
 .buttons {
-    height: 15%;
+    height: 0;
     display: flex;
     flex-wrap: wrap;
     position: absolute;
-    bottom: 2%;
+    bottom: 23%;
     width: 100%;
 }
 
 button {
+    border-radius: 15px;
     margin-right: 35%;
     width: 30%;
     margin-left: 35%;
     margin-bottom: 2%;
-    height: 30%;
+    height: 33px;
+    box-shadow: 0px 7px 18px 1px #00000094;
+    border: none;
+    color: #FFFFFF;
+    font-size: 15px;
+    outline: none;
 }
 
 .countPassagers {
@@ -57,40 +41,12 @@ button {
     height: auto;
     position: absolute;
     left: 10%;
-    top: 46%;
+    top: 36%;
     overflow: hidden;
 }
 
-.stationName {
-    left: 16%;
-    height: 6%;
-    width: 65%;
-    position: absolute;
-    top: 50%;
-}
-
-.start {
-    background-image: url("../pictures/2-1.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    height: 56%;
-    width: 30%;
-    position: absolute;
-    left: 2%;
-}
-
-.startEnglish {
-    background-image: url("../pictures/2-2.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 33%;
-    height: 25%;
-    position: absolute;
-    bottom: 0;
-}
-
 .trainName {
-    background-image: url("../pictures/2-5.png");
+    background-image: url("../pictures/5-2.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 14.6%;
@@ -100,30 +56,8 @@ button {
     left: 41%;
 }
 
-.arrow1 {
-    background-image: url("../pictures/2-3.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 20%;
-    position: absolute;
-    height: 2%;
-    top: 44%;
-    left: 38%;
-}
-
-.arrow2 {
-    background-image: url("../pictures/2-4.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 4%;
-    height: 15%;
-    top: 44%;
-    left: 55%;
-    position: absolute;
-}
-
 .destination {
-    background-image: url("../pictures/2-7.png");
+    background-color: #A2C0EA;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 56%;
@@ -133,68 +67,8 @@ button {
     position: absolute;
 }
 
-.destinationEnglish {
-    background-image: url("../pictures/2-6.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 40.5%;
-    height: 27%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-
-.trainR {
-    background-image: url("../pictures/T2.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 38.6%;
-    height: 4%;
-    position: absolute;
-    right: 0;
-    bottom: 38%;
-}
-
-.Passagermessage {
-    height: 11%;
-    width: 58%;
-    position: absolute;
-    bottom: 30%;
-    left: 16%;
-}
-
-.passager {
-    background-image: url("../pictures/3-1.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 16%;
-    height: 19%;
-    position: absolute;
-    top: 0;
-}
-
-.message {
-    background-image: url("../pictures/3-2.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 16%;
-    height: 19%;
-    position: absolute;
-    top: 40%;
-}
-
-.trainL {
-    width: 60%;
-    background-image: url("../pictures/T1.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    height: 6%;
-    position: absolute;
-    bottom: 20%;
-}
-
 .QRcode {
-    background-image: url("../pictures/6-1.png");
+    background-image: url("../pictures/5-3.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 47pt;
@@ -205,22 +79,37 @@ button {
 }
 
 .passager-name {
-    height: 38%;
-    width: 55%;
+    height: 6%;
+    width: 42%;
     position: absolute;
-    left: 19%;
+    left: 24%;
+    top: 50%;
+    font-size: 11px;
+    color: #FFFFFF;
+    word-break: break-all;
+    /* background-color: aliceblue; */
+}
+
+.message-input {
+    /* background-color: aliceblue; */
+    width: 64%;
+    height: 8%;
+    position: absolute;
+    bottom: 35%;
+    right: 12%;
     font-size: 11px;
     color: #FFFFFF;
     word-break: break-all;
 }
 
-.message-input {
-    width: 80%;
-    height: 60%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    font-size: 11px;
-    color: #FFFFFF;
-    word-break: break-all;
+#save {
+    background-color: #EA8C98;
+}
+
+#return {
+    background-color: #EA8C98;
+}
+
+#update {
+    background-color: #A2C0EA;
 }
