@@ -10,7 +10,7 @@ $timezone = 'Asia/Shanghai';
 date_default_timezone_set($timezone);
 session_start();
 $key = $_SESSION['id'];
-$query = mysqli_query($link, "SELECT FROM `station` WHERE id=$key");
+$query = mysqli_query($link, "SELECT * FROM `station` WHERE id=$key");
 $arr = mysqli_fetch_array($query);
 ?>
 <!DOCTYPE html>

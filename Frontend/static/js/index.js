@@ -51,14 +51,14 @@ $(function () {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 },
                 success: function (res) {
-                    if (!errcode) {
+                    if (!res.errcode) {
                         window.location.href = 'ticket.html';
                     }
                     else {
                         $('#errmsg_back').html(res.errmsg);
                     }
                 },
-                error: function () { if (!errcode) {
+                error: function (res) { if (!res.errcode) {
                     window.location.href = 'ticket.html';
                 }
                 else {
@@ -105,14 +105,14 @@ $(function () {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 },
                 success: function (res) {
-                    if (!errcode) {
+                    if (!res.errcode) {
                         window.location.href = 'ticket.html';
                     }
                     else {
                         $('#errmsg_back').html(res.errmsg);
                     }
                 },
-                error: function () { if (!errcode) {
+                error: function (res) { if (!res.errcode) {
                     window.location.href = 'ticket.html';
                 }
                 else {
