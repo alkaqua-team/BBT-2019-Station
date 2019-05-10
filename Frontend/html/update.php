@@ -30,9 +30,9 @@ $arr = mysqli_fetch_array($query);
 </head>
 
 <body>
-    <div class="title">修改信息</br>制作专属车票</div>
     <!-- @include('common.message') -->
-    <div class="container">
+    <div class="containerr background">
+    <div class="title">修改信息</br>制作专属车票</div>
         <div class="input-box" id="passager1">乘客</br><input type="text" name="Station[passenger1]" id="passager-name1"
                 value="<?php echo $arr['passenger1']; ?>">
         </div>
@@ -51,7 +51,7 @@ $arr = mysqli_fetch_array($query);
                 id="message"><?php echo $arr['comment']; ?></textarea></div>
     </div>
     <div class="errmsg" id="errmsg_comment"></div>
-    <input class="create-ticket" type="submit" id="update-ticket" value="修改车票">
+    <input class="create-ticket create" type="submit" id="update-ticket" value="修改车票">
 </body>
 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript" src="../static/js/config.js"></script>
