@@ -61,7 +61,7 @@ $(function () {
                         $('#errmsg_back').html(res.errmsg);
                     }
                 },
-                error: function () { if (!res.errcode) {
+                error: function (res) { if (!res.errcode) {
                     window.location.href = 'ticket.html';
                 }
                 else {
@@ -115,7 +115,7 @@ $(function () {
                         $('#errmsg_back').html(res.errmsg);
                     }
                 },
-                error: function () { if (!res.errcode) {
+                error: function (res) { if (!res.errcode) {
                     window.location.href = 'ticket.html';
                 }
                 else {
