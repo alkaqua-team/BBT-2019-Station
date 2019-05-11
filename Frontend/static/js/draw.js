@@ -2,6 +2,9 @@ const height = document.documentElement.clientHeight;
 const width = document.documentElement.clientWidth;
 var color = "#F7A44F";
 $(function () {
+    $(".svg").on("touchstart",function(){
+        $(".svg").css("display","none");
+    })
     $("#finish").click(function () {
         window.location.href = "../html/success.html";
     })
