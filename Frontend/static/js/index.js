@@ -55,14 +55,14 @@ $(function () {
                 },
                 success: function (res) {
                     if (!res.errcode) {
-                        window.location.href = 'ticket.php';
+                        //window.location.href = 'ticket.php';
                     }
                     else {
                         $('#errmsg_back').html(res.errmsg);
                     }
                 },
                 error: function (res) { if (!res.errcode) {
-                    window.location.href = 'ticket.php';
+                    //window.location.href = 'ticket.php';
                 }
                 else {
                     $('#errmsg_back').html(res.errmsg);

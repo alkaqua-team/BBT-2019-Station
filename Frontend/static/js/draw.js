@@ -1,6 +1,13 @@
 const height = document.documentElement.clientHeight;
 const width = document.documentElement.clientWidth;
 var color = "#F7A44F";
+var img = new Image();
+img.src = "../static/pictures/2-1.png";
+img.onload = function(){
+    // console.log("lllll")
+    $(".svg").css("display","block");
+}
+
 $(function () {
     $(".svg").on("touchstart",function(){
         $(".svg").css("display","none");

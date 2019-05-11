@@ -29,6 +29,7 @@ body {
     float: right;
 }
 .svg{
+    display: none;
     stroke: #a78e74;
     position: absolute;
     top: 38%;
