@@ -18,6 +18,8 @@ Route::group(['middleware' => ['web']], function () {
     //Route::any('station/portal', ['uses' => 'StationController@portal']);
     //Route::any('station/update', ['uses' => 'StationController@update']);
     Route::post('station/modify', ['uses' => 'StationController@modify']);
+    Route::post('station/ticket', ['uses' => 'StationController@ticket']);
+    Route::post('station/update', ['uses' => 'StationController@update']);
 });
 Route::get('/', function () {
     return view('welcome');

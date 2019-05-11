@@ -104,7 +104,6 @@ class StationController extends Controller
         $key = DB::table('station')->whereRaw('openid=? and passenger1=? and passenger2=? and passenger3=? and destination=? and comment=?', ['wxlj', $passenger1, $passenger2, $passenger3, $destination, $comment])->pluck('id')[0];
         session_start();
         $_SESSION['id'] = $key;
-        session()->put('id', $key);
         $result = [
                 'errcode' => 0,
             ];
@@ -174,11 +173,44 @@ class StationController extends Controller
         $passenger3 = htmlspecialchars($_POST['passenger3']);
         $destination = htmlspecialchars($_POST['destination']);
         $comment = htmlspecialchars($_POST['comment']);
-        DB::table('station')->where('id', $request->session()->get('id'))->update(
+        session_start();
+        DB::table('station')->where('id', $_SESSION['id'])->update(
             ['openid' => 'wxlj', 'passenger1' => $passenger1, 'passenger2' => $passenger2, 'passenger3' => $passenger3, 'destination' => $destination, 'comment' => $comment, 'updated_at' => now()]
         );
         $result = [
             'errcode' => 0,
+        ];
+        echo json_encode($result);
+    }
+
+    public function ticket(Request $request)
+    {
+        session_start();
+        $num = DB::table('station')->whereRaw('id<=', $_SESSION['id'])->count();
+        $station = DB::table('station')->where('id', $_SESSION['id'])->get();
+        $result = [
+            'errcode' => o,
+            'passenger1' => $station['passenger1'],
+            'passenger2' => $station['passenger2'],
+            'passenger3' => $station['passenger3'],
+            'destination' => $station['destination'],
+            'comment' => $station['comment'],
+            'num' => $num,
+        ];
+        echo json_encode($result);
+    }
+
+    public function update(Request $request)
+    {
+        session_start();
+        $station = DB::table('station')->where('id', $_SESSION['id'])->get();
+        $result = [
+            'errcode' => o,
+            'passenger1' => $station['passenger1'],
+            'passenger2' => $station['passenger2'],
+            'passenger3' => $station['passenger3'],
+            'destination' => $station['destination'],
+            'comment' => $station['comment'],
         ];
         echo json_encode($result);
     }
