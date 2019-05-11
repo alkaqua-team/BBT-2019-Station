@@ -18,9 +18,14 @@ function randomNumber(max) {
 }
 var randomNum = randomNumber(5);
 console.log(randomNum)
-$(function () {
+var img = new Image();
+img.src = "../static/pictures/3-1.png";
+img.onload = function () {
     $(".success-pic").css("background-image", "url(" + pic1[randomNum] + ")")
     $(".success-text").css("background-image", "url(" + pic2[randomNum] + ")")
+    $(".buttons").css("display","flex")
+}
+$(function () {
     $("#write-information").click(function () {
         window.location.href = "./index.html";
     })
