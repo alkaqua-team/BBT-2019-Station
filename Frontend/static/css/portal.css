@@ -22,7 +22,9 @@ body {
     background-image: url(../pictures/1-2.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    animation: moveright 4s forwards;
+    animation-delay:5s;
+    -webkit-animation-delay:5s;
+    /* animation: moveright 4s forwards; */
     animation-timing-function: ease-out;
     overflow: hidden !important;
 }

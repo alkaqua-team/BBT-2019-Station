@@ -28,7 +28,7 @@ $(function () {
     })
     $("#repaint").click(function (e) {
         e.preventDefault();
-        ctx.clearRect(0, 0, width, height);
+        ctx.clearRect(0, 0, width*2, height*2);
         listenToUser(canvas)
     }) 
 })
