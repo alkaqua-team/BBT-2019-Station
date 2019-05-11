@@ -101,7 +101,7 @@ class StationController extends Controller
         DB::insert('insert into station(passenger1,passenger2,passenger3,destination,comment,created_at) values(?,?,?,?,?,?)', [
             $passenger1, $passenger2, $passenger3, $destination, $comment, now(),
         ]);
-        $key = DB::table('station')->whereRaw('passenger1=? and passenger2=? and passenger3=? and destination=? and comment=?', [$passenger1, $passenger2, $passenger3, $destination, $comment])->pluck('id')[0];
+        $key = DB::table('station')->whereRaw('openid=? and passenger1=? and passenger2=? and passenger3=? and destination=? and comment=?', ['wxlj', $passenger1, $passenger2, $passenger3, $destination, $comment])->pluck('id')[0];
         session_start();
         $_SESSION['id'] = $key;
         session()->put('id', $key);
@@ -175,7 +175,7 @@ class StationController extends Controller
         $destination = htmlspecialchars($_POST['destination']);
         $comment = htmlspecialchars($_POST['comment']);
         DB::table('station')->where('id', $request->session()->get('id'))->update(
-            ['passenger1' => $passenger1, 'passenger2' => $passenger2, 'passenger3' => $passenger3, 'destination' => $destination, 'comment' => $comment, 'updated_at' => now()]
+            ['openid' => 'wxlj', 'passenger1' => $passenger1, 'passenger2' => $passenger2, 'passenger3' => $passenger3, 'destination' => $destination, 'comment' => $comment, 'updated_at' => now()]
         );
         $result = [
             'errcode' => 0,
