@@ -12,7 +12,7 @@ session_start();
 $key = $_SESSION['id'];
 $query1 = mysqli_query($link, "SELECT count(*) as num FROM `station` WHERE id<=$key");
 $arr1 = mysqli_fetch_array($query1);
-$query = mysqli_query($link, "SELECT * FROM `station` WHERE id<=$key");
+$query = mysqli_query($link, "SELECT * FROM `station` WHERE id=$key");
 $arr = mysqli_fetch_array($query);
 ?>
 <!DOCTYPE html>

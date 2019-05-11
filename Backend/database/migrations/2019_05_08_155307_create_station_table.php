@@ -13,6 +13,7 @@ class CreateStationTable extends Migration
     {
         Schema::create('station1', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('openid', 100);
             $table->string('passenger1', 10);
             $table->string('passenger2', 10)->default('NULL');
             $table->string('passenger3', 10)->default('NULL');
