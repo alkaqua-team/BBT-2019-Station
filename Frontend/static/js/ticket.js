@@ -1,6 +1,6 @@
 const width = document.documentElement.clientWidth;
 const height = document.documentElement.clientHeight;
-
+console.log(passagers);
 $(function () {
     $("#update").click(function () {
         window.location.href = "update";

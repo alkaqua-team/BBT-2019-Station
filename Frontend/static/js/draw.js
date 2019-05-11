@@ -5,6 +5,9 @@ $(function () {
     $(".svg").on("touchstart",function(){
         $(".svg").css("display","none");
     })
+    $("#canvas").on("touchstart",function(){
+        $(".svg").css("display","none");
+    })
     $("#finish").click(function () {
         window.location.href = "../html/success.html";
     })

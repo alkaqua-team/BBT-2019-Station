@@ -22,14 +22,13 @@
     flex-direction: column;
     padding-right: 34px;
     padding-left: 34px;
-    margin-right: auto;
-    margin-left: auto;
 }
 
 .input-box {
     margin-top: 3%;
     height: 8%;
     width: 100%;
+    color:#51637F;
 }
 
 input {
@@ -53,19 +52,20 @@ input {
 }
 
 .create-ticket {
-    width: 40%;
-    height: 7%;
-    margin-top: 2%;
-    margin-left: 30%;
+    height: 28.5px;
+    width:  115px;
     outline: none;
 }
 
 .create {
     background-color: #EA8C98;
     color: #EAEAEA;
-    font-size: 18px;
+    font-size: 15px;
+    margin: 3% 34%;
     position: absolute;
-    bottom: 1%;
+    bottom: 0;
+    border-radius: 15px;
+    /* box-shadow: 0px 7px 18px 1px #00000094; */
 }
 
 .add {
