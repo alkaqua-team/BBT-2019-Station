@@ -28,6 +28,22 @@ body {
     background-repeat: no-repeat;
     float: right;
 }
+.svg{
+    stroke: #a78e74;
+    position: absolute;
+    top: 38%;
+    stroke-linecap: round;
+    animation: lineMove 7s ease-in-out 0s infinite;
+}
+@keyframes lineMove {
+    0% {
+        stroke-dasharray: 0, 2000
+    }
+
+    100% {
+        stroke-dasharray: 2000, 2000
+    }
+}
 
 .buttons {
     width: 100%;
