@@ -24,7 +24,9 @@ $(function () {
     $("#write-information").click(function () {
         window.location.href = "./index.html";
     })
-    $("#reselect").click(function () {
-        window.location.href = "./draw.html";
+    $("#reselect").click(function (e) {
+        e.preventDefault();
+        history.back(-1);
+        $(".svg").remove()
     })
 })
