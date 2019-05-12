@@ -12,9 +12,10 @@
 }
 
 .background {
-    background-image: url("../pictures/7-1.png");
-    background-size: 100% 100%;
+    background-image: url("../pictures/3-1.png");
+    background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: scroll;
 }
 
 .containerr {
@@ -53,19 +54,17 @@ input {
     padding-left: 4px;
 }
 
-.create-ticket {
+.create {
+    outline: none;
     height: 28.5px;
     width:  115px;
-    outline: none;
-}
-
-.create {
     background-color: #EA8C98;
     color: #EAEAEA;
     font-size: 15px;
     border-radius: 15px;
     margin:5% auto;
     flex: 0 0 28.5px;
+    margin-bottom: 10%;
 }
 
 .add {
@@ -79,6 +78,7 @@ input {
     background-image: url("../pictures/7-2.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    outline: none;
 }
 
 .reduce {
@@ -92,6 +92,7 @@ input {
     background-image: url("../pictures/7-3.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    outline: none;
 }
 .errmsg{
     height: 12px;
