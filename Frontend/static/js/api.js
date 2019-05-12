@@ -9,7 +9,7 @@ function ticket(way, data, fn) {
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
-        error: fn,
+        success: fn,
     })
 }
 
@@ -20,6 +20,6 @@ function show(method, fn) {
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
-        error: fn,
+        success: fn,
     })
 }

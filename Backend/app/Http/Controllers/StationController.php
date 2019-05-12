@@ -91,6 +91,7 @@ class StationController extends Controller
             return redirect()->back();
         } */
         //}
+        header('Content-Type: application/json; charset=utf-8');
         $timezone = 'Asia/Shanghai';
         date_default_timezone_set($timezone);
         $passenger1 = htmlspecialchars($_POST['passenger1']);
@@ -104,9 +105,10 @@ class StationController extends Controller
         $key = DB::table('station')->whereRaw('openid=? and passenger1=? and passenger2=? and passenger3=? and destination=? and comment=?', ['wxlj', $passenger1, $passenger2, $passenger3, $destination, $comment])->pluck('id')[0];
         session_start();
         $_SESSION['id'] = $key;
-        $result = [
+        $result = array(
                 'errcode' => 0,
-            ];
+        );
+
         echo json_encode($result);
     }
 
@@ -166,6 +168,7 @@ class StationController extends Controller
             return redirect()->back();
         } */
         //}
+        header('Content-Type: application/json; charset=utf-8');
         $timezone = 'Asia/Shanghai';
         date_default_timezone_set($timezone);
         $passenger1 = htmlspecialchars($_POST['passenger1']);
@@ -177,14 +180,16 @@ class StationController extends Controller
         DB::table('station')->where('id', $_SESSION['id'])->update(
             ['openid' => 'wxlj', 'passenger1' => $passenger1, 'passenger2' => $passenger2, 'passenger3' => $passenger3, 'destination' => $destination, 'comment' => $comment, 'updated_at' => now()]
         );
-        $result = [
+        $result = array(
             'errcode' => 0,
-        ];
+        );
+
         echo json_encode($result);
     }
 
     public function ticket(Request $request)
     {
+        header('Content-Type: application/json; charset=utf-8');
         session_start();
         $num = $_SESSION['id'];
         $passenger1 = DB::table('station')->where('id', $_SESSION['id'])->pluck('passenger1')[0];
@@ -192,7 +197,7 @@ class StationController extends Controller
         $passenger3 = DB::table('station')->where('id', $_SESSION['id'])->pluck('passenger3')[0];
         $destination = DB::table('station')->where('id', $_SESSION['id'])->pluck('destination')[0];
         $comment = DB::table('station')->where('id', $_SESSION['id'])->pluck('comment')[0];
-        $result = [
+        $result = array(
             'errcode' => 0,
             'passenger1' => $passenger1,
             'passenger2' => $passenger2,
@@ -200,26 +205,29 @@ class StationController extends Controller
             'destination' => $destination,
             'comment' => $comment,
             'num' => $num,
-        ];
+        );
+
         echo json_encode($result);
     }
 
     public function update(Request $request)
     {
+        header('Content-Type: application/json; charset=utf-8');
         session_start();
         $passenger1 = DB::table('station')->where('id', $_SESSION['id'])->pluck('passenger1')[0];
         $passenger2 = DB::table('station')->where('id', $_SESSION['id'])->pluck('passenger2')[0];
         $passenger3 = DB::table('station')->where('id', $_SESSION['id'])->pluck('passenger3')[0];
         $destination = DB::table('station')->where('id', $_SESSION['id'])->pluck('destination')[0];
         $comment = DB::table('station')->where('id', $_SESSION['id'])->pluck('comment')[0];
-        $result = [
+        $result = array(
             'errcode' => 0,
             'passenger1' => $passenger1,
             'passenger2' => $passenger2,
             'passenger3' => $passenger3,
             'destination' => $destination,
             'comment' => $comment,
-        ];
+        );
+
         echo json_encode($result);
     }
 }
