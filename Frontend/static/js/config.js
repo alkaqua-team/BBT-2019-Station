@@ -4,14 +4,14 @@ function Is(style, str) {
         case 'passenger1':
             if (str.length != 0) {
                 if (!Reg.test(str)) {
-                    $("#errmsg_passenger1").html("乘客格式不正确（注：只能包含中文或英文，中文中可以包含 · ，英文中可以包含 . · - ）");
+                    $("#errmsg_passenger1").text("乘客格式不正确（注：只能包含中文或英文，中文中可以包含 · ，英文中可以包含 . · - ）");
                     $('#passager-name1').val(str);
                     return false;
                 }
                 else return true;
             }
             else {
-                $("#errmsg_passenger1").html("信息未完善，请填完!");
+                $("#errmsg_passenger1").text("信息未完善，请填完!");
                 $('#passager-name1').val(str);
                 return false;
             }
@@ -19,7 +19,7 @@ function Is(style, str) {
         case 'passenger2':
             if (str.length != 0) {
                 if (!Reg.test(str)) {
-                    $("#errmsg_passenger2").html("乘客格式不正确（注：只能包含中文或英文，中文中可以包含 · ，英文中可以包含 . · - ）");
+                    $("#errmsg_passenger2").text("乘客格式不正确（注：只能包含中文或英文，中文中可以包含 · ，英文中可以包含 . · - ）");
                     $('#passager-name2').val(str);
                     return false;
                 }
@@ -30,7 +30,7 @@ function Is(style, str) {
         case 'passenger3':
             if (str.length != 0) {
                 if (!Reg.test(str)) {
-                    $("#errmsg_passenger3").html("乘客格式不正确（注：只能包含中文或英文，中文中可以包含 · ，英文中可以包含 . · - ）");
+                    $("#errmsg_passenger3").text("乘客格式不正确（注：只能包含中文或英文，中文中可以包含 · ，英文中可以包含 . · - ）");
                     $('#passager-name3').val(str);
                     return false;
                 }
@@ -41,13 +41,13 @@ function Is(style, str) {
         case 'destination':
             if (str.length != 0) {
                 if (!Reg.test(str)) {
-                    $("#errmsg_destination").html("目的地格式不正确（注：只能包含中文或英文，中文中可以包含 · ，英文中可以包含 . · - ）");
+                    $("#errmsg_destination").text("目的地格式不正确（注：只能包含中文或英文，中文中可以包含 · ，英文中可以包含 . · - ）");
                     $('#destination').val(str);
                     return false;
                 }
                 else return true;
             } else {
-                $("#errmsg_destination").html("信息未完善，请填完!");
+                $("#errmsg_destination").text("信息未完善，请填完!");
                 $('#destination').val(str);
                 return false;
             }
@@ -56,7 +56,7 @@ function Is(style, str) {
             if (str.length != 0) {
                 return true;
             } else {
-                $("#errmsg_comment").html("信息未完善，请填完!");
+                $("#errmsg_comment").text("信息未完善，请填完!");
                 $('#message').html(str);
                 return false;
             }
