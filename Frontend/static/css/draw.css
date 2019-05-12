@@ -113,6 +113,7 @@ button {
     width: 20px;
     height: 20px;
     border-radius: 50%;
+    /* border: #F7D2AC solid 3pt; */
 }
 
 #orange {
@@ -133,4 +134,13 @@ button {
 
 #blue2 {
     background-color: #4C68F1;
+}
+.tips{
+    color:#BEA991;
+    font-size: 10px;
+    width:60%;
+    height: auto;
+    position: absolute;
+    top: 29%;
+    right: 7%;
 }
