@@ -25,7 +25,7 @@
 }
 
 .input-box {
-    margin: 5% 0;
+    margin: 2% 0;
     height: auto;
     width: 100%;
     color: #51637F;
@@ -38,6 +38,7 @@ input {
     border: none;
     outline: none;
     border-radius: 10px;
+    padding-left: 5px;
 }
 
 .message {
@@ -49,6 +50,7 @@ input {
     border: none;
     outline: none;
     border-radius: 10px;
+    padding-left: 4px;
 }
 
 .create-ticket {
@@ -62,7 +64,7 @@ input {
     color: #EAEAEA;
     font-size: 15px;
     border-radius: 15px;
-    margin:auto auto;
+    margin:5% auto;
 }
 
 .add {
@@ -91,7 +93,7 @@ input {
     background-repeat: no-repeat;
 }
 .errmsg{
-    height: 20px;
+    height: 12px;
     color: red;
     font-size: 12px;
 }

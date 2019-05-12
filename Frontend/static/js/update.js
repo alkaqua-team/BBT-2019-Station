@@ -1,5 +1,8 @@
 const method1 = "/update/";
 const method2 = "/modify/";
+var passagers = new Array();
+var judge = new Array();
+
 
 $(function(){
 show(method1,function(res){

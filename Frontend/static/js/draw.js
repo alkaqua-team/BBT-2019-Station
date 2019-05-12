@@ -32,33 +32,33 @@ $(function () {
     })
     $("#orange").click(function () {
         color = "#F7A44F";
-        remove_border(colors);
-        add_border("orange");
+        // remove_border(colors);
+        // add_border("orange");
     })
     $("#yellow").click(function () {
         color = "#F7ED4F";
-        remove_border(colors);
-        add_border("yellow");
+        // remove_border(colors);
+        // add_border("yellow");
     })
     $("#green").click(function () {
         color = "#C0F54E";
-        remove_border(colors);
-        add_border("green");
+        // remove_border(colors);
+        // add_border("green");
     })
     $("#blue1").click(function () {
         color = "#4DF3E5";
-        remove_border(colors);
-        add_border("blue1");
+        // remove_border(colors);
+        // add_border("blue1");
     })
     $("#blue2").click(function () {
         color = "#4C68F1";
-        remove_border(colors);
-        add_border("blue2");
+        // remove_border(colors);
+        // add_border("blue2");
     })
     $("#repaint").click(function (e) {
         e.preventDefault();
         ctx.clearRect(0, 0, width * 2, height * 2);
-        remove_border(colors);
+        // remove_border(colors);
         listenToUser(canvas)
     })
 })
