@@ -2,7 +2,6 @@ const width = document.documentElement.clientWidth;
 var img = new Image();
 img.src = "../static/pictures/1-1.png";
 img.onload = function(){
-    // console.log("lllll")
     $(".cloud").css("display","block");
     setTimeout(function(){
     $(".train-picture").css("display","block");
@@ -17,7 +16,6 @@ img.onload = function(){
     },13000)
 }
 $(function () {
-// $(".cloud").css("width",width);
     $("button").click(function () {
         window.location.href = "../html/draw.html";
     });

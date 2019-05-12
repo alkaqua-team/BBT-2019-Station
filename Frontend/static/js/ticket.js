@@ -27,8 +27,9 @@ $(function () {
                 console.error('oops, something went wrong!', error);
             });
     })
-
+    
     show(method, function (res) {
+<<<<<<< HEAD
         var res1;
         if((typeof res=='object')&&res.constructor==Object){
             res1=res;
@@ -40,6 +41,13 @@ $(function () {
             $(".station-name").text(res1.destination);
             $(".passager-name").text(res1.passenger1 + " " + res1.passenger2 + " " + res1.passenger3);
             $(".message-input").text(res1.comment)
+=======
+        if (res.errcode == 0) {
+            $(".countPassagers").text("恭喜你成为第" + res.num + "位搭上列车的乘客")
+            $(".destination").text(res.destination);
+            $(".passager-name").text(res.passenger1 + " " + res.passenger2 + " " + res.passenger3);
+            $(".message-input").text(res.comment)
+>>>>>>> 2b0903ba16afad3b1f0203907720475c2afda6e1
         }else{
             console.log("fails to get data.")
             console.log(res);
