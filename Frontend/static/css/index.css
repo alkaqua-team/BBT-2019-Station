@@ -25,10 +25,10 @@
 }
 
 .input-box {
-    margin-top: 3%;
-    height:auto;
+    margin: 5% 0;
+    height: auto;
     width: 100%;
-    color:#51637F;
+    color: #51637F;
 }
 
 input {
@@ -62,7 +62,7 @@ input {
     color: #EAEAEA;
     font-size: 15px;
     border-radius: 15px;
-    margin: 3% auto;
+    margin:auto auto;
 }
 
 .add {
@@ -91,13 +91,7 @@ input {
     background-repeat: no-repeat;
 }
 .errmsg{
-    height: 30px;
+    height: 20px;
     color: red;
     font-size: 12px;
-}
-.text-errmsg{
-    width: 26%;
-    position: absolute;
-    right: 0;
-    bottom: 22%;
 }

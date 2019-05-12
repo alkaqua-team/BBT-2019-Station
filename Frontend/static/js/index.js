@@ -8,9 +8,6 @@ $(function () {
         if (i < 4) {
             $("#errmsg_passenger" + (i - 1)).after(add)
             i++;
-            if(i == 3||4){
-                $("#errmsg_comment").addClass("text-errmsg");
-            }
         } else {
             // alert("最多只能有三位乘客噢~")
         }
@@ -130,18 +127,15 @@ function reduce(j) {
         if ($("#passager3").attr("id")) {
             $("#passager3").remove();
             $("#errmsg_passenger3").remove();
-            $("#errmsg_comment").removeClass("text-errmsg")
             i--;
         } else {
             $("#passager2").remove();
             $("#errmsg_passenger2").remove();
-            $("#errmsg_comment").removeClass("text-errmsg")
             i--;
         }
     } else {
         $("#passager3").remove();
         $("#errmsg_passenger3").remove();
-        $("#errmsg_comment").removeClass("text-errmsg")
         i--
     }
 }
