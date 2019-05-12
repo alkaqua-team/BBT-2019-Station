@@ -4,14 +4,14 @@ function Is(style, str) {
         case 'passenger1':
             if (str.length != 0) {
                 if (!Reg.test(str)) {
-                    $("#errmsg_passenger1").text("注：只能包含中文或英文，中文中可以包含 · ，英文中可以包含 . · -");
+                    $("#errmsg_passenger1").text("只能包含中文或英文，中文中可以包含 · ，英文中可以包含 . · -");
                     $('#passager-name1').val(str);
                     return false;
                 }
                 else return true;
             }
             else {
-                $("#errmsg_passenger1").text("信息未完善，请填完!");
+                $("#errmsg_passenger1").text("填写完才能提交噢");
                 $('#passager-name1').val(str);
                 return false;
             }
@@ -47,7 +47,7 @@ function Is(style, str) {
                 }
                 else return true;
             } else {
-                $("#errmsg_destination").text("信息未完善，请填完!");
+                $("#errmsg_destination").text("填写完才能提交噢");
                 $('#destination').val(str);
                 return false;
             }
@@ -56,7 +56,7 @@ function Is(style, str) {
             if (str.length != 0) {
                 return true;
             } else {
-                $("#errmsg_comment").text("信息未完善，请填完!");
+                $("#errmsg_comment").text("填写完才能提交噢");
                 $('#message').html(str);
                 return false;
             }

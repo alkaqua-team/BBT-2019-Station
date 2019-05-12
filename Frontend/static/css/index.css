@@ -9,10 +9,11 @@
     height: auto;
     color: #51637F;
     font-size: 16px;
+    padding-bottom: 6%;
 }
 
 .background {
-    background-image: url("../pictures/3-1.png");
+    background-image: url("../pictures/4-1.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -26,10 +27,13 @@
 }
 
 .input-box {
-    margin: 2% 0;
+    margin: 5% 0;
+    margin-left: 9%;
     height: auto;
     width: 100%;
     color: #51637F;
+    font-size: 20px;
+
 }
 
 input {
@@ -38,13 +42,13 @@ input {
     background: rgba(255, 255, 255, 0.8);
     border: none;
     outline: none;
-    border-radius: 10px;
+    border-radius: 13px;
     padding-left: 5px;
+    font-size: 20px;
 }
 
 .message {
     line-height: normal;
-    height: auto;
     width: 75%;
     resize: none;
     background: rgba(255, 255, 255, 0.8);
@@ -68,13 +72,13 @@ input {
 }
 
 .add {
-    margin-top: 1%;
+    /* margin-top: 1%; */
     margin-left: 0;
     margin-right:15%;
     float: right;
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
+    width: 23px;
+    height: 23px;
     background-image: url("../pictures/7-2.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -82,13 +86,13 @@ input {
 }
 
 .reduce {
-    margin-top: 1%;
+    /* margin-top: 1%; */
     margin-left: 0;
     margin-right: 15%;
     float: right;
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
+    width: 23px;
+    height: 23px;
     background-image: url("../pictures/7-3.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -96,7 +100,30 @@ input {
 }
 .errmsg{
     height: 12px;
-    color: red;
+    color:#DB4C4C;
     font-size: 12px;
     flex: 0 0 16px;
+    margin-left: 9%;
+}
+.tip{
+    top: 16%;
+    height: auto;
+    position: absolute;
+    right: 15%;
+    font-size: 10px;
+    opacity: 0.6;
+}
+.arrow{
+    background-image: url(../pictures/4-2.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 3%;
+    height: 3%;
+    position: absolute;
+    right: 13%;
+    top: 18%;
+}
+.mes{
+    margin-bottom: 12%;
+    height: 16%;
 }

@@ -27,11 +27,11 @@ $(function () {
                 console.error('oops, something went wrong!', error);
             });
     })
-
+    
     show(method, function (res) {
         if (res.errcode == 0) {
             $(".countPassagers").text("恭喜你成为第" + res.num + "位搭上列车的乘客")
-            $(".station-name").text(res.destination);
+            $(".destination").text(res.destination);
             $(".passager-name").text(res.passenger1 + " " + res.passenger2 + " " + res.passenger3);
             $(".message-input").text(res.comment)
         }else{
