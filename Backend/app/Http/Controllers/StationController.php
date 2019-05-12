@@ -98,8 +98,8 @@ class StationController extends Controller
         $passenger3 = htmlspecialchars($_POST['passenger3']);
         $destination = htmlspecialchars($_POST['destination']);
         $comment = htmlspecialchars($_POST['comment']);
-        DB::insert('insert into station(passenger1,passenger2,passenger3,destination,comment,created_at) values(?,?,?,?,?,?)', [
-            $passenger1, $passenger2, $passenger3, $destination, $comment, now(),
+        DB::insert('insert into station(openid,passenger1,passenger2,passenger3,destination,comment,created_at) values(?,?,?,?,?,?,?)', [
+            'wxlj', $passenger1, $passenger2, $passenger3, $destination, $comment, now(),
         ]);
         $key = DB::table('station')->whereRaw('openid=? and passenger1=? and passenger2=? and passenger3=? and destination=? and comment=?', ['wxlj', $passenger1, $passenger2, $passenger3, $destination, $comment])->pluck('id')[0];
         session_start();
@@ -186,15 +186,19 @@ class StationController extends Controller
     public function ticket(Request $request)
     {
         session_start();
-        $num = DB::table('station')->whereRaw('id<=', $_SESSION['id'])->count();
-        $station = DB::table('station')->where('id', $_SESSION['id'])->get();
+        $num = $_SESSION['id'];
+        $passenger1 = DB::table('station')->where('id', $_SESSION['id'])->pluck('passenger1')[0];
+        $passenger2 = DB::table('station')->where('id', $_SESSION['id'])->pluck('passenger2')[0];
+        $passenger3 = DB::table('station')->where('id', $_SESSION['id'])->pluck('passenger3')[0];
+        $destination = DB::table('station')->where('id', $_SESSION['id'])->pluck('destination')[0];
+        $comment = DB::table('station')->where('id', $_SESSION['id'])->pluck('comment')[0];
         $result = [
-            'errcode' => o,
-            'passenger1' => $station['passenger1'],
-            'passenger2' => $station['passenger2'],
-            'passenger3' => $station['passenger3'],
-            'destination' => $station['destination'],
-            'comment' => $station['comment'],
+            'errcode' => 0,
+            'passenger1' => $passenger1,
+            'passenger2' => $passenger2,
+            'passenger3' => $passenger3,
+            'destination' => $destination,
+            'comment' => $comment,
             'num' => $num,
         ];
         echo json_encode($result);
@@ -203,14 +207,18 @@ class StationController extends Controller
     public function update(Request $request)
     {
         session_start();
-        $station = DB::table('station')->where('id', $_SESSION['id'])->get();
+        $passenger1 = DB::table('station')->where('id', $_SESSION['id'])->pluck('passenger1')[0];
+        $passenger2 = DB::table('station')->where('id', $_SESSION['id'])->pluck('passenger2')[0];
+        $passenger3 = DB::table('station')->where('id', $_SESSION['id'])->pluck('passenger3')[0];
+        $destination = DB::table('station')->where('id', $_SESSION['id'])->pluck('destination')[0];
+        $comment = DB::table('station')->where('id', $_SESSION['id'])->pluck('comment')[0];
         $result = [
-            'errcode' => o,
-            'passenger1' => $station['passenger1'],
-            'passenger2' => $station['passenger2'],
-            'passenger3' => $station['passenger3'],
-            'destination' => $station['destination'],
-            'comment' => $station['comment'],
+            'errcode' => 0,
+            'passenger1' => $passenger1,
+            'passenger2' => $passenger2,
+            'passenger3' => $passenger3,
+            'destination' => $destination,
+            'comment' => $comment,
         ];
         echo json_encode($result);
     }
