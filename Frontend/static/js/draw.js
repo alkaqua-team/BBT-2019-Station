@@ -6,6 +6,7 @@ img.src = "../static/pictures/2-1.png";
 img.onload = function () {
     // console.log("lllll")
     $(".svg").css("display", "block");
+    listenToUser(canvas);
 }
 var colors = [
     "orange", "yellow", "green", "blue1", "blue2"
@@ -72,7 +73,6 @@ ctx.beginPath();
 var x = width;
 var y = height * 0.34
 var movey = height * 0.35;
-listenToUser(canvas);
 
 function listenToUser(canvas) {
     let painting = false;

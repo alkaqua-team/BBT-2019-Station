@@ -4,15 +4,16 @@ body {
     padding: 0;
     height: 100%;
 }
-
-.container {
-    height: 100%;
-    display: flex;
-    justify-content: center;
+.background{
     background-image: url(../pictures/1-1.png);
     /* background-color: black; */
     background-repeat: no-repeat;
     background-size: 100% 100%;
+}
+.container {
+    /* height: 100%; */
+    display: flex;
+    justify-content: center;
 }
 
 .train-picture {

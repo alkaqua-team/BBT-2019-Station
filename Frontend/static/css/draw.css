@@ -33,6 +33,7 @@ body {
     stroke: #a78e74;
     position: absolute;
     top: 38%;
+    left: 10%;
     stroke-linecap: round;
     animation: lineMove 7s ease-in-out 0s infinite;
 }
