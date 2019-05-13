@@ -1,7 +1,8 @@
 document.body.addEventListener('touchmove', function (e) {
-    e.preventDefault(); 
-  }, {passive: false}); 
-
+    e.preventDefault();
+}, {
+    passive: false
+});
 const height = document.documentElement.clientHeight;
 const width = document.documentElement.clientWidth;
 var color = "#F7A44F";
@@ -17,15 +18,16 @@ var colors = [
 
 function remove_border(arr) {
     for (var i = 0; i < 5; i++) {
-        document.getElementById(arr[i]).style.border="none";
+        document.getElementById(arr[i]).style.border = "none";
     }
 }
-function add_border(element){
-    document.getElementById(element).style.border="#F7D2AC solid 3pt";
+
+function add_border(element) {
+    document.getElementById(element).style.border = "#F7D2AC solid 3pt";
 }
 
 $(function () {
-    
+
     listenToUser(canvas);
     $(".svg").on("touchstart", function () {
         $(".svg").css("display", "none");
@@ -92,7 +94,7 @@ function listenToUser(canvas) {
             drawCircle(x, y, 0);
         };
         canvas.ontouchmove = function (e) {
-            $(".container").css("position","fixed");
+            $(".container").css("position", "fixed");
             if (painting) {
                 let x = e.touches[0].clientX;
                 let y = e.touches[0].clientY;
@@ -106,7 +108,7 @@ function listenToUser(canvas) {
         };
 
         canvas.ontouchend = function () {
-            $(".container").css("position","static");
+            $(".container").css("position", "static");
             painting = false;
             canvas.ontouchstart = function () {};
         }
@@ -123,7 +125,7 @@ function listenToUser(canvas) {
             drawCircle(x, y, 0);
         };
         canvas.onmousemove = function (e) {
-            $(".container").css("position","fixed");
+            $(".container").css("position", "fixed");
             if (painting) {
                 let x = e.clientX;
                 let y = e.clientY;
@@ -137,13 +139,13 @@ function listenToUser(canvas) {
         };
 
         canvas.onmouseup = function () {
-            $(".container").css("position","static");
+            $(".container").css("position", "static");
             painting = false;
             canvas.onmousedown = function () {}
         };
 
         canvas.mouseleave = function () {
-            $(".container").css("position","static");
+            $(".container").css("position", "static");
             painting = false;
             canvas.onmousedown = function () {}
         }
