@@ -1,4 +1,5 @@
 const host = " http://182.254.161.213/BBT-2019-Station/Backend/public/station"
+// const host = "../js";
 
 function ticket(method, data, fn) {
     $.ajax({

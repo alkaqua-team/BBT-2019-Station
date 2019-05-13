@@ -9,6 +9,7 @@ body {
     /* background-color: black; */
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    overflow: hidden !important;
 }
 .container {
     /* height: 100%; */
@@ -58,24 +59,24 @@ body {
     top: 12%;
     animation: slideInLeft 6s forwards;
     left: -50%;
-    overflow: hidden;
+    overflow: hidden !important;
 }
 
 .moveleft {
     animation: slideOutLeft 6s forwards;
-    overflow: hidden;
+    overflow: hidden !important;
 }
 
 .moveright {
     animation: slideOutRight 6s forwards;
-    overflow: hidden;
+    overflow: hidden !important;
 }
 
 #cloud2 {
     position: absolute;
     top: 17%;
     animation: slideInRight 6s forwards;
-    overflow: hidden;
+    overflow: hidden !important;
     right: -50%;
 }
 

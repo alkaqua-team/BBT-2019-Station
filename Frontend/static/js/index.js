@@ -2,6 +2,7 @@ var i = 2;
 var passagers = new Array();
 var judge = new Array();
 const method1 = "/save/";
+// const method1 = "/test.json";
 $(function () {
     $("#add").click(function () {
         var add = "<div class='input-box' id='passager" + i + "'>乘客</br><input type='text' id='passager-name" +
