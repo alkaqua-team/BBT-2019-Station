@@ -1,4 +1,7 @@
 const width = document.documentElement.clientWidth;
+const height = document.documentElement.clientHeight;
+$(".background").css("height",height);
+$(".background").css("width",width);
 var img = new Image();
 img.src = "../static/pictures/1-1.png";
 img.onload = function(){

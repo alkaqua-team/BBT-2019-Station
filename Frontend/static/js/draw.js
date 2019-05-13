@@ -1,3 +1,7 @@
+document.body.addEventListener('touchmove', function (e) {
+    e.preventDefault(); 
+  }, {passive: false}); 
+
 const height = document.documentElement.clientHeight;
 const width = document.documentElement.clientWidth;
 var color = "#F7A44F";
@@ -21,6 +25,7 @@ function add_border(element){
 }
 
 $(function () {
+    
     listenToUser(canvas);
     $(".svg").on("touchstart", function () {
         $(".svg").css("display", "none");
