@@ -84,32 +84,36 @@ body {
 @keyframes slideInLeft {
     from {
         transform: translate3d(-100%, 0, 0);
-        visibility: visible;
+        /* visibility: visible; */
+        display: block;
     }
 
     to {
         transform: translate3d(0, 0, 0);
+        display: block;
     }
 }
 
 @keyframes slideInRight {
     from {
         transform: translate3d(100%, 0, 0);
-        visibility: visible;
+        /* visibility: visible; */
+        display: block;
     }
 
     to {
         transform: translate3d(0, 0, 0);
+        display: block;
     }
 }
 
-@keyframes slideOutLeft {
+/* @keyframes slideOutLeft {
     from {
         transform: translate3d(0, 0, 0);
     }
 
     to {
-        visibility: hidden;
+        display: none;
         transform: translate3d(-100%, 0, 0);
     }
 }
@@ -123,7 +127,7 @@ body {
         visibility: hidden;
         transform: translate3d(100%, 0, 0);
     }
-}
+} */
 
 .entrance {
     display: none;
