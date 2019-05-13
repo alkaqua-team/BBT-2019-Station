@@ -86,8 +86,11 @@ function listenToUser(canvas) {
         };
         canvas.ontouchmove = function (e) {
             $("body").css("position","flexed");
-            // $(".color-select").hide();
-            // $(".buttons").hide();
+            $(".introduction").hide();
+            $(".tips").hide();
+            $(".svg").hide();
+            $(".color-select").hide();
+            $(".buttons").hide();
             if (painting) {
                 let x = e.touches[0].clientX;
                 let y = e.touches[0].clientY;
@@ -102,8 +105,11 @@ function listenToUser(canvas) {
 
         canvas.ontouchend = function () {
             $("body").css("position","static");
-            // $(".color-select").show();
-            // $(".buttons").show();
+            $(".introduction").show();
+            $(".tips").show();
+            // $(".svg").show();
+            $(".color-select").show();
+            $(".buttons").show();
             painting = false;
             canvas.ontouchstart = function () {};
         }
@@ -121,8 +127,11 @@ function listenToUser(canvas) {
         };
         canvas.onmousemove = function (e) {
             $("body").css("position","flexed");
-            // $(".color-select").hide();
-            // $(".buttons").hide();
+            $(".introduction").hide();
+            $(".tips").hide();
+            $(".svg").hide();
+            $(".color-select").hide();
+            $(".buttons").hide();
             if (painting) {
                 let x = e.clientX;
                 let y = e.clientY;
@@ -137,6 +146,11 @@ function listenToUser(canvas) {
 
         canvas.onmouseup = function () {
             $("body").css("position","static");
+            $(".introduction").show();
+            $(".tips").show();
+            // $(".svg").show();
+            $(".color-select").show();
+            $(".buttons").show();
             // $(".color-select").show();
             // $(".buttons").show();
             painting = false;
@@ -145,6 +159,11 @@ function listenToUser(canvas) {
 
         canvas.mouseleave = function () {
             $("body").css("position","static");
+            $(".introduction").show();
+            $(".tips").show();
+            // $(".svg").show();
+            $(".color-select").show();
+            $(".buttons").show();
             // $(".color-select").show();
             // $(".buttons").show();
             painting = false;
