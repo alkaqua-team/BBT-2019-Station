@@ -6,12 +6,18 @@ var judge = new Array();
 
 $(function(){
 show(method1,function(res){
-    if(res.errcode == 0){
-    $("#passager-name1").val(res.passenger1);
-    $("#passager-name2").val(res.passenger2);
-    $("#passager-name3").val(res.passenger3);
-    $("#destination").val(res.destination);
-    $("#message").val(res.comment);
+    var res1;
+        if((typeof res=='object')&&res.constructor==Object){
+            res1=res;
+        }else{
+            res1  = eval("("+res+")");
+        }
+    if(res1.errcode == 0){
+    $("#passager-name1").val(res1.passenger1);
+    $("#passager-name2").val(res1.passenger2);
+    $("#passager-name3").val(res1.passenger3);
+    $("#destination").val(res1.destination);
+    $("#message").val(res1.comment);
     }else{
         console.log("fails to get data.");
     }
