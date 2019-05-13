@@ -44,7 +44,7 @@ $("#update-ticket").click(function () {
         }
         ticket(method2,data,function (res) {
                 if (!res.errcode) {
-                   // window.location.href = 'ticket.html';
+                    window.location.href = 'ticket.html';
                 }
                 else {
                     $('#errmsg_back').html(res.errmsg);
