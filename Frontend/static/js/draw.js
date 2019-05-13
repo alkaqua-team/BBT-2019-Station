@@ -85,7 +85,7 @@ function listenToUser(canvas) {
             drawCircle(x, y, 0);
         };
         canvas.ontouchmove = function (e) {
-            $("body").css("position","flexed");
+            $(".container").css("position","fixed");
             $(".introduction").hide();
             $(".tips").hide();
             $(".svg").hide();
@@ -104,7 +104,7 @@ function listenToUser(canvas) {
         };
 
         canvas.ontouchend = function () {
-            $("body").css("position","static");
+            $(".container").css("position","static");
             $(".introduction").show();
             $(".tips").show();
             // $(".svg").show();
@@ -126,7 +126,7 @@ function listenToUser(canvas) {
             drawCircle(x, y, 0);
         };
         canvas.onmousemove = function (e) {
-            $("body").css("position","flexed");
+            $(".container").css("position","fixed");
             $(".introduction").hide();
             $(".tips").hide();
             $(".svg").hide();
@@ -145,7 +145,7 @@ function listenToUser(canvas) {
         };
 
         canvas.onmouseup = function () {
-            $("body").css("position","static");
+            $(".container").css("position","static");
             $(".introduction").show();
             $(".tips").show();
             // $(".svg").show();
@@ -158,7 +158,7 @@ function listenToUser(canvas) {
         };
 
         canvas.mouseleave = function () {
-            $("body").css("position","static");
+            $(".container").css("position","static");
             $(".introduction").show();
             $(".tips").show();
             // $(".svg").show();
