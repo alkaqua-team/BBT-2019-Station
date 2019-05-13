@@ -86,12 +86,6 @@ function listenToUser(canvas) {
         };
         canvas.ontouchmove = function (e) {
             $(".container").css("position","fixed");
-            $("#canvas").css("position","fixed");
-            // $(".introduction").hide();
-            // $(".tips").hide();
-            // $(".svg").hide();
-            // $(".color-select").hide();
-            // $(".buttons").hide();
             if (painting) {
                 let x = e.touches[0].clientX;
                 let y = e.touches[0].clientY;
@@ -106,12 +100,6 @@ function listenToUser(canvas) {
 
         canvas.ontouchend = function () {
             $(".container").css("position","static");
-            $("#canvas").css("position","static");
-            // $(".introduction").show();
-            // $(".tips").show();
-            // // $(".svg").show();
-            // $(".color-select").show();
-            // $(".buttons").show();
             painting = false;
             canvas.ontouchstart = function () {};
         }
@@ -129,12 +117,6 @@ function listenToUser(canvas) {
         };
         canvas.onmousemove = function (e) {
             $(".container").css("position","fixed");
-            $("#canvas").css("position","fixed");
-            // $(".introduction").hide();
-            // $(".tips").hide();
-            // $(".svg").hide();
-            // $(".color-select").hide();
-            // $(".buttons").hide();
             if (painting) {
                 let x = e.clientX;
                 let y = e.clientY;
@@ -149,28 +131,12 @@ function listenToUser(canvas) {
 
         canvas.onmouseup = function () {
             $(".container").css("position","static");
-            $("#canvas").css("position","static");
-            // $(".introduction").show();
-            // $(".tips").show();
-            // // $(".svg").show();
-            // $(".color-select").show();
-            // $(".buttons").show();
-            // $(".color-select").show();
-            // $(".buttons").show();
             painting = false;
             canvas.onmousedown = function () {}
         };
 
         canvas.mouseleave = function () {
             $(".container").css("position","static");
-            $("#canvas").css("position","static");
-            // $(".introduction").show();
-            // $(".tips").show();
-            // // $(".svg").show();
-            // $(".color-select").show();
-            // $(".buttons").show();
-            // $(".color-select").show();
-            // $(".buttons").show();
             painting = false;
             canvas.onmousedown = function () {}
         }
