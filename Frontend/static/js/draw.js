@@ -4,7 +4,6 @@ var color = "#F7A44F";
 var img = new Image();
 img.src = "../static/pictures/2-1.png";
 img.onload = function () {
-    // console.log("lllll")
     $(".svg").css("display", "block");
     listenToUser(canvas);
 }
@@ -33,33 +32,22 @@ $(function () {
     })
     $("#orange").click(function () {
         color = "#F7A44F";
-        // remove_border(colors);
-        // add_border("orange");
     })
     $("#yellow").click(function () {
         color = "#F7ED4F";
-        // remove_border(colors);
-        // add_border("yellow");
     })
     $("#green").click(function () {
         color = "#C0F54E";
-        // remove_border(colors);
-        // add_border("green");
     })
     $("#blue1").click(function () {
         color = "#4DF3E5";
-        // remove_border(colors);
-        // add_border("blue1");
     })
     $("#blue2").click(function () {
         color = "#4C68F1";
-        // remove_border(colors);
-        // add_border("blue2");
     })
     $("#repaint").click(function (e) {
         e.preventDefault();
         ctx.clearRect(0, 0, width * 2, height * 2);
-        // remove_border(colors);
         listenToUser(canvas)
     })
 })
@@ -97,6 +85,9 @@ function listenToUser(canvas) {
             drawCircle(x, y, 0);
         };
         canvas.ontouchmove = function (e) {
+            $("#canvas").css("position","flexed");
+            $(".color-select").hide();
+            $(".buttons").hide();
             if (painting) {
                 let x = e.touches[0].clientX;
                 let y = e.touches[0].clientY;
@@ -110,6 +101,9 @@ function listenToUser(canvas) {
         };
 
         canvas.ontouchend = function () {
+            $("#canvas").css("position","static");
+            $(".color-select").show();
+            $(".buttons").show();
             painting = false;
             canvas.ontouchstart = function () {};
         }
@@ -126,6 +120,9 @@ function listenToUser(canvas) {
             drawCircle(x, y, 0);
         };
         canvas.onmousemove = function (e) {
+            $("#canvas").css("position","flexed");
+            $(".color-select").hide();
+            $(".buttons").hide();
             if (painting) {
                 let x = e.clientX;
                 let y = e.clientY;
@@ -139,11 +136,17 @@ function listenToUser(canvas) {
         };
 
         canvas.onmouseup = function () {
+            $("#canvas").css("position","static");
+            $(".color-select").show();
+            $(".buttons").show();
             painting = false;
             canvas.onmousedown = function () {}
         };
 
         canvas.mouseleave = function () {
+            $("#canvas").css("position","static");
+            $(".color-select").show();
+            $(".buttons").show();
             painting = false;
             canvas.onmousedown = function () {}
         }
