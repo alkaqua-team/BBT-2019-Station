@@ -5,6 +5,7 @@ var img = new Image();
 img.src = "../static/pictures/2-1.png";
 img.onload = function () {
     $(".svg").css("display", "block");
+    listenToUser(canvas);
 }
 var colors = [
     "orange", "yellow", "green", "blue1", "blue2"
@@ -20,13 +21,13 @@ function add_border(element){
 }
 
 $(function () {
+    listenToUser(canvas);
     $(".svg").on("touchstart", function () {
         $(".svg").css("display", "none");
         listenToUser(canvas)
     })
     $("#canvas").on("touchstart", function () {
         $(".svg").css("display", "none");
-        listenToUser(canvas)
     })
     $("#finish").click(function () {
         window.location.href = "../html/success.html";
