@@ -230,4 +230,47 @@ class StationController extends Controller
 
         echo json_encode($result);
     }
+
+    public function checkTime(Request $request)
+    {
+        header('Content-Type: application/json; charset=utf-8');
+        $timezone = 'Asia/Shanghai';
+        date_default_timezone_set($timezone);
+        $nowTime = now();
+        $startTime = '2019-05-29 00:00:00';
+        $closeTime = '2019-06-01 00:00:00';
+        if ($nowTime < $startTime) {
+            $result = array(
+                'errcode' => 440,
+                'errmsg' => '活动还未开始',
+            );
+            echo json_encode($result);
+        }
+        if ($nowTime > $closeTime) {
+            $result = array(
+                'errcode' => 441,
+                'errmsg' => '活动已结束',
+            );
+            echo json_encode($result);
+        }
+    }
+
+    public function checkOpenid(Request $request)
+    {
+        header('Content-Type: application/json; charset=utf-8');
+        session_start();
+        if (isset($_SESSION['openid'])) {
+            $result = array(
+                'errcode' => 0,
+                'errmsg' => '已授权',
+            );
+            echo json_encode($result);
+        } else {
+            $result = array(
+                'errcode' => 540,
+                'errmsg' => '未授权',
+            );
+            echo json_encode($result);
+        }
+    }
 }

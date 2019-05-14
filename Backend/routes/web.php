@@ -20,6 +20,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('station/modify', ['uses' => 'StationController@modify']);
     Route::post('station/ticket', ['uses' => 'StationController@ticket']);
     Route::post('station/update', ['uses' => 'StationController@update']);
+    Route::post('station/checkTime', ['uses' => 'StationController@checkTime']);
+    Route::post('station/checkOpenid', ['uses' => 'StationController@checkOpenid']);
 });
 Route::get('/', function () {
     return view('welcome');
