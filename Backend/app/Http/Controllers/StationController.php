@@ -273,4 +273,21 @@ class StationController extends Controller
             echo json_encode($result);
         }
     }
+
+    public function getStationName(Request $request)
+    {
+        header('Content-Type: application/json; charset=utf-8');
+        session_start();
+        $_SESSION['code'] = htmlspecialchars($_POST['code']);
+    }
+
+    public function returnStationName(Request $request)
+    {
+        header('Content-Type: application/json; charset=utf-8');
+        session_start();
+        $result = array(
+                'code' => $_SESSION['code'],
+            );
+        echo json_encode($result);
+    }
 }

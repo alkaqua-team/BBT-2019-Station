@@ -22,6 +22,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('station/update', ['uses' => 'StationController@update']);
     Route::post('station/checkTime', ['uses' => 'StationController@checkTime']);
     Route::post('station/checkOpenid', ['uses' => 'StationController@checkOpenid']);
+    Route::post('station/getStationName', ['uses' => 'StationController@getStationName']);
+    Route::post('station/returnStationName', ['uses' => 'StationController@returnStationName']);
 });
 Route::get('/', function () {
     return view('welcome');
