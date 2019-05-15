@@ -7,36 +7,34 @@ const height = document.documentElement.clientHeight;
 const width = document.documentElement.clientWidth;
 var color = "#F7A44F";
 var img = new Image();
+var draw = false;
 img.src = "../static/pictures/2-1.png";
 img.onload = function () {
     $(".svg").css("display", "block");
+    setTimeout(function(){
+        $(".svg").css("display","none");
+    },6000)
     listenToUser(canvas);
 }
 var colors = [
     "orange", "yellow", "green", "blue1", "blue2"
 ];
 
-function remove_border(arr) {
-    for (var i = 0; i < 5; i++) {
-        document.getElementById(arr[i]).style.border = "none";
-    }
-}
-
-function add_border(element) {
-    document.getElementById(element).style.border = "#F7D2AC solid 3pt";
-}
-
 $(function () {
     listenToUser(canvas);
     $(".svg").on("touchstart", function () {
         $(".svg").css("display", "none");
-        listenToUser(canvas)
+        listenToUser(canvas);
     })
     $("#canvas").on("touchstart", function () {
         $(".svg").css("display", "none");
     })
     $("#finish").click(function () {
+        if(draw == false){
+            alert("你还没有画画噢")
+        }else{
         window.location.href = "../html/success.html";
+        }
     })
     $("#orange").click(function () {
         color = "#F7A44F";
@@ -56,6 +54,7 @@ $(function () {
     $("#repaint").click(function (e) {
         e.preventDefault();
         ctx.clearRect(0, 0, width * 2, height * 2);
+        draw = false;
         listenToUser(canvas)
     })
 })
@@ -66,9 +65,8 @@ canvas.width = width;
 
 
 ctx.beginPath();
-var x = width;
-var y = height * 0.34
-var movey = height * 0.35;
+// var x = width;
+// var y = height * 0.34
 
 function listenToUser(canvas) {
     let painting = false;
@@ -80,6 +78,7 @@ function listenToUser(canvas) {
     if (document.body.ontouchstart !== undefined) { //两个表达式的类型不相同
         canvas.ontouchstart = function (e) {
             painting = true;
+            draw = true;
             let x = e.touches[0].clientX;
             let y = e.touches[0].lientY;
             ctx.rect(0.066 * width, 0.28 * height, width * 0.93, 0.41 * height);
@@ -109,6 +108,7 @@ function listenToUser(canvas) {
         canvas.ontouchend = function () {
             $(".container").css("position", "static");
             painting = false;
+            draw = true;
             canvas.ontouchstart = function () {};
         }
     } else {

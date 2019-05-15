@@ -69,6 +69,7 @@ input {
     margin: 5% auto;
     flex: 0 0 28.5px;
     margin-bottom: 10%;
+    text-align: center;
 }
 
 .add {
@@ -151,8 +152,10 @@ input {
 }
 
 .err {
-    margin-right: 16%;
+    margin-left: 0;
     display: block;
+    margin-top:1%;
+    margin-top: 5%;
 }
 
 ::-webkit-input-placeholder {

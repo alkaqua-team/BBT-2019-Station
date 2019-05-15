@@ -32,22 +32,22 @@ body {
     float: right;
 }
 .svg{
-    display: none;
     stroke: #a78e74;
     opacity: 0.5;
     position: absolute;
     top: 38%;
     left: 10%;
     stroke-linecap: round;
-    animation: lineMove 7s ease-in-out 0s infinite;
+    animation: lineMove 7s ease-in-out forwards;
 }
 @keyframes lineMove {
     0% {
-        stroke-dasharray: 0, 2000
+        stroke-dasharray: 0, 1500;
     }
 
     100% {
-        stroke-dasharray: 2000, 2000
+        stroke-dasharray: 1500, 1500;
+        display:none;
     }
 }
 
