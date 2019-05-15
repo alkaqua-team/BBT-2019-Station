@@ -27,7 +27,7 @@ $(function () {
             $(".tip").hide();
             $(".arrow").hide();
             $("#reduce2").toggleClass("reduce2");
-        }else{
+        } else {
             $("#add1").hide();
             $("#add2").hide();
             $(".tip").hide();
