@@ -18,7 +18,7 @@ $(function () {
                 var img = new Image();
                 img.src = dataUrl;
                 node.appendChild(img);
-                img.id = "img";
+                // img.id = "img";
                 img.onload = function () {
                     console.log(img.width + "----" + img.height);
                 };
