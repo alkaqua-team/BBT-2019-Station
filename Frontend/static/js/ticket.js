@@ -14,6 +14,8 @@ domtoimage.toPng(node)
         node.appendChild(img);
         img.onload = function () {
             $(".errmsg").show();
+            img.id = "img";
+            $("#img").css("opacity",0);
         };
     })
     .catch(function (error) {
