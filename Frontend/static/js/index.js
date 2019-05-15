@@ -13,30 +13,11 @@ $(function () {
         } else {
             $("#passager3").show();
             $("#add1").hide();
-            $("#add2").hide();
             $(".tip").hide();
             $(".arrow").hide();
-            $("#reduce2").toggleClass("reduce2");
-        }
-    })
-    $("#add2").click(function () {
-        if ($("#passager3").css("display") == "none") {
-            $("#passager3").show();
-            $("#add1").hide();
-            $("#add2").hide();
-            $(".tip").hide();
-            $(".arrow").hide();
-            $("#reduce2").toggleClass("reduce2");
-        } else {
-            $("#add1").hide();
-            $("#add2").hide();
-            $(".tip").hide();
-            $(".arrow").hide();
-            $("#reduce2").toggleClass("reduce2");
         }
     })
     $("#reduce2").click(function () {
-        $("#reduce2").removeClass("reduce2");
         $("#add1").show();
         $("#add2").show();
         $(".tip").show();
@@ -45,9 +26,8 @@ $(function () {
         $("#passager-name2").val("");
     });
     $("#reduce3").click(function () {
-        $("#reduce2").removeClass("reduce2");
         $("#passager3").hide();
-        $("#passager-name3").val(" ");
+        $("#passager-name3").val("");
         $("#add1").show();
         $("#add2").show();
         $(".tip").show();

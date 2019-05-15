@@ -85,8 +85,9 @@ input {
 }
 
 .reduce {
-    margin-left: 4%;
-    margin-right: 5%;
+    background-color: transparent;
+    margin-right: 16%;
+    margin-left: 0;
     float: right;
     border-radius: 50%;
     width: 23px;
@@ -134,7 +135,8 @@ input {
 #passager3 {
     display: none;
 }
-.reduce2{
+
+.reduce2 {
     margin-right: 16%;
     margin-left: 0;
     display: block;
@@ -147,7 +149,24 @@ input {
     background-repeat: no-repeat;
     outline: none;
 }
-.err{
+
+.err {
     margin-right: 16%;
     display: block;
+}
+
+::-webkit-input-placeholder {
+    opacity: 0.5;
+}
+
+:-moz-placeholder {
+    opacity: 0.5;
+}
+
+::-moz-placeholder {
+    opacity: 0.5;
+}
+
+:-ms-input-placeholder {
+    opacity: 0.5;
 }
