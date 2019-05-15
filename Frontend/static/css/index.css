@@ -62,20 +62,19 @@ input {
 .create {
     outline: none;
     height: 28.5px;
-    width:  115px;
+    width: 115px;
     background-color: #EA8C98;
     color: #EAEAEA;
     font-size: 15px;
     border-radius: 15px;
-    margin:5% auto;
+    margin: 5% auto;
     flex: 0 0 28.5px;
     margin-bottom: 10%;
 }
 
 .add {
-    /* margin-top: 1%; */
+    background-color: transparent;
     margin-left: 0;
-    margin-right:15%;
     float: right;
     border-radius: 50%;
     width: 23px;
@@ -87,9 +86,8 @@ input {
 }
 
 .reduce {
-    /* margin-top: 1%; */
-    margin-left: 0;
-    margin-right: 15%;
+    margin-left: 4%;
+    margin-right: 5%;
     float: right;
     border-radius: 50%;
     width: 23px;
@@ -99,14 +97,16 @@ input {
     background-repeat: no-repeat;
     outline: none;
 }
-.errmsg{
+
+.errmsg {
     height: 12px;
-    color:#DB4C4C;
+    color: #DB4C4C;
     font-size: 12px;
     flex: 0 0 16px;
     margin-left: 9%;
 }
-.tip{
+
+.tip {
     top: 18%;
     height: auto;
     position: absolute;
@@ -114,7 +114,8 @@ input {
     font-size: 10px;
     opacity: 0.6;
 }
-.arrow{
+
+.arrow {
     background-image: url(../pictures/4-2.jpg);
     background-repeat: no-repeat;
     background-size: contain;
@@ -124,7 +125,26 @@ input {
     right: 13%;
     top: 20%;
 }
-.mes{
+
+.mes {
     margin-bottom: 12%;
     height: 16%;
+}
+
+#passager2,
+#passager3 {
+    display: none;
+}
+.reduce2{
+    margin-right: 16%;
+    margin-left: 0;
+    display: block;
+    float: right;
+    border-radius: 50%;
+    width: 23px;
+    height: 23px;
+    background-image: url("../pictures/7-3.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    outline: none;
 }

@@ -4,19 +4,43 @@ var judge = new Array();
 const method1 = "/save/";
 const height = document.documentElement.clientHeight;
 const width = document.documentElement.clientWidth;
-$(".background").css("height",height);
-$(".background").css("width",width);
+$(".background").css("height", height);
+$(".background").css("width", width);
 $(function () {
-    $("#add").click(function () {
-        var add = "<div class='input-box' id='passager" + i + "'>乘客</br><input type='text' id='passager-name" +
-            i + "name='Station[passenger" + i + "]><div class='create-ticket reduce' id='reduce" + i + "' onclick='reduce(" + i + ")'></div></div><div class='errmsg' id='errmsg_passenger" + i + "'></div>";
-        if (i < 4) {
-            $("#errmsg_passenger" + (i - 1)).after(add)
-            i++;
+    $("#add1").click(function () {
+        if ($("#passager2").css("display") == "none") {
+            $("#passager2").show();
         } else {
+            $("#passager3").show();
+            $("#add1").hide();
+            $("#add2").hide();
+            $("#reduce2").toggleClass("reduce2");
         }
     })
-
+    $("#add2").click(function () {
+        if ($("#passager3").css("display") == "none") {
+            $("#passager3").show();
+            $("#add1").hide();
+            $("#add2").hide();
+            $("#reduce2").toggleClass("reduce2");
+        }else{
+            $("#add1").hide();
+            $("#add2").hide();
+            $("#reduce2").toggleClass("reduce2");
+        }
+    })
+    $("#reduce2").click(function () {
+        $("#add1").show();
+        $("#add2").show();
+        $("#reduce2").removeClass("reduce2");
+        $("#passager2").hide();
+    });
+    $("#reduce3").click(function () {
+        $("#reduce2").removeClass("reduce2");
+        $("#passager3").hide();
+        $("#add1").show();
+        $("#add2").show();
+    })
     $("#create-ticket").click(function () {
         //乘客信息填写
         passagers[0] = getval('passager-name1');
@@ -33,23 +57,23 @@ $(function () {
         //向后台传数据
         if (judge[0] && judge[1] && judge[2] && judge[3] && judge[4]) {
             var data = {
-                    "passenger1": passagers[0],
-                    "passenger2": passagers[1],
-                    "passenger3": passagers[2],
-                    "destination": destination,
-                    "comment": message,
+                "passenger1": passagers[0],
+                "passenger2": passagers[1],
+                "passenger3": passagers[2],
+                "destination": destination,
+                "comment": message,
             }
-            ticket(method1,data,function (res) {
-                    if (!res.errcode) {
-                        window.location.href = 'ticket.html';
-                    }
-                    else {
-                        $('#errmsg_back').html(res.errmsg);
-                    }
-                });
+            ticket(method1, data, function (res) {
+                if (!res.errcode) {
+                    window.location.href = 'ticket.html';
+                } else {
+                    $('#errmsg_back').html(res.errmsg);
+                }
+            });
         }
     })
 })
+
 function reduce(j) {
     if (j == 2) {
         if ($("#passager3").attr("id")) {
