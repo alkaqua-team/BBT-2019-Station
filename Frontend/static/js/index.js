@@ -14,6 +14,8 @@ $(function () {
             $("#passager3").show();
             $("#add1").hide();
             $("#add2").hide();
+            $(".tip").hide();
+            $(".arrow").hide();
             $("#reduce2").toggleClass("reduce2");
         }
     })
@@ -22,17 +24,23 @@ $(function () {
             $("#passager3").show();
             $("#add1").hide();
             $("#add2").hide();
+            $(".tip").hide();
+            $(".arrow").hide();
             $("#reduce2").toggleClass("reduce2");
         }else{
             $("#add1").hide();
             $("#add2").hide();
+            $(".tip").hide();
+            $(".arrow").hide();
             $("#reduce2").toggleClass("reduce2");
         }
     })
     $("#reduce2").click(function () {
+        $("#reduce2").removeClass("reduce2");
         $("#add1").show();
         $("#add2").show();
-        $("#reduce2").removeClass("reduce2");
+        $(".tip").show();
+        $(".arrow").show();
         $("#passager2").hide();
     });
     $("#reduce3").click(function () {
@@ -40,6 +48,8 @@ $(function () {
         $("#passager3").hide();
         $("#add1").show();
         $("#add2").show();
+        $(".tip").show();
+        $(".arrow").show();
     })
     $("#create-ticket").click(function () {
         //乘客信息填写

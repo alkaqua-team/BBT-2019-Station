@@ -80,8 +80,8 @@ body {
     border-radius: 15px;
     text-align:center;
     outline: none;
-    text-indent: 18px;
-    letter-spacing: 18px;
+    text-indent: 16px;
+    letter-spacing: 16px;
 }
 
 .repaint {
@@ -95,8 +95,8 @@ body {
     border-radius: 15px;
     text-align: center;
     outline: none;
-    letter-spacing: 18px;
-    text-indent: 18px;
+    letter-spacing: 16px;
+    text-indent: 16px;
 }
 
 button {
