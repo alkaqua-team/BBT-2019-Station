@@ -1,14 +1,7 @@
 const method = "/ticket/";
-$(function () {
-    $("#update").click(function () {
-        window.location.href = "update.html";
-    })
-    $("#return").click(function () {
-        window.location.href = "portal.html";
-    })
-    var canvas = document.getElementById("canvas");
-    canvas.height = height;
-    canvas.width = width;
+var img = new Image();
+img.src = "../static/pictures/1-1.png";
+img.onload = function () {
     $("#save").click(function () {
         var node = document.getElementById("container");
         domtoimage.toPng(node)
@@ -26,7 +19,17 @@ $(function () {
                 console.error('oops, something went wrong!', error);
             });
     })
-    
+}
+$(function () {
+    $("#update").click(function () {
+        window.location.href = "update.html";
+    })
+    $("#return").click(function () {
+        window.location.href = "portal.html";
+    })
+    var canvas = document.getElementById("canvas");
+    canvas.height = height;
+    canvas.width = width;    
     show(method, function (res) {
         var res1;
         if((typeof res=='object')&&res.constructor==Object){
