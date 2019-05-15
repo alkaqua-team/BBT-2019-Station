@@ -44,8 +44,8 @@ body {
 
 .cloud {
     background-repeat: no-repeat;
-    background-size: 90% 90%;
-    width: 90%;
+    background-size: 100% 100%;
+    width: 100%;
     height: 15%;
     display: none;
 }
@@ -62,7 +62,7 @@ body {
 #cloud2 {
     background-image: url("../pictures/1-4.png");
     position: relative;
-    top: 6%;
+    top: 16%;
     animation: slideInRight 7s forwards;
     left: 100%;
     overflow: hidden !important;

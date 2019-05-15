@@ -112,7 +112,7 @@ button {
     word-break: break-all;
     text-align: center;
 }
-#container{
+.container{
     background-image: url("../pictures/5-1.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;

@@ -1,6 +1,6 @@
 const method = "/ticket/";
 var img = new Image();
-img.src = "../static/pictures/1-1.png";
+img.src = "../static/pictures/5-1.png";
 img.onload = function () {
         var node = document.getElementById("container");
         domtoimage.toPng(node)
