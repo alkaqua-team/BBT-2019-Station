@@ -5,7 +5,7 @@ const method1 = "/save/";
 const height = document.documentElement.clientHeight;
 const width = document.documentElement.clientWidth;
 $(".background").css("height", height);
-$(".background").css("width", width);
+// $(".background").css("width", width);
 $(function () {
     $("#add1").click(function () {
         if ($("#passager2").css("display") == "none") {
