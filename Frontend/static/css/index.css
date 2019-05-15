@@ -148,3 +148,7 @@ input {
     background-repeat: no-repeat;
     outline: none;
 }
+.err{
+    margin-right: 16%;
+    display: block;
+}

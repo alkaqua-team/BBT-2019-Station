@@ -42,10 +42,12 @@ $(function () {
         $(".tip").show();
         $(".arrow").show();
         $("#passager2").hide();
+        $("#passager-name2").val("");
     });
     $("#reduce3").click(function () {
         $("#reduce2").removeClass("reduce2");
         $("#passager3").hide();
+        $("#passager-name3").val(" ");
         $("#add1").show();
         $("#add2").show();
         $(".tip").show();
