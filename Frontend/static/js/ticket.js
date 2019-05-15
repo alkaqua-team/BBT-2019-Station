@@ -1,4 +1,10 @@
 const method = "/ticket/";
+document.onselectstart = function(){
+    return false;
+}
+document.oncopy = function(){
+    return false;
+}
 window.onload = function(){
 var node = document.getElementById("container");
 domtoimage.toPng(node)
