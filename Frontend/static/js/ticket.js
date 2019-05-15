@@ -1,5 +1,3 @@
-// const width = document.documentElement.clientWidth;
-// const height = document.documentElement.clientHeight;
 const method = "/ticket/";
 $(function () {
     $("#update").click(function () {
@@ -18,9 +16,10 @@ $(function () {
                 var img = new Image();
                 img.src = dataUrl;
                 node.appendChild(img);
-                // img.id = "img";
                 img.onload = function () {
-                    console.log(img.width + "----" + img.height);
+                    $(".save").css("visibility","hidden")
+                    $(".errmsg").show();
+                    img.id = "img"
                 };
             })
             .catch(function (error) {

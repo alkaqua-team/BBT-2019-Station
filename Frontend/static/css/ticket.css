@@ -81,11 +81,9 @@ button {
     font-size: 11px;
     color: #FFFFFF;
     word-break: break-all;
-    /* background-color: aliceblue; */
 }
 
 .message-input {
-    /* background-color: aliceblue; */
     width: 64%;
     height: 8%;
     position: absolute;
@@ -96,7 +94,7 @@ button {
     word-break: break-all;
 }
 
-#save {
+.save {
     background-color: #EA8C98;
 }
 
@@ -122,4 +120,17 @@ button {
     background-image: url("../pictures/5-1.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+}
+#img{
+    position: absolute;
+    top:0;
+}
+.errmsg{
+    text-align: center;
+    color: #8B9EA5;
+    height: auto;
+    position: absolute;
+    bottom: 19%;
+    width: 100%;
+    display: none;
 }
