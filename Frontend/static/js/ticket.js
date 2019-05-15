@@ -2,7 +2,6 @@ const method = "/ticket/";
 var img = new Image();
 img.src = "../static/pictures/1-1.png";
 img.onload = function () {
-    $("#save").click(function () {
         var node = document.getElementById("container");
         domtoimage.toPng(node)
             .then(function (dataUrl) {
@@ -10,15 +9,12 @@ img.onload = function () {
                 img.src = dataUrl;
                 node.appendChild(img);
                 img.onload = function () {
-                    $(".save").css("visibility","hidden")
                     $(".errmsg").show();
-                    img.id = "img"
                 };
             })
             .catch(function (error) {
                 console.error('oops, something went wrong!', error);
             });
-    })
 }
 $(function () {
     $("#update").click(function () {
