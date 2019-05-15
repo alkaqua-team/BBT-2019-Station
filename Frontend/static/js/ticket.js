@@ -1,6 +1,6 @@
-const width = document.documentElement.clientWidth;
-const height = document.documentElement.clientHeight;
-const method = "/ticket/"
+// const width = document.documentElement.clientWidth;
+// const height = document.documentElement.clientHeight;
+const method = "/ticket/";
 $(function () {
     $("#update").click(function () {
         window.location.href = "update.html";

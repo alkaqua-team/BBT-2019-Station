@@ -27,7 +27,6 @@ function add_border(element) {
 }
 
 $(function () {
-
     listenToUser(canvas);
     $(".svg").on("touchstart", function () {
         $(".svg").css("display", "none");

@@ -111,14 +111,15 @@ button {
     background-color: #A2C0EA;
 }
 .station-name{
-    background-image: url("../pictures/5-2.png");
-    background-size: contain;
-    background-repeat: no-repeat;
     position: absolute;
     left: 37%;
     width: 12%;
     height:3%;
     top: 40%;
+    font-size: 13px;
+    color: #FFFFFF;
+    word-break: break-all;
+    text-align: center;
 }
 #img{
     height: 24%;
