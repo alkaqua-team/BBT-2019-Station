@@ -1,20 +1,18 @@
 const method = "/ticket/";
-var img = new Image();
-img.src = "../static/pictures/5-1.png";
-img.onload = function () {
-        var node = document.getElementById("container");
-        domtoimage.toPng(node)
-            .then(function (dataUrl) {
-                var img = new Image();
-                img.src = dataUrl;
-                node.appendChild(img);
-                img.onload = function () {
-                    $(".errmsg").show();
-                };
-            })
-            .catch(function (error) {
-                console.error('oops, something went wrong!', error);
-            });
+window.onload = function(){
+var node = document.getElementById("container");
+domtoimage.toPng(node)
+    .then(function (dataUrl) {
+        var img = new Image();
+        img.src = dataUrl;
+        node.appendChild(img);
+        img.onload = function () {
+            $(".errmsg").show();
+        };
+    })
+    .catch(function (error) {
+        console.error('oops, something went wrong!', error);
+    });
 }
 $(function () {
     $("#update").click(function () {
@@ -25,20 +23,20 @@ $(function () {
     })
     var canvas = document.getElementById("canvas");
     canvas.height = height;
-    canvas.width = width;    
+    canvas.width = width;
     show(method, function (res) {
         var res1;
-        if((typeof res=='object')&&res.constructor==Object){
-            res1=res;
-        }else{
-            res1  = eval("("+res+")");
+        if ((typeof res == 'object') && res.constructor == Object) {
+            res1 = res;
+        } else {
+            res1 = eval("(" + res + ")");
         }
         if (res1.errcode == 0) {
             $(".countPassagers").text("恭喜你成为第" + res1.num + "位搭上列车的乘客")
             $(".destination").text(res1.destination);
             $(".passager-name").text(res1.passenger1 + " " + res1.passenger2 + " " + res1.passenger3);
             $(".message-input").text(res1.comment)
-        }else{
+        } else {
             console.log("fails to get data.")
             console.log(res);
         }
