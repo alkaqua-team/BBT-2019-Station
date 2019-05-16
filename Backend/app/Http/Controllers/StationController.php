@@ -11,6 +11,7 @@ class StationController extends Controller
     {
         $timezone = 'Asia/Shanghai';
         date_default_timezone_set($timezone);
+        session_start();
         $passenger1 = $request->input('data.passenger1');
         $passenger2 = $request->input('data.passenger2');
         $passenger3 = $request->input('data.passenger3');
@@ -29,6 +30,7 @@ class StationController extends Controller
     {
         $timezone = 'Asia/Shanghai';
         date_default_timezone_set($timezone);
+        session_start();
         $passenger1 = $request->input('data.passenger1');
         $passenger2 = $request->input('data.passenger2');
         $passenger3 = $request->input('data.passenger3');
@@ -105,6 +107,7 @@ class StationController extends Controller
 
     public function checkOpenid(Request $request)
     {
+        session_start();
         $_SESSION['openid'] = 'wxlj';
         if (isset($_SESSION['openid'])) {
             return response()->json([
