@@ -18,7 +18,7 @@ class CreateStationTable extends Migration
             $table->string('passenger2', 10)->default('NULL');
             $table->string('passenger3', 10)->default('NULL');
             $table->string('destination', 20);
-            $table->text('comment');
+            $table->string('comment', 50);
             $table->time('created_at')->default('NULL');
             $table->time('updated_at')->default('NULL');
         });
