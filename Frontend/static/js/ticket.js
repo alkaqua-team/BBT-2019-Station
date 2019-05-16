@@ -29,9 +29,6 @@ $(function () {
     $("#return").click(function () {
         window.location.href = "portal.html";
     })
-    var canvas = document.getElementById("canvas");
-    canvas.height = height;
-    canvas.width = width;
     show(method, function (res) {
         var res1;
         if ((typeof res == 'object') && res.constructor == Object) {
@@ -40,6 +37,7 @@ $(function () {
             res1 = eval("(" + res + ")");
         }
         if (res1.errcode == 0) {
+            console.log(res1);
             $(".countPassagers").text("恭喜你成为第" + res1.num + "位搭上列车的乘客")
             $(".destination").text(res1.destination);
             $(".passager-name").text(res1.passenger1 + " " + res1.passenger2 + " " + res1.passenger3);
