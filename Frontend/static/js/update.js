@@ -1,4 +1,4 @@
-var passagers = new Array();
+var input = new Array();
 var judge = new Array();
 var inputbox = [
     "passager-name1", "passager-name2", "passager-name3", "destination", "message"
