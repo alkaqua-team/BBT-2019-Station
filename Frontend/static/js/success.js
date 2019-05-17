@@ -33,11 +33,7 @@ $(function () {
             "code": randomNum
         }
         ticketShow(savename, data, function () {
-            // if (res.errcode == 0) {
                 window.location.href = "./index.html";
-            // } else {
-                // alert("抱歉抱歉~请刷新重试噢~")
-            // }
         })
     })
     $("#reselect").click(function (e) {
