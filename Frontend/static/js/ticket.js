@@ -37,10 +37,10 @@ $(function () {
     //     console.log(res);
     //     $(".station-name").text(station[res.code]);
     // })
-    
+
     //展示信息
     show(ticket, function (res) {
-        var res1 =res;
+        var res1 = res;
         if (res1.errcode == 0) {
             console.log(res1);
             if (res1.passenger2 == null) {
