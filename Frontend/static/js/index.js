@@ -45,6 +45,7 @@ $(function () {
         }
         for (var i = 0; i < 5; i++) {
             judge[i] = checkinput(inputbox[i], errmsg[i], input[i]);
+            console.log(judge[i])
             console.log("loop again")
         }
         //向后台传数据
