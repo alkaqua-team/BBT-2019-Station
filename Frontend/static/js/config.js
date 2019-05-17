@@ -3,24 +3,20 @@ var Reg = /^(?:[\u4e00-\u9fa5]+)(?:·[\u4e00-\u9fa5]+)*$|^[a-zA-Z]+\s?[\.·\-()a
 function checkinput(display, id, errid, str) {
     console.log("enter")
     if (block(display)) {
-        console.log("block")
-        console.log(str.length)
         if (str.length != 0) {
-            console.log("length")
             if (!Reg.test(str)) {
                 $("#" + errid).text("只能包含中文或英文，中文中可以包含 · ，英文中可以包含 . · -");
                 $("#" + id).val(str);
                 return false;
             }
+            $("#"+errid).text("");
             return true;
         } else {
-            console.log("null")
             $("#" + errid).text("填写完才能提交噢");
             $("#" + id).val(str);
             return false;
         }
     } else {
-        console.log("wmbl")
         return true;
     }
 }
