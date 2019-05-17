@@ -41,26 +41,20 @@ $(function () {
     //展示信息
     show(ticket, function (res) {
         var res1 =res;
-        // if ((typeof res == 'object') && res.constructor == Object) {
-        //     res1 = res;
-        // } else {
-        //     res1 = eval("(" + res + ")");
-        // }
         if (res1.errcode == 0) {
             console.log(res1);
             if (res1.passenger2 == null) {
                 res1.passenger2 = "";
             }
             if (res1.passenger3 == null) {
-                res.passenger3 = "";
+                res1.passenger3 = "";
             }
             $(".countPassagers").text("恭喜你成为第" + res1.num + "位搭上列车的乘客")
             $(".destination").text(res1.destination);
             $(".passager-name").html(res1.passenger1 + "&nbsp" + res1.passenger2 + "&nbsp" + res1.passenger3);
             $(".message-input").text(res1.comment)
         } else {
-            console.log("fails to get data.")
-            console.log(res);
+            // console.log("fails to get data.")
         }
     })
 })
