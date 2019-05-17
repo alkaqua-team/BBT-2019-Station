@@ -7,7 +7,7 @@ const checktime = "/checkTime/";
 const checkid = "/checkOpenid/";
 const savename = "/getStationName/";
 const returnName = "returnStationName/";
-
+const state = "test";
 //post 带参数请求
 function ticketShow(method, data, fn) {
     $.ajax({
@@ -86,7 +86,7 @@ function checkId() {
         }
         if (res1.errcode == 540) {
             // 未授权 引导用户到认证页面
-            weixin(host + checkid, state)
+            //weixin(host + checkid, state)
             alert("未授权");
         }
         if (res1.errcode == 0) {

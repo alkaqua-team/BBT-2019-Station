@@ -2,7 +2,9 @@ const Reg = /^(?:[\u4e00-\u9fa5]+)(?:·[\u4e00-\u9fa5]+)*$|^[a-zA-Z]+\s?[\.·\-(
 
 function checkinput(id, errid, str) {
     if (block(id)) {
+        console.log("block")
         if (str.length != 0) {
+            console.log("length")
             if (!Reg.test(str)) {
                 document.getElementById(errid).text("只能包含中文或英文，中文中可以包含 · ，英文中可以包含 . · -");
                 document.getElementById(id).val(str);
@@ -10,6 +12,7 @@ function checkinput(id, errid, str) {
             }
             return true;
         } else {
+            console.log("null")
             document.getElementById(errid).text("填写完才能提交噢");
             document.getElementById(id).val(str);
             return false;
