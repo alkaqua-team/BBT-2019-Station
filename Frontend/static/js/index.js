@@ -6,6 +6,9 @@ var inputbox = [
 var errmsg = [
     "errmsg_passenger1", "errmsg_passenger2", "errmsg_passenger3", "errmsg_destination", "errmsg_comment"
 ];
+var checkdisplay = [
+    "passager1","passager2","passager3","destination","message"
+]
 const height = document.documentElement.clientHeight;
 const width = document.documentElement.clientWidth;
 $(".background").css("height", height);
@@ -44,7 +47,7 @@ $(function () {
             console.log("loop")
         }
         for (var i = 0; i < 5; i++) {
-            judge[i] = checkinput(inputbox[i], errmsg[i], input[i]);
+            judge[i] = checkinput(checkdisplay[i],inputbox[i], errmsg[i], input[i]);
             console.log(judge[i])
             console.log("loop again")
         }

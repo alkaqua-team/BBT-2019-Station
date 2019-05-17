@@ -1,9 +1,10 @@
 var Reg = /^(?:[\u4e00-\u9fa5]+)(?:·[\u4e00-\u9fa5]+)*$|^[a-zA-Z]+\s?[\.·\-()a-zA-Z]*[a-zA-Z]+$/;
 
-function checkinput(id, errid, str) {
+function checkinput(display,id, errid, str) {
     console.log("enter")
-    if (block(id)) {
+    if (block(display)) {
         console.log("block")
+        console.log(str.length)
         if (str.length != 0) {
             console.log("length")
             if (!Reg.test(str)) {
@@ -24,8 +25,8 @@ function checkinput(id, errid, str) {
     }
 }
 
-function block(id) {
-    if ($("#" + id).css("display") != "none") {
+function block(display) {
+    if ($("#" + display).css("display") != "none") {
         return true;
     } else {
         return false;
