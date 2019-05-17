@@ -32,7 +32,7 @@ $(function () {
         var data = {
             "code": randomNum
         }
-        ticketShow(savename, data, function (res) {
+        ticketShow("http://182.254.161.213/BBT-2019-Station/public/station/getStationName/", data, function (res) {
             // if (res.errcode == 0) {
                 window.location.href = "./index.html";
             // } else {
