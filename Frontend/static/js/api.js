@@ -8,6 +8,7 @@ const checkid = "/checkOpenid/";
 const savename = "/getStationName/";
 const returnName = "returnStationName/";
 
+//post 带参数请求
 function ticketShow(method, data, fn) {
     $.ajax({
         type: "POST",
@@ -26,6 +27,7 @@ function ticketShow(method, data, fn) {
     })
 }
 
+//post 不带参数请求
 function show(method, fn) {
     $.ajax({
         type: "POST",
@@ -42,14 +44,15 @@ function show(method, fn) {
     })
 }
 
-function weixin(redirect,state,fn){
+//微信授权接口跳转（redirect由后端提供）
+function weixin(redirect,state){
     $.ajax({
         type:"GET",
         url:"https://hemc.100steps.net/2018/fireman/auth.php?redirect=" + redirect + "&state=" + state,
-        success:fn,
     })
 }
 
+//检查是否在活动时间（true  在活动时间内）
 function checkTime(){
         show(checktime, function (res) {
         var res1;
@@ -61,19 +64,19 @@ function checkTime(){
         if (res1.errcode == 440) {
             //活动还未开始
             window.location.href = "../html/checktime.html";    
-           // return false;
         }
         if(res1.errcode== 441){
             //活动已经结束
             window.location.href = "../html/checktime.html";
-           // return false;
         }
         if (res1.errcode == 0) {
             return true;
         }
         })
 }
-function check(){
+
+//检查是否有openid
+function checkId(){
             show(checkid, function (res) {
                 var res1;
                 if ((typeof res == 'object') && res.constructor == Object) {
@@ -82,12 +85,9 @@ function check(){
                     res1 = eval("(" + res + ")");
                 }
                 if (res1.errcode == 540) {
-                    //未授权 引导用户到认证页面
-                    // weixin(redirect,state,function(){
-                    //     //这还没好
-                    // })
+                    // 未授权 引导用户到认证页面
+                    // weixin(redirect,state)
                     alert("未授权");
-                    return false;
                 }
                 if(res1.errcode == 0){
                     return true;
