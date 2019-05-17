@@ -71,7 +71,7 @@ $(function () {
                 "destination": input[3],
                 "comment": input[4],
             }
-            ticket(modify, data, function (res) {
+            ticketShow(modify, data, function (res) {
                 if (!res.errcode) {
                     window.location.href = 'ticket.html';
                 } else {
