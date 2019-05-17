@@ -49,10 +49,14 @@ $(function () {
             if (res1.passenger3 == null) {
                 res1.passenger3 = "";
             }
-            $(".countPassagers").text("恭喜你成为第" + res1.num + "位搭上列车的乘客")
+            $(".countPassagers").text("恭喜你成为第" + res1.num + "位搭上列车的乘客");
+            $(".countPassagers").css("display","block");
             $(".destination").text(res1.destination);
+            $(".destination").css("display","block");
             $(".passager-name").html(res1.passenger1 + "&nbsp" + res1.passenger2 + "&nbsp" + res1.passenger3);
             $(".message-input").text(res1.comment)
+            $(".passager-name").css("display","block");
+            $(".message-input").css("display","block");
         } else {
             // console.log("fails to get data.")
         }
