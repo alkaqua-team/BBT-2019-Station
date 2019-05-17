@@ -9,7 +9,7 @@ function checkinput(display, id, errid, str) {
                 $("#" + id).val(str);
                 return false;
             }
-            $("#"+errid).text("");
+            $("#" + errid).text("");
             return true;
         } else {
             $("#" + errid).text("填写完才能提交噢");
@@ -35,4 +35,14 @@ function getval(str) {
         string = string.value.trim();
         return string;
     } else return '';
+}
+
+function typechange(res) {
+    var res1;
+    if ((typeof res == 'object') && res.constructor == Object) {
+        res1 = res;
+    } else {
+        res1 = eval("(" + res + ")");
+    }
+    return res1;
 }
