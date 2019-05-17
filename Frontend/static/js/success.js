@@ -32,7 +32,7 @@ $(function () {
         var data = {
             "code": randomNum
         }
-        ticketShow(savename, data, function (res) {
+        ticketShow(savename, data, function () {
             // if (res.errcode == 0) {
                 window.location.href = "./index.html";
             // } else {
