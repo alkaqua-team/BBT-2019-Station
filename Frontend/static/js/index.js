@@ -1,11 +1,15 @@
 var i = 2;
 var passagers = new Array();
 var judge = new Array();
-const method1 = "/save/";
+const checktime = "/checkTime/";
+const save = "/save/";
 const height = document.documentElement.clientHeight;
 const width = document.documentElement.clientWidth;
 $(".background").css("height", height);
 $(function () {
+    show(checktime,function(res){
+        
+    })
     $("#add1").click(function () {
         if ($("#passager2").css("display") == "none") {
             $("#passager2").show();
@@ -54,7 +58,7 @@ $(function () {
                 "destination": destination,
                 "comment": message,
             }
-            ticket(method1, data, function (res) {
+            ticket(save, data, function (res) {
                 if (!res.errcode) {
                     window.location.href = 'ticket.html';
                 } else {
