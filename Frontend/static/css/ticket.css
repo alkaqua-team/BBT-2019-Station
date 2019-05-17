@@ -9,10 +9,6 @@
     user-select: none；
 }
 
-.canvas {
-    display: flex;
-}
-
 .buttons {
     height: 0;
     display: flex;
@@ -41,6 +37,7 @@ button {
     left: 10%;
     top: 39.5%;
     overflow: hidden;
+    z-index: 233;
 }
 
 .destination {
