@@ -40,12 +40,12 @@ $(function () {
     
     //展示信息
     show(ticket, function (res) {
-        var res1;
-        if ((typeof res == 'object') && res.constructor == Object) {
-            res1 = res;
-        } else {
-            res1 = eval("(" + res + ")");
-        }
+        var res1 =res;
+        // if ((typeof res == 'object') && res.constructor == Object) {
+        //     res1 = res;
+        // } else {
+        //     res1 = eval("(" + res + ")");
+        // }
         if (res1.errcode == 0) {
             console.log(res1);
             if (res1.passenger2 == null) {
