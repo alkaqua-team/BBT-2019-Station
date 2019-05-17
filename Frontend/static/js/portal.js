@@ -23,7 +23,6 @@ $(function () {
         }
         if (res1.errcode == 440) {
             window.location.href = "../../html/checktime.html";
-        }
         if(res1.errcode== 441){
             window.location.href = "#"
         }

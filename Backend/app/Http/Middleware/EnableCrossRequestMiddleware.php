@@ -19,7 +19,7 @@ class EnableCrossRequestMiddleware
         $response = $next($request);
         $origin = $request->server('HTTP_ORIGIN') ? $request->server('HTTP_ORIGIN') : '';
         $allow_origin = [
-            'http://134.175.124.192/',
+            'http://134.175.124.192',
         ];
         if (in_array($origin, $allow_origin)) {
             $response->header('Access-Control-Allow-Origin', $origin);
