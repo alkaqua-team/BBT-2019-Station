@@ -7,15 +7,15 @@ function checkinput(id, errid, str) {
         if (str.length != 0) {
             console.log("length")
             if (!Reg.test(str)) {
-                document.getElementById(errid).text("只能包含中文或英文，中文中可以包含 · ，英文中可以包含 . · -");
-                document.getElementById(id).val(str);
+                $("#"+errid).text("只能包含中文或英文，中文中可以包含 · ，英文中可以包含 . · -");
+                $("#"+id).val(str);
                 return false;
             }
             return true;
         } else {
             console.log("null")
-            document.getElementById(errid).text("填写完才能提交噢");
-            document.getElementById(id).val(str);
+            $("#"+errid).text("填写完才能提交噢");
+            $("#"+id).val(str);
             return false;
         }
     } else {
