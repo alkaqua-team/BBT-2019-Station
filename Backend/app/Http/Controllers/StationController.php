@@ -11,13 +11,12 @@ class StationController extends Controller
     {
         $timezone = 'Asia/Shanghai';
         date_default_timezone_set($timezone);
-        session_start();
-        $passenger1 = $request->input('data.passenger1');
-        $passenger2 = $request->input('data.passenger2');
-        $passenger3 = $request->input('data.passenger3');
-        $destination = $request->input('data.destination');
-        $comment = $request->input('data.comment');
-        $key = DB::table('station')->insertGetId(['openid' => $_SESSION['openid'], 'passenger1' => $passenger1, 'passenger2' => $passenger2, 'passenger3' => $passenger3,
+        $passenger1 = $request->input('passenger1');
+        $passenger2 = $request->input('passenger2');
+        $passenger3 = $request->input('passenger3');
+        $destination = $request->input('destination');
+        $comment = $request->input('comment');
+        $key = DB::table('station')->insertGetId(['openid' => session()->get('openid'), 'passenger1' => $passenger1, 'passenger2' => $passenger2, 'passenger3' => $passenger3,
         'destination' => $destination, 'comment' => $comment, 'created_at' => now(), ]);
         session()->put('id', $key);
 
@@ -30,14 +29,13 @@ class StationController extends Controller
     {
         $timezone = 'Asia/Shanghai';
         date_default_timezone_set($timezone);
-        session_start();
-        $passenger1 = $request->input('data.passenger1');
-        $passenger2 = $request->input('data.passenger2');
-        $passenger3 = $request->input('data.passenger3');
-        $destination = $request->input('data.destination');
-        $comment = $request->input('data.comment');
+        $passenger1 = $request->input('passenger1');
+        $passenger2 = $request->input('passenger2');
+        $passenger3 = $request->input('passenger3');
+        $destination = $request->input('destination');
+        $comment = $request->input('comment');
         DB::table('station')->where('id', session()->get('id'))->update(
-            ['openid' => $_SESSION['openid'], 'passenger1' => $passenger1, 'passenger2' => $passenger2, 'passenger3' => $passenger3, 'destination' => $destination, 'comment' => $comment, 'updated_at' => now()]
+            ['openid' => session()->get('openid'), 'passenger1' => $passenger1, 'passenger2' => $passenger2, 'passenger3' => $passenger3, 'destination' => $destination, 'comment' => $comment, 'updated_at' => now()]
         );
 
         return response()->json([
@@ -107,24 +105,37 @@ class StationController extends Controller
 
     public function checkOpenid(Request $request)
     {
-        session_start();
-        $_SESSION['openid'] = 'wxlj';
-        if (isset($_SESSION['openid'])) {
-            return response()->json([
+        if ($request->isMethod('post')) {
+            if ($request->session()->has('openid')) {
+                return response()->json([
                 'errcode' => 0,
                 'errmsg' => '已授权',
             ]);
-        } else {
-            return response()->json([
+            } else {
+                return response()->json([
                 'errcode' => 540,
                 'errmsg' => '未授权',
             ]);
+            }
+        }
+        if ($request->isMethod('get')) {
+            $params = $request->all();
+            $token = $params['token'];
+            $sign = $params['sign'];
+            $origin_token = $token;
+            $token = json_decode(base64_decode($token), true);
+            if (md5(sha1($origin_token.'')) !== $sign || empty($token['openid'])) {
+                return redirect('http://182.254.161.213/BBT-2019-Station/Frontend/html/index.html');
+            }
+            $request->session()->put('openid', $token['openid']);
+
+            return redirect('http://182.254.161.213/BBT-2019-Station/Frontend/html/index.html');
         }
     }
 
     public function getStationName(Request $request)
     {
-        session()->put('code', $request->input('data.code'));
+        session()->put('code', $request->input('code'));
     }
 
     public function returnStationName(Request $request)
