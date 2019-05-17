@@ -65,8 +65,6 @@ canvas.width = width;
 
 
 ctx.beginPath();
-// var x = width;
-// var y = height * 0.34
 
 function listenToUser(canvas) {
     let painting = false;

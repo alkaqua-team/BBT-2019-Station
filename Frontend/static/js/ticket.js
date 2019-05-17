@@ -28,6 +28,9 @@ $(function () {
     $("#return").click(function () {
         window.location.href = "portal.html";
     })
+    show(returnName,function(res){
+        console.log(res);
+    })
     show(ticket, function (res) {
         var res1;
         if ((typeof res == 'object') && res.constructor == Object) {
