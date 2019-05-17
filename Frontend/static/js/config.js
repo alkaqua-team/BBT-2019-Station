@@ -25,7 +25,7 @@ function checkinput(id, errid, str) {
 }
 
 function block(id) {
-    if ($("#" + id).css("display") == "static") {
+    if ($("#" + id).css("display") != "none") {
         return true;
     } else {
         return false;
