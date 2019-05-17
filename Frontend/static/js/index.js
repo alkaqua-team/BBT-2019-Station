@@ -51,6 +51,7 @@ $(function () {
             console.log(judge[i])
             console.log("loop again")
         }
+        
         //向后台传数据
         if (judge[0] && judge[1] && judge[2] && judge[3] && judge[4]) {
             var data = {

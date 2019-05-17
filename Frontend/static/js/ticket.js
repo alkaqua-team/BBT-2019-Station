@@ -1,3 +1,6 @@
+var station = [
+    "秀发号", "满绩号", "暴富号", "超越号", "托单号"
+]
 document.onselectstart = function () {
     return false;
 }
@@ -28,9 +31,14 @@ $(function () {
     $("#return").click(function () {
         window.location.href = "portal.html";
     })
-    show(returnName,function(res){
-        console.log(res);
-    })
+
+    // //返回列车号（还没测试 可能有bug）
+    // show(returnName, function (res) {
+    //     console.log(res);
+    //     $(".station-name").text(station[res.code]);
+    // })
+    
+    //展示信息
     show(ticket, function (res) {
         var res1;
         if ((typeof res == 'object') && res.constructor == Object) {
