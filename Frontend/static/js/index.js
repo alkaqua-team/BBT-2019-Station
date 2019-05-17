@@ -1,15 +1,15 @@
 var i = 2;
 var passagers = new Array();
 var judge = new Array();
-const checktime = "/checkTime/";
-const save = "/save/";
 const height = document.documentElement.clientHeight;
 const width = document.documentElement.clientWidth;
 $(".background").css("height", height);
 $(function () {
-    show(checktime,function(res){
-        
-    })
+    if(checkTime()==true){
+        alert("成功")
+    }else{
+       //console.log(res1.errmsg);
+    }
     $("#add1").click(function () {
         if ($("#passager2").css("display") == "none") {
             $("#passager2").show();
@@ -58,7 +58,7 @@ $(function () {
                 "destination": destination,
                 "comment": message,
             }
-            ticket(save, data, function (res) {
+            ticketShow(save, data, function (res) {
                 if (!res.errcode) {
                     window.location.href = 'ticket.html';
                 } else {
