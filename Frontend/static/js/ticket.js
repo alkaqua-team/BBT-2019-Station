@@ -54,7 +54,7 @@ $(function () {
             if (res1.passenger3 == null) {
                 res.passenger3 = "";
             }
-            $(".countPassagers").text("恭喜你成为第" + res1.num + "位搭上列车的乘客")
+            $(".countPassagers").append("恭喜你成为第" + res1.num + "位搭上列车的乘客")
             $(".destination").text(res1.destination);
             $(".passager-name").html(res1.passenger1 + "&nbsp" + res1.passenger2 + "&nbsp" + res1.passenger3);
             $(".message-input").text(res1.comment)
