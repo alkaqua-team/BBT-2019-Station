@@ -41,9 +41,11 @@ $(function () {
         //乘客信息填写
         for (var i = 0; i < 5; i++) {
             input[i] = getval(inputbox[i]);
+            console.log("loop")
         }
         for (var i = 0; i < 5; i++) {
             judge[i] = checkinput(inputbox[i], errmsg[i], input[i]);
+            console.log("loop again")
         }
         //向后台传数据
         if (judge[0] && judge[1] && judge[2] && judge[3] && judge[4]) {
@@ -61,6 +63,8 @@ $(function () {
                     $('#errmsg_back').html(res.errmsg);
                 }
             });
+        }else{
+            console.log("error")
         }
     })
 
