@@ -19,6 +19,7 @@ function checkinput(id, errid, str) {
             return false;
         }
     } else {
+        console.log("wmbl")
         return true;
     }
 }
