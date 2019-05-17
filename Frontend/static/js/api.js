@@ -45,16 +45,16 @@ function show(method, fn) {
 }
 
 //微信授权接口跳转（redirect由后端提供）
-function weixin(redirect,state){
+function weixin(redirect, state) {
     $.ajax({
-        type:"GET",
-        url:"https://hemc.100steps.net/2018/fireman/auth.php?redirect=" + redirect + "&state=" + state,
+        type: "GET",
+        url: "https://hemc.100steps.net/2018/fireman/auth.php?redirect=" + redirect + "&state=" + state,
     })
 }
 
 //检查是否在活动时间（true  在活动时间内）
-function checkTime(){
-        show(checktime, function (res) {
+function checkTime() {
+    show(checktime, function (res) {
         var res1;
         if ((typeof res == 'object') && res.constructor == Object) {
             res1 = res;
@@ -63,34 +63,34 @@ function checkTime(){
         }
         if (res1.errcode == 440) {
             //活动还未开始
-            window.location.href = "../html/checktime.html";    
+            window.location.href = "../html/checktime.html";
         }
-        if(res1.errcode== 441){
+        if (res1.errcode == 441) {
             //活动已经结束
             window.location.href = "../html/checktime.html";
         }
         if (res1.errcode == 0) {
             return true;
         }
-        })
+    })
 }
 
 //检查是否有openid
-function checkId(){
-            show(checkid, function (res) {
-                var res1;
-                if ((typeof res == 'object') && res.constructor == Object) {
-                    res1 = res;
-                } else {
-                    res1 = eval("(" + res + ")");
-                }
-                if (res1.errcode == 540) {
-                    // 未授权 引导用户到认证页面
-                    // weixin(redirect,state)
-                    alert("未授权");
-                }
-                if(res1.errcode == 0){
-                    return true;
-                }
-            })
-    }
+function checkId() {
+    show(checkid, function (res) {
+        var res1;
+        if ((typeof res == 'object') && res.constructor == Object) {
+            res1 = res;
+        } else {
+            res1 = eval("(" + res + ")");
+        }
+        if (res1.errcode == 540) {
+            // 未授权 引导用户到认证页面
+            weixin(host + checkid, state)
+            alert("未授权");
+        }
+        if (res1.errcode == 0) {
+            return true;
+        }
+    })
+}
