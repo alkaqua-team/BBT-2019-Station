@@ -11,9 +11,9 @@ var draw = false;
 img.src = "../static/pictures/2-1.png";
 img.onload = function () {
     $(".svg").css("display", "block");
-    setTimeout(function(){
-        $(".svg").css("display","none");
-    },6000)
+    setTimeout(function () {
+        $(".svg").css("display", "none");
+    }, 6000)
     listenToUser(canvas);
 }
 var colors = [
@@ -30,10 +30,10 @@ $(function () {
         $(".svg").css("display", "none");
     })
     $("#finish").click(function () {
-        if(draw == false){
+        if (draw == false) {
             alert("你还没有画画噢")
-        }else{
-        window.location.href = "../html/success.html";
+        } else {
+            window.location.href = "../html/success.html";
         }
     })
     $("#orange").click(function () {
@@ -86,9 +86,6 @@ function listenToUser(canvas) {
                 "x": x,
                 "y": y
             };
-            if(x>0.996*width||x<0.066*width||y<0.28*height||y>0.69*height){
-                alert("你出界了")
-            }
             ctx.save();
             drawCircle(x, y, 0);
         };
@@ -97,6 +94,9 @@ function listenToUser(canvas) {
             if (painting) {
                 let x = e.touches[0].clientX;
                 let y = e.touches[0].clientY;
+                if (x > 0.996 * width || x < 0.066 * width || y < 0.28 * height || y > 0.69 * height) {
+                    alert("你出界了")
+                }
                 let newPoint = {
                     "x": x,
                     "y": y
