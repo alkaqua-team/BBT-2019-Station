@@ -1,26 +1,25 @@
-const method = "/ticket/";
-document.onselectstart = function(){
+document.onselectstart = function () {
     return false;
 }
-document.oncopy = function(){
+document.oncopy = function () {
     return false;
 }
-window.onload = function(){
-var node = document.getElementById("container");
-domtoimage.toPng(node)
-    .then(function (dataUrl) {
-        var img = new Image();
-        img.src = dataUrl;
-        node.appendChild(img);
-        img.onload = function () {
-            $(".errmsg").show();
-            img.id = "img";
-            $("#img").css("opacity",0);
-        };
-    })
-    .catch(function (error) {
-        console.error('oops, something went wrong!', error);
-    });
+window.onload = function () {
+    var node = document.getElementById("container");
+    domtoimage.toPng(node)
+        .then(function (dataUrl) {
+            var img = new Image();
+            img.src = dataUrl;
+            node.appendChild(img);
+            img.onload = function () {
+                $(".errmsg").show();
+                img.id = "img";
+                $("#img").css("opacity", 0);
+            };
+        })
+        .catch(function (error) {
+            console.error('oops, something went wrong!', error);
+        });
 }
 $(function () {
     $("#update").click(function () {
@@ -29,7 +28,7 @@ $(function () {
     $("#return").click(function () {
         window.location.href = "portal.html";
     })
-    show(method, function (res) {
+    show(ticket, function (res) {
         var res1;
         if ((typeof res == 'object') && res.constructor == Object) {
             res1 = res;
@@ -38,6 +37,12 @@ $(function () {
         }
         if (res1.errcode == 0) {
             console.log(res1);
+            if (res1.passenger2 == null) {
+                res1.passenger2 = "";
+            }
+            if (res1.passenger3 == null) {
+                res.passenger3 = "";
+            }
             $(".countPassagers").text("恭喜你成为第" + res1.num + "位搭上列车的乘客")
             $(".destination").text(res1.destination);
             $(".passager-name").html(res1.passenger1 + "&nbsp" + res1.passenger2 + "&nbsp" + res1.passenger3);
