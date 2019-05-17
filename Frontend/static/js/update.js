@@ -12,6 +12,32 @@ var checkdisplay = [
 
 
 $(function () {
+    $("#add1").click(function () {
+        if (block("passager2") == true) {
+            $("#passager3").show();
+            $("#add1").hide();
+            $(".tip").hide();
+            $(".arrow").hide();
+        } else {
+            $("#passager2").show();
+        }
+    })
+    $("#reduce2").click(function () {
+        $("#add1").show();
+        $("#add2").show();
+        $(".tip").show();
+        $(".arrow").show();
+        $("#passager2").hide();
+        $("#passager-name2").val("");
+    });
+    $("#reduce3").click(function () {
+        $("#passager3").hide();
+        $("#passager-name3").val("");
+        $("#add1").show();
+        $("#add2").show();
+        $(".tip").show();
+        $(".arrow").show();
+    })
     show(update, function (res) {
         var res1 = typechange(res);
         if (res1.errcode == 0) {
