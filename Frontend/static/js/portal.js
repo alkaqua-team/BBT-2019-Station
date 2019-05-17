@@ -22,7 +22,7 @@ $(function () {
             res1 = eval("(" + res + ")");
         }
         if (res1.errcode == 440) {
-            window.location.href = "../../html/checktime.html";
+            window.location.href = "../../html/checktime.html";}
         if(res1.errcode== 441){
             window.location.href = "#"
         }
