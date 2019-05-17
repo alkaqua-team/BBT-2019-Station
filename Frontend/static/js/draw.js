@@ -96,6 +96,9 @@ function listenToUser(canvas) {
                 let y = e.touches[0].clientY;
                 if (x > 0.996 * width || x < 0.066 * width || y < 0.28 * height || y > 0.69 * height) {
                     alert("你出界了")
+                    ctx.clearRect(0, 0, width * 2, height * 2);
+                    draw = false;
+                    listenToUser(canvas)            
                 }
                 let newPoint = {
                     "x": x,
