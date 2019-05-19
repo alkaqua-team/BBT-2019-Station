@@ -13,11 +13,11 @@ var pic2 = [
     "../static/pictures/3-11.png",
 ]
 
-//随机生成0-3的数字（用于随机生成图片）
+//随机生成0-6的数字（用于随机生成图片）
 function randomNumber(max) {
     return Math.floor(Math.random() * Math.floor(max));
 }
-var randomNum = randomNumber(5);
+var randomNum = randomNumber(7);
 //传列车号
 var data = {
     "code": randomNum

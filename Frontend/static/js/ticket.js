@@ -1,5 +1,5 @@
 var station = [
-    "秀发号", "满绩号", "暴富号", "超越号", "托单号"
+    "秀发号", "满绩号", "暴富号", "超越号", "脱单号","吃鸡号","暴瘦号"
 ]
 document.onselectstart = function () {
     return false;
