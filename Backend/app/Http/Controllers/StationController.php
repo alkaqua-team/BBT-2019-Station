@@ -9,6 +9,7 @@ class StationController extends Controller
 {
     public function save(Request $request)
     {
+        session()->put('openid', 'wxlj');
         $timezone = 'Asia/Shanghai';
         date_default_timezone_set($timezone);
         $passenger1 = $request->input('passenger1');
@@ -19,6 +20,8 @@ class StationController extends Controller
         $key = DB::table('station')->insertGetId(['openid' => session()->get('openid'), 'passenger1' => $passenger1, 'passenger2' => $passenger2, 'passenger3' => $passenger3,
         'destination' => $destination, 'comment' => $comment, 'created_at' => now(), ]);
         session()->put('id', $key);
+        session_start();
+        $_SESSION['id'] = $key;
 
         return response()->json([
             'errcode' => 0,
@@ -136,6 +139,8 @@ class StationController extends Controller
     public function getStationName(Request $request)
     {
         session()->put('code', $request->input('code'));
+        session_start();
+        $_SESSION['code'] = $request->input('code');
     }
 
     public function returnStationName(Request $request)
