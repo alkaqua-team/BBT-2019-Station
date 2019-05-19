@@ -9,7 +9,7 @@ document.oncopy = function () {
 }
 window.onload = function () {
     var node = document.getElementById("container");
-    domtoimage.toPng(node)
+        domtoimage.toPng(node)
         .then(function (dataUrl) {
             console.log(dataUrl)
             var img = new Image();
