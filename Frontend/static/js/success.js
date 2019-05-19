@@ -33,6 +33,7 @@ $(function () {
             "code": randomNum
         }
         ticketShow(savename, data, function () {
+            console.log("have it");
             window.location.href = "./index.html";
         })
     })
