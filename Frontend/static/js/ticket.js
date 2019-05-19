@@ -9,7 +9,6 @@ document.oncopy = function () {
 }
 window.onload = function () {
     var node = document.getElementById("container");
-    setTimeout( function(){
     domtoimage.toPng(node)
         .then(function (dataUrl) {
             console.log(dataUrl)
@@ -25,7 +24,6 @@ window.onload = function () {
         .catch(function (error) {
             console.error('oops, something went wrong!', error);
         });
-    }, 3000)
 }
 $(function () {
     $("#update").click(function () {
