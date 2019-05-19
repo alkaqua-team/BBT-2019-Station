@@ -87,12 +87,12 @@ function listenToUser(canvas) {
             let x = e.touches[0].clientX;
             let y = e.touches[0].lientY;
 
-            if(x<0.066*width||x>0.996*width||y<0.28*height||y>0.69*height){
+            if(y<0.28*height||y>0.69*height){
                 alert("你出界了噢")
-                ctx.clearRect(0, 0, width * 2, height * 2);
+                // ctx.clearRect(0, 0, width * 2, height * 2);
+                painting = false;
                 draw = false;
                 listenToUser(canvas)        
-
             }
             //截取绘图区域
             ctx.rect(0.066 * width, 0.28 * height, width * 0.93, 0.41 * height);
