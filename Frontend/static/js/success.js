@@ -22,10 +22,6 @@ var randomNum = randomNumber(5);
 var data = {
     "code": randomNum
 }
-ticketShow(savename, data, function (res) {
-    console.log(res);
-    console.log("have it");
-})
 var img = new Image();
 img.src = "../static/pictures/3-1.png";
 img.onload = function () {
@@ -34,6 +30,10 @@ img.onload = function () {
     $(".buttons").css("display", "flex")
 }
 $(function () {
+    ticketShow(savename, data, function (res) {
+        console.log(res);
+        console.log("have it");
+    })
     $("#write-information").click(function () {
         window.location.href = "./index.html";
     })
