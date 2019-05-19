@@ -1,11 +1,14 @@
+//阻止微信橡皮筋效果
 document.body.addEventListener('touchmove', function (e) {
     e.preventDefault();
 }, {
     passive: false
 });
+//设置高宽、默认颜色
 const height = document.documentElement.clientHeight;
 const width = document.documentElement.clientWidth;
 var color = "#F7A44F";
+
 var img = new Image();
 var draw = false;
 img.src = "../static/pictures/2-1.png";
@@ -21,7 +24,7 @@ var colors = [
 ];
 
 $(function () {
-    listenToUser(canvas);
+    //listenToUser(canvas);
     $(".svg").on("touchstart", function () {
         $(".svg").css("display", "none");
         listenToUser(canvas);
@@ -36,6 +39,7 @@ $(function () {
             window.location.href = "../html/success.html";
         }
     })
+    //设置画笔颜色
     $("#orange").click(function () {
         color = "#F7A44F";
     })
@@ -51,6 +55,7 @@ $(function () {
     $("#blue2").click(function () {
         color = "#4C68F1";
     })
+    //重画
     $("#repaint").click(function (e) {
         e.preventDefault();
         ctx.clearRect(0, 0, width * 2, height * 2);
@@ -58,6 +63,7 @@ $(function () {
         listenToUser(canvas)
     })
 })
+
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 canvas.height = height;
@@ -67,6 +73,7 @@ canvas.width = width;
 ctx.beginPath();
 
 function listenToUser(canvas) {
+    //设置x,y
     let painting = false;
     let lastPoint = {
         "x": undefined,
@@ -79,6 +86,15 @@ function listenToUser(canvas) {
             draw = true;
             let x = e.touches[0].clientX;
             let y = e.touches[0].lientY;
+
+            if(x<0.066*width||x>0.996*width||y<0.28*height||y>0.69*height){
+                alert("你出界了噢")
+                ctx.clearRect(0, 0, width * 2, height * 2);
+                draw = false;
+                listenToUser(canvas)        
+
+            }
+            //截取绘图区域
             ctx.rect(0.066 * width, 0.28 * height, width * 0.93, 0.41 * height);
             ctx.strokeStyle = color;
             ctx.clip()
@@ -91,6 +107,7 @@ function listenToUser(canvas) {
         };
         canvas.ontouchmove = function (e) {
             $(".container").css("position", "fixed");
+            //如果为true 画画
             if (painting) {
                 let x = e.touches[0].clientX;
                 let y = e.touches[0].clientY;
@@ -98,6 +115,7 @@ function listenToUser(canvas) {
                     "x": x,
                     "y": y
                 };
+                //画出线条
                 drawLine(lastPoint.x, lastPoint.y, newPoint.x, newPoint.y);
                 lastPoint = newPoint;
             }
@@ -109,44 +127,45 @@ function listenToUser(canvas) {
             draw = true;
             canvas.ontouchstart = function () {};
         }
-    } else {
-        canvas.onmousedown = function (e) {
-            painting = true;
-            let x = e.clientX;
-            let y = e.clientY;
-            lastPoint = {
-                "x": x,
-                "y": y
-            };
-            ctx.save();
-            drawCircle(x, y, 0);
-        };
-        canvas.onmousemove = function (e) {
-            $(".container").css("position", "fixed");
-            if (painting) {
-                let x = e.clientX;
-                let y = e.clientY;
-                let newPoint = {
-                    "x": x,
-                    "y": y
-                };
-                drawLine(lastPoint.x, lastPoint.y, newPoint.x, newPoint.y);
-                lastPoint = newPoint;
-            }
-        };
+    } 
+    // else {
+    //     canvas.onmousedown = function (e) {
+    //         painting = true;
+    //         let x = e.clientX;
+    //         let y = e.clientY;
+    //         lastPoint = {
+    //             "x": x,
+    //             "y": y
+    //         };
+    //         ctx.save();
+    //         drawCircle(x, y, 0);
+    //     };
+    //     canvas.onmousemove = function (e) {
+    //         $(".container").css("position", "fixed");
+    //         if (painting) {
+    //             let x = e.clientX;
+    //             let y = e.clientY;
+    //             let newPoint = {
+    //                 "x": x,
+    //                 "y": y
+    //             };
+    //             drawLine(lastPoint.x, lastPoint.y, newPoint.x, newPoint.y);
+    //             lastPoint = newPoint;
+    //         }
+    //     };
 
-        canvas.onmouseup = function () {
-            $(".container").css("position", "static");
-            painting = false;
-            canvas.onmousedown = function () {}
-        };
+    //     canvas.onmouseup = function () {
+    //         $(".container").css("position", "static");
+    //         painting = false;
+    //         canvas.onmousedown = function () {}
+    //     };
 
-        canvas.mouseleave = function () {
-            $(".container").css("position", "static");
-            painting = false;
-            canvas.onmousedown = function () {}
-        }
-    }
+    //     canvas.mouseleave = function () {
+    //         $(".container").css("position", "static");
+    //         painting = false;
+    //         canvas.onmousedown = function () {}
+    //     }
+    // }
 }
 
 function drawCircle(x, y, radius) {
