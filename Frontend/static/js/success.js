@@ -28,7 +28,7 @@ img.onload = function () {
 }
 $(function () {
     $("#write-information").click(function () {
-        传列车号
+        //传列车号
         var data = {
             "code": randomNum
         }
@@ -40,5 +40,6 @@ $(function () {
         e.preventDefault();
         history.back(-1);
         $(".svg").remove()
+        ctx.clearRect(0, 0, width * 2, height * 2);
     })
 })
