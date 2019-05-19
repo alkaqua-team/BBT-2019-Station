@@ -5,9 +5,9 @@ document.body.addEventListener('touchmove', function (e) {
 });
 const height = document.documentElement.clientHeight;
 const width = document.documentElement.clientWidth;
-$("#canvas").css("position","absolute");
-$("#canvas").css("top",0.28 * height);
-$("#canvas").css("left",0.066 * width);
+$("#canvas").css("position", "absolute");
+$("#canvas").css("top", 0.28 * height);
+$("#canvas").css("left", 0.066 * width);
 var color = "#F7A44F";
 var img = new Image();
 var draw = false;
@@ -79,10 +79,8 @@ function listenToUser(canvas) {
         canvas.ontouchstart = function (e) {
             painting = true;
             draw = true;
-            let x = e.touches[0].clientX-0.066 * width;
-            let y = e.touches[0].clientY-0.28 * height;
-        // let x = e.offsetX;
-            // let y = e.offsetY;
+            let x = e.touches[0].clientX - 0.066 * width;
+            let y = e.touches[0].clientY - 0.28 * height;
             console.log(x);
             console.log(y);
             ctx.strokeStyle = color;
@@ -95,14 +93,8 @@ function listenToUser(canvas) {
         };
         canvas.ontouchmove = function (e) {
             if (painting) {
-                let x = e.touches[0].clientX-0.066 * width;
-                let y = e.touches[0].clientY-0.28 * height;
-                // let x = e.offsetX;
-                // let y = e.offsetY;
-        
-    
-                // let x = e.touches[0].clientX;
-                // let y = e.touches[0].clientY;
+                let x = e.touches[0].clientX - 0.066 * width;
+                let y = e.touches[0].clientY - 0.28 * height;
                 let newPoint = {
                     "x": x,
                     "y": y
@@ -170,4 +162,3 @@ function drawLine(x1, y1, x2, y2) {
     ctx.stroke();
     ctx.closePath();
 }
-

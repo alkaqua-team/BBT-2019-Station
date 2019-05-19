@@ -12,6 +12,10 @@ var checkdisplay = [
 const height = document.documentElement.clientHeight;
 const width = document.documentElement.clientWidth;
 $(".background").css("height", height);
+$(".tip").css("top",height*0.18);
+$(".tip").css("right",width*0.15);
+$(".arrow").css("top",0.2*height);
+$(".arrow").css("right",0.13*width);
 $(function () {
     $("#add1").click(function () {
         if (block("passager2") == true) {
@@ -51,7 +55,7 @@ $(function () {
             console.log(judge[i])
             console.log("loop again")
         }
-        
+
         //向后台传数据
         if (judge[0] && judge[1] && judge[2] && judge[3] && judge[4]) {
             var data = {
