@@ -28,13 +28,13 @@ img.onload = function () {
 }
 $(function () {
     $("#write-information").click(function () {
-        //传列车号
-        // var data = {
-        //     "code": randomNum
-        // }
-        // ticketShow(savename, data, function () {
+        传列车号
+        var data = {
+            "code": randomNum
+        }
+        ticketShow(savename, data, function () {
             window.location.href = "./index.html";
-        // })
+        })
     })
     $("#reselect").click(function (e) {
         e.preventDefault();

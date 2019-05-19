@@ -9,8 +9,10 @@ document.oncopy = function () {
 }
 window.onload = function () {
     var node = document.getElementById("container");
+    setTimeout( function(){
     domtoimage.toPng(node)
         .then(function (dataUrl) {
+            console.log(dataUrl)
             var img = new Image();
             img.src = dataUrl;
             node.appendChild(img);
@@ -23,6 +25,7 @@ window.onload = function () {
         .catch(function (error) {
             console.error('oops, something went wrong!', error);
         });
+    }, 3000)
 }
 $(function () {
     $("#update").click(function () {
@@ -33,10 +36,10 @@ $(function () {
     })
 
     // //返回列车号（还没测试 可能有bug）
-    // show(returnName, function (res) {
-    //     console.log(res);
-    //     $(".station-name").text(station[res.code]);
-    // })
+    show(returnName, function (res) {
+        console.log(res);
+        $(".station-name").text(station[res.code]);
+    })
 
     //展示信息
     show(ticket, function (res) {
