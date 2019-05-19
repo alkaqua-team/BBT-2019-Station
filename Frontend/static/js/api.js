@@ -6,7 +6,7 @@ const update = "/update/";
 const checktime = "/checkTime/";
 const checkid = "/checkOpenid/";
 const savename = "/getStationName/";
-const returnName = "returnStationName/";
+const returnName = "/returnStationName/";
 const state = "test";
 
 //post 带参数请求

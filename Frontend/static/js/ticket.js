@@ -11,7 +11,7 @@ window.onload = function () {
     var node = document.getElementById("container");
         domtoimage.toPng(node)
         .then(function (dataUrl) {
-            console.log(dataUrl)
+            // console.log(dataUrl)
             var img = new Image();
             img.src = dataUrl;
             node.appendChild(img);
