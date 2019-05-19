@@ -18,7 +18,14 @@ function randomNumber(max) {
     return Math.floor(Math.random() * Math.floor(max));
 }
 var randomNum = randomNumber(5);
-console.log(randomNum)
+//传列车号
+var data = {
+    "code": randomNum
+}
+ticketShow(savename, data, function (res) {
+    console.log(res);
+    console.log("have it");
+})
 var img = new Image();
 img.src = "../static/pictures/3-1.png";
 img.onload = function () {
@@ -28,14 +35,7 @@ img.onload = function () {
 }
 $(function () {
     $("#write-information").click(function () {
-        //传列车号
-        var data = {
-            "code": randomNum
-        }
-        ticketShow(savename, data, function () {
-            console.log("have it");
-            window.location.href = "./index.html";
-        })
+        window.location.href = "./index.html";
     })
     $("#reselect").click(function (e) {
         e.preventDefault();
