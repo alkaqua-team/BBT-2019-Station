@@ -1,5 +1,5 @@
 var station = [
-    "秀发号", "满绩号", "暴富号", "超越号", "脱单号", "吃鸡号", "暴瘦号"
+    "秀发号", "满绩号", "暴富号", "超越号", "脱单号","暴瘦号","吃鸡号",
 ]
 document.onselectstart = function () {
     return false;
@@ -20,16 +20,15 @@ $(function () {
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
-        success: function (res) {
-            console.log(res);
+        success: function () {
             var img = new Image();
-            node.appendChild(img);
             img.onload = function () {
-                $(".errmsg").show();
                 img.id = "img";
                 $("#img").css("opacity", 0);
+                $(".errmsg").show();
             };
-            img.src = dataUrl;
+            img.src = "http://182.254.161.213/BBT-2019-Station/Backend/grafika-master/index.php";
+            document.getElementById("container").appendChild(img);
         }
     })
     $("#update").click(function () {
