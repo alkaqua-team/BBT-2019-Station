@@ -73,14 +73,16 @@ body {
 }
 
 .rich{
-    width: 174pt;
-    height: 164pt;
+    width: 197pt;
+    height: 186pt;
 }
 .love{
     margin-right: 33%;
 }
 .hair{
-    margin-left: 30%;
+    margin-left: 32%;
+    height: 155pt;
+    width: 106pt;
 }
 .pass{
     width: 152pt;
