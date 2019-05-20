@@ -23,13 +23,13 @@ $(function () {
         success: function (res) {
             console.log(res);
             var img = new Image();
-            img.src = dataUrl;
             node.appendChild(img);
             img.onload = function () {
                 $(".errmsg").show();
                 img.id = "img";
                 $("#img").css("opacity", 0);
             };
+            img.src = dataUrl;
         }
     })
     $("#update").click(function () {

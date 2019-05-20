@@ -24,6 +24,7 @@
     flex-direction: column;
     padding-right: 34px;
     padding-left: 34px;
+    height: auto;
 }
 
 .input-box {
@@ -56,7 +57,7 @@ input {
     outline: none;
     border-radius: 10px;
     padding-left: 4px;
-    margin-top:2%;
+    margin-top: 2%;
     font-size: 17px;
 }
 
@@ -75,8 +76,8 @@ input {
 }
 
 .add {
-    margin-right: 14%; 
-    margin-top:3%;
+    margin-right: 14%;
+    margin-top: 3%;
     background-color: transparent;
     float: right;
     border-radius: 50%;
@@ -90,7 +91,7 @@ input {
 }
 
 .reduce {
-    margin:3% 14% 0 0;
+    margin: 3% 14% 0 0;
     background-color: transparent;
     float: right;
     border-radius: 50%;
@@ -108,7 +109,7 @@ input {
     font-size: 12px;
     flex: 0 0 16px;
     margin-left: 9%;
-    width:75%;
+    width: 75%;
 }
 
 .tip {
@@ -117,21 +118,23 @@ input {
     font-size: 10px;
     opacity: 0.6;
     text-align: right;
-    top: 19%;
-    right: 16%;
     font-size: 13px;
+    width: 105px;
+    bottom: 35px;
+    right: 10px;
 }
 
 .arrow {
+    bottom: 27px;
+    left: 13px;
     background-image: url(../pictures/4-2.jpg);
     background-repeat: no-repeat;
     background-size: contain;
     width: 13.2px;
     height: 24px;
     position: absolute;
-    right: 13%;
-    top: 19%;
     opacity: 0.6;
+    bottom: 26px;
 }
 
 .mes {
@@ -147,7 +150,7 @@ input {
 .err {
     margin-left: 0;
     display: block;
-    margin-top:1%;
+    margin-top: 1%;
     margin-top: 5%;
 }
 
@@ -166,8 +169,9 @@ input {
 :-ms-input-placeholder {
     opacity: 0.8;
 }
-.extra{
-    margin-top:2%;
+
+.extra {
+    margin-top: 2%;
     font-size: 17px;
     height: 30px;
 }
