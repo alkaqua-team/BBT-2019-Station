@@ -130,6 +130,7 @@ input {
     position: absolute;
     right: 13%;
     top: 20%;
+    opacity: 0.6;
 }
 
 .mes {
@@ -150,21 +151,22 @@ input {
 }
 
 ::-webkit-input-placeholder {
-    opacity: 0.5;
+    opacity: 0.8;
 }
 
 :-moz-placeholder {
-    opacity: 0.5;
+    opacity: 0.8;
 }
 
 ::-moz-placeholder {
-    opacity: 0.5;
+    opacity: 0.8;
 }
 
 :-ms-input-placeholder {
-    opacity: 0.5;
+    opacity: 0.8;
 }
 .extra{
     margin-top:2%;
     font-size: 17px;
+    height: 30px;
 }
