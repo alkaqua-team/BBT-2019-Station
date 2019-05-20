@@ -14,7 +14,7 @@ var pic2 = [
     "../static/pictures/3-13.png",
     "../static/pictures/3-14.png",
 ]
-var text=[
+var text = [
     "岁月如水，祝你此刻和未来一直拥有乌黑亮丽的秀发，赶快登上列车，去往不秃的远方吧。",
     "满绩号的列车即将启动，赶快带上你满满的活力，和小伙伴们冲击满绩叭！！",
     "暴富号来啦！！妈妈再也不用担心我月底没钱了，登上暴富号，未来天天暴富！！！",
@@ -36,12 +36,37 @@ var data = {
 var img = new Image();
 img.src = "../static/pictures/3-1.png";
 img.onload = function () {
+
     $(".success-pic").css("background-image", "url(" + pic1[randomNum] + ")")
     $(".success-text").css("background-image", "url(" + pic2[randomNum] + ")")
     $(".introduction").text(text[randomNum]);
     $(".buttons").css("display", "flex")
 }
 $(function () {
+
+    //更改div样式
+    switch (randomNum) {
+        case 0:
+            $(".success-pic").addClass("hair");
+            break;
+        case 1:
+            break;
+        case 2:
+            $(".success-pic").addClass("rich");
+            break;
+        case 3:
+            $(".success-pic").addClass("pass");
+            break;
+        case 4:
+            $(".success-pic").addClass("love");
+            break;
+        case 5:
+            $(".success-pic").addClass("thin");
+            break;
+        default:
+            console.log("number maybe strange.")
+    }
+
     ticketShow(savename, data, function (res) {
         console.log(res);
         console.log("have it");

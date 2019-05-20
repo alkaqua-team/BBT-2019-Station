@@ -69,10 +69,12 @@ body {
     color: #9195A5;
     font-size: 13pt;
     margin: 0 auto;
+    margin-bottom: 4%;
 }
 
 .rich{
-    width:170pt;
+    width: 174pt;
+    height: 164pt;
 }
 .love{
     margin-right: 33%;
