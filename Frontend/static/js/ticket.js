@@ -1,5 +1,5 @@
 var station = [
-    "秀发号", "满绩号", "暴富号", "超越号", "脱单号","吃鸡号","暴瘦号"
+    "秀发号", "满绩号", "暴富号", "超越号", "脱单号", "吃鸡号", "暴瘦号"
 ]
 document.onselectstart = function () {
     return false;
@@ -7,25 +7,31 @@ document.onselectstart = function () {
 document.oncopy = function () {
     return false;
 }
-window.onload = function () {
-    var node = document.getElementById("container");
-        domtoimage.toPng(node)
-        .then(function (dataUrl) {
-            // console.log(dataUrl)
-            var img = new Image();
-            img.src = dataUrl;
-            node.appendChild(img);
-            img.onload = function () {
-                $(".errmsg").show();
-                img.id = "img";
-                $("#img").css("opacity", 0);
-            };
-        })
-        .catch(function (error) {
-            console.error('oops, something went wrong!', error);
-        });
-}
+
 $(function () {
+    $.ajax({
+        type: "POST",
+        url: "http://182.254.161.213/BBT-2019-Station/Backend/grafika-master/index.php",
+        xhrFields: {
+            withCredentials: true
+        },
+        crossDomain: true,
+        contentType: "application/x-www-form-urlencoded",
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        success: function (res) {
+            console.log(res);
+            // var img = new Image();
+            // img.src = dataUrl;
+            // node.appendChild(img);
+            // img.onload = function () {
+            //     $(".errmsg").show();
+            //     img.id = "img";
+            //     $("#img").css("opacity", 0);
+            // };
+        }
+    })
     $("#update").click(function () {
         window.location.href = "update.html";
     })
