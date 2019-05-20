@@ -22,14 +22,14 @@ $(function () {
         },
         success: function (res) {
             console.log(res);
-            // var img = new Image();
-            // img.src = dataUrl;
-            // node.appendChild(img);
-            // img.onload = function () {
-            //     $(".errmsg").show();
-            //     img.id = "img";
-            //     $("#img").css("opacity", 0);
-            // };
+            var img = new Image();
+            img.src = dataUrl;
+            node.appendChild(img);
+            img.onload = function () {
+                $(".errmsg").show();
+                img.id = "img";
+                $("#img").css("opacity", 0);
+            };
         }
     })
     $("#update").click(function () {
