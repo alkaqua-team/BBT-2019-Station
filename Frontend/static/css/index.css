@@ -76,7 +76,7 @@ input {
 
 .add {
     margin-right: 14%; 
-    margin-top:2%;
+    margin-top:3%;
     background-color: transparent;
     float: right;
     border-radius: 50%;
@@ -89,7 +89,7 @@ input {
 }
 
 .reduce {
-    margin:2% 14% 0 0;
+    margin:3% 14% 0 0;
     background-color: transparent;
     float: right;
     border-radius: 50%;
@@ -129,7 +129,7 @@ input {
     height: 24px;
     position: absolute;
     right: 13%;
-    top: 20%;
+    top: 19%;
     opacity: 0.6;
 }
 
