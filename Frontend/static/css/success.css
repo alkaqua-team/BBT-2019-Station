@@ -7,7 +7,6 @@ body {
 
 .container {
     height: 100%;
-    /* width: 100%; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,6 +21,7 @@ body {
     height: 119pt;
     width: 82pt;
     margin: 0 auto;
+    margin-top: 20%;
 }
 
 .success-text {
@@ -29,8 +29,7 @@ body {
     height: 18pt;
     background-repeat: no-repeat;
     background-size: contain;
-    margin:10% auto;
-    margin-bottom: 25%;
+    margin:7% auto;
 }
 
 .buttons {
@@ -62,4 +61,10 @@ body {
 
 .reselect {
     background-color: #A2C0EA;
+}
+.introduction{
+    width: auto;
+    height: 13%;
+    margin-bottom:5%;
+    color:#9195A5;
 }
