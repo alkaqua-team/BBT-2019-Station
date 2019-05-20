@@ -37,14 +37,14 @@
 }
 
 input {
-    height: auto;
+    height: 28px;
     width: 75%;
     background: rgba(255, 255, 255, 0.8);
     border: none;
     outline: none;
     border-radius: 13px;
     padding-left: 5px;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .message {
@@ -56,6 +56,8 @@ input {
     outline: none;
     border-radius: 10px;
     padding-left: 4px;
+    margin-top:2%;
+    font-size: 17px;
 }
 
 .create {
@@ -73,8 +75,9 @@ input {
 }
 
 .add {
+    margin-right: 14%; 
+    margin-top:2%;
     background-color: transparent;
-    margin-left: 0;
     float: right;
     border-radius: 50%;
     width: 23px;
@@ -86,9 +89,8 @@ input {
 }
 
 .reduce {
+    margin:2% 14% 0 0;
     background-color: transparent;
-    margin-right: 16%;
-    margin-left: 0;
     float: right;
     border-radius: 50%;
     width: 23px;
@@ -105,6 +107,7 @@ input {
     font-size: 12px;
     flex: 0 0 16px;
     margin-left: 9%;
+    width:75%;
 }
 
 .tip {
@@ -112,15 +115,21 @@ input {
     position: absolute;
     font-size: 10px;
     opacity: 0.6;
+    text-align: right;
+    top: 19%;
+    right: 16%;
+    font-size: 13px;
 }
 
 .arrow {
     background-image: url(../pictures/4-2.jpg);
     background-repeat: no-repeat;
     background-size: contain;
-    width: 3%;
-    height: 3%;
+    width: 13.2px;
+    height: 24px;
     position: absolute;
+    right: 13%;
+    top: 20%;
 }
 
 .mes {
@@ -131,20 +140,6 @@ input {
 #passager2,
 #passager3 {
     display: none;
-}
-
-.reduce2 {
-    margin-right: 16%;
-    margin-left: 0;
-    display: block;
-    float: right;
-    border-radius: 50%;
-    width: 23px;
-    height: 23px;
-    background-image: url("../pictures/7-3.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    outline: none;
 }
 
 .err {
@@ -168,4 +163,8 @@ input {
 
 :-ms-input-placeholder {
     opacity: 0.5;
+}
+.extra{
+    margin-top:2%;
+    font-size: 17px;
 }

@@ -12,10 +12,6 @@ var checkdisplay = [
 const height = document.documentElement.clientHeight;
 const width = document.documentElement.clientWidth;
 $(".background").css("height", height);
-$(".tip").css("top",height*0.18);
-$(".tip").css("right",width*0.15);
-$(".arrow").css("top",0.2*height);
-$(".arrow").css("right",0.13*width);
 $(function () {
     $("#add1").click(function () {
         if (block("passager2") == true) {
