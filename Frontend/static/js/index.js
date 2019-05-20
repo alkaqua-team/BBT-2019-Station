@@ -9,9 +9,6 @@ var errmsg = [
 var checkdisplay = [
     "passager1", "passager2", "passager3", "destination", "message"
 ]
-const height = document.documentElement.clientHeight;
-const width = document.documentElement.clientWidth;
-$(".background").css("height", height);
 $(function () {
     $("#add1").click(function () {
         if (block("passager2") == true) {
