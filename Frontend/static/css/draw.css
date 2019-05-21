@@ -115,6 +115,7 @@ button {
     top: 70%;
     left: 0;
     margin-left: 25%;
+    align-items: center;
 }
 
 .color {
@@ -151,4 +152,10 @@ button {
     position: absolute;
     top: 29%;
     right: 10%;
+}
+
+.select{
+    border:3px solid #F7D2AC;
+    height: 23px;
+    width: 23px;
 }

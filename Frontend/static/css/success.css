@@ -70,18 +70,20 @@ body {
     font-size: 13pt;
     margin: 0 auto;
     margin-bottom: 4%;
+    text-align: center;
 }
 
 .rich{
     width: 197pt;
     height: 186pt;
-    margin-left: 15%;
+    margin: 0 auto;
 }
 .love{
     margin-right: 33%;
 }
 .hair{
-    margin-left: 32%;
+    margin: 5% auto;
+    margin-top: 15%;
     height: 155pt;
     width: 106pt;
 }

@@ -5,7 +5,7 @@ function checkinput(display, id, errid, str) {
     if (block(display)) {
         if (str.length != 0) {
             if (!Reg.test(str)) {
-                $("#" + errid).text("只能包含中文或英文，中文中可以包含 · ，英文中可以包含 . · -");
+                $("#" + errid).text("只能包含中文或英文噢");
                 $("#" + id).val(str);
                 return false;
             }
@@ -45,4 +45,15 @@ function typechange(res) {
         res1 = eval("(" + res + ")");
     }
     return res1;
+}
+
+function message(id, errid, str) {
+    if (str.length != 0) {
+        $("#" + errid).text("");
+        return true;
+    } else {
+        $("#" + errid).text("填写完才能提交噢");
+        $("#" + id).val(str);
+        return false;
+    }
 }

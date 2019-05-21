@@ -40,18 +40,28 @@ $(function () {
     })
     $("#orange").click(function () {
         color = "#F7A44F";
+        clear();
+        $("#orange").addClass("select");
     })
     $("#yellow").click(function () {
         color = "#F7ED4F";
+        clear();
+        $("#yellow").addClass("select");
     })
     $("#green").click(function () {
         color = "#C0F54E";
+        clear();
+        $("#green").addClass("select");
     })
     $("#blue1").click(function () {
         color = "#4DF3E5";
+        clear();
+        $("#blue1").addClass("select");
     })
     $("#blue2").click(function () {
         color = "#4C68F1";
+        clear();
+        $("#blue2").addClass("select");
     })
     $("#repaint").click(function (e) {
         e.preventDefault();
@@ -161,4 +171,10 @@ function drawLine(x1, y1, x2, y2) {
     ctx.lineTo(x2, y2);
     ctx.stroke();
     ctx.closePath();
+}
+
+function clear() {
+    for (var i = 0; i < 5; i++) {
+        $("#" + colors[i]).removeClass("select");
+    }
 }
