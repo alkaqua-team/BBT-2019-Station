@@ -124,6 +124,9 @@ button {
     width: 20px;
     height: 20px;
     border-radius: 50%;
+    -moz-border-radius:50%;
+    -ms-border-radius:50%;
+    -o-border-radius:50%;
 }
 
 #orange {
