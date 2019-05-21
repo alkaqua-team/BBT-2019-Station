@@ -154,5 +154,7 @@ button {
 }
 
 .select{
-    border:2px solid #F7D2AC;
+    border:3px solid #F7D2AC;
+    height: 17px;
+    width: 17px;
 }
