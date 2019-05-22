@@ -26,9 +26,7 @@ $result = mysqli_fetch_array($query);
 $editor = Grafika::createEditor(); // Create the best available editor
 $station = array('秀发号', '满绩号', '暴富号', '超越号', '脱单号', '暴瘦号', '吃鸡号');
 $editor->open($image, 'initial.png');
-$editor->text($image, '恭喜你成为第', 18, 72, 428, new Color('#D98247'), '', 0);
-$editor->text($image, $_SESSION['id'], 18, 222, 428, new Color('#D98247'), '', 0);
-$editor->text($image, '位搭上列车的乘客', 18, 262, 428, new Color('#D98247'), '', 0);
+$editor->text($image, '恭喜你成为第'.$_SESSION['id'].'位搭上列车的乘客', 18, 72, 428, new Color('#D98247'), '', 0);
 $editor->text($image, $result['passenger1'], 25, 173, 612, new Color('#FFFFFF'), '', 0);
 $editor->text($image, $result['passenger2'], 25, 223, 612, new Color('#FFFFFF'), '', 0);
 $editor->text($image, $result['passenger3'], 25, 273, 612, new Color('#FFFFFF'), '', 0);
