@@ -1,4 +1,5 @@
-* {
+body,
+html {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -175,6 +176,6 @@ input {
     height: 30px;
 }
 
-#errmsg_comment{
+#errmsg_comment {
     margin-bottom: 12%;
 }

@@ -25,6 +25,9 @@ $(function () {
             img.id = "img";
             img.onload = function () {
                 $(".errmsg").show();
+                $("#img").click(function(){
+                    return false;
+                })
             };
             img.src = "http://182.254.161.213/BBT-2019-Station/Backend/grafika-master/index.php";
             document.getElementById("container").appendChild(img);
