@@ -124,7 +124,7 @@ button {
 }
 
 #img{
-    visibility: hidden;
+    /* visibility: hidden; */
     /* z-index: -2; */
     opacity: 0;
     overflow: hidden;
