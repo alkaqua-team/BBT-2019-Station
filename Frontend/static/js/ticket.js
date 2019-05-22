@@ -23,7 +23,7 @@ $(function () {
         success: function () {
             var img = new Image();
             img.id = "img";
-            $("#img").css("opacity", 0);
+            $("#img").css("visibility", "hidden");
             img.onload = function () {
                 $(".errmsg").show();
             };
