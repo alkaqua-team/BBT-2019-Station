@@ -108,6 +108,7 @@ button {
     background-image: url("../pictures/5-1.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .errmsg {
@@ -120,4 +121,11 @@ button {
     display: none;
     font-size: 13px;
     margin-bottom: 3%;
+}
+
+#img{
+    /* visibility: hidden; */
+    /* z-index: -2; */
+    opacity: 0;
+    overflow: hidden;
 }
