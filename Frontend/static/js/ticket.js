@@ -22,12 +22,11 @@ $(function () {
         },
         success: function () {
             var img = new Image();
+            img.src = "http://182.254.161.213/BBT-2019-Station/Backend/grafika-master/index.php";
             img.id = "img";
-            $("#img").css("visibility", "hidden");
             img.onload = function () {
                 $(".errmsg").show();
             };
-            img.src = "http://182.254.161.213/BBT-2019-Station/Backend/grafika-master/index.php";
             document.getElementById("container").appendChild(img);
         }
     })
