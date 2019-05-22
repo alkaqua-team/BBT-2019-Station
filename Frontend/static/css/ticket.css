@@ -128,4 +128,5 @@ button {
     /* z-index: -2; */
     opacity: 0;
     overflow: hidden;
+    pointer-events: auto;
 }
