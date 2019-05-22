@@ -9,30 +9,6 @@ document.oncopy = function () {
 }
 
 $(function () {
-    $.ajax({
-        type: "POST",
-        url: "http://182.254.161.213/BBT-2019-Station/Backend/grafika-master/index.php",
-        xhrFields: {
-            withCredentials: true
-        },
-        crossDomain: true,
-        contentType: "application/x-www-form-urlencoded",
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        },
-        success: function () {
-            var img = new Image();
-            img.id = "img";
-            img.onload = function () {
-                $(".errmsg").show();
-                $("#img").click(function(){
-                    return false;
-                })
-            };
-            img.src = "http://182.254.161.213/BBT-2019-Station/Backend/grafika-master/index.php";
-            document.getElementById("container").appendChild(img);
-        }
-    })
     $("#update").click(function () {
         window.location.href = "update.html";
     })
@@ -65,4 +41,30 @@ $(function () {
             // console.log("fails to get data.")
         }
     })
+
+    $.ajax({
+        type: "POST",
+        url: "http://182.254.161.213/BBT-2019-Station/Backend/grafika-master/index.php",
+        xhrFields: {
+            withCredentials: true
+        },
+        crossDomain: true,
+        contentType: "application/x-www-form-urlencoded",
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        success: function () {
+            var img = new Image();
+            img.id = "img";
+            img.onload = function () {
+                $(".errmsg").show();
+                $("#img").click(function(){
+                    return false;
+                })
+            };
+            img.src = "http://182.254.161.213/BBT-2019-Station/Backend/grafika-master/index.php";
+            document.getElementById("container").appendChild(img);
+        }
+    })
+
 })
