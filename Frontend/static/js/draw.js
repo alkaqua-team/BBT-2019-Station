@@ -24,6 +24,7 @@ var colors = [
 ];
 
 $(function () {
+    $("#orange").addClass("select");
     $(".svg").on("touchstart", function () {
         $(".svg").css("display", "none");
         // listenToUser(canvas);
