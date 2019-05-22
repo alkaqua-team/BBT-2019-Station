@@ -1,13 +1,13 @@
 var input = new Array();
 var judge = new Array();
 var inputbox = [
-    "passager-name1", "passager-name2", "passager-name3", "destination", "message"
+    "passager-name1", "passager-name2", "passager-name3", "destination","message"
 ];
 var errmsg = [
-    "errmsg_passenger1", "errmsg_passenger2", "errmsg_passenger3", "errmsg_destination", "errmsg_comment"
+    "errmsg_passenger1", "errmsg_passenger2", "errmsg_passenger3", "errmsg_destination","errmsg_comment"
 ];
 var checkdisplay = [
-    "passager1", "passager2", "passager3", "destination", "message"
+    "passager1", "passager2", "passager3", "destination"
 ]
 $(function () {
     $("#add1").click(function () {
@@ -43,11 +43,14 @@ $(function () {
             input[i] = getval(inputbox[i]);
             console.log("loop")
         }
-        for (var i = 0; i < 5; i++) {
+        for (var i = 0; i < 4; i++) {
             judge[i] = checkinput(checkdisplay[i], inputbox[i], errmsg[i], input[i]);
             console.log(judge[i])
             console.log("loop again")
         }
+
+        //message的检查
+        judge[4] = message(inputbox[4],errmsg[4],input[4]);
 
         //向后台传数据
         if (judge[0] && judge[1] && judge[2] && judge[3] && judge[4]) {

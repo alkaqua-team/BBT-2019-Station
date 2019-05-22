@@ -1,5 +1,5 @@
 var station = [
-    "秀发号", "满绩号", "暴富号", "超越号", "脱单号","暴瘦号","吃鸡号",
+    "秀发号", "满绩号", "暴富号", "超越号", "脱单号", "暴瘦号", "吃鸡号",
 ]
 document.onselectstart = function () {
     return false;
@@ -22,9 +22,9 @@ $(function () {
         },
         success: function () {
             var img = new Image();
+            img.id = "img";
+            $("#img").css("visibility", "hidden");
             img.onload = function () {
-                img.id = "img";
-                $("#img").css("opacity", 0);
                 $(".errmsg").show();
             };
             img.src = "http://182.254.161.213/BBT-2019-Station/Backend/grafika-master/index.php";
