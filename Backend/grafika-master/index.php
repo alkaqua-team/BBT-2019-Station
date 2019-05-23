@@ -11,9 +11,9 @@ header('Access-Control-Allow-Headers:Origin, Content-Type, Cookie, X-CSRF-TOKEN,
 header('Access-Control-Expose-Headers:Authorization, authenticated');
 header('Access-Control-Allow-Methods:GET, POST, PATCH, PUT, OPTIONS');
 header('Access-Control-Allow-Credentials:true');
-$host = 'localhost';
-$user = 'root';
-$pass = '123Linux';
+$host = '';
+$user = '';
+$pass = '';
 $link = mysqli_connect($host, $user, $pass);
 mysqli_select_db($link, '123');
 mysqli_query($link, 'SET names UTF8');
