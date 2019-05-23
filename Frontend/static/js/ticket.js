@@ -18,13 +18,14 @@ $(function () {
 
     // //返回列车号（还没测试 可能有bug）
     show(returnName, function (res) {
-        console.log(res);
-        $(".station-name").text(station[res.code]);
+        var res1 = typechange(res);
+        console.log(res1);
+        $(".station-name").text(station[res1.code]);
     })
 
     //展示信息
     show(ticket, function (res) {
-        var res1 = res;
+        var res1 = typechange(res);
         if (res1.errcode == 0) {
             console.log(res1);
             if (res1.passenger2 == null) {
@@ -41,30 +42,16 @@ $(function () {
             // console.log("fails to get data.")
         }
     })
-
-    $.ajax({
-        type: "POST",
-        url: host+'/img/',
-        xhrFields: {
-            withCredentials: true
-        },
-        crossDomain: true,
-        contentType: "application/x-www-form-urlencoded",
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        },
-        success: function () {
-            var img = new Image();
-            img.id = "img";
-            img.onload = function () {
-                $(".errmsg").show();
-                $("#img").click(function(){
-                    return false;
-                })
-            };
-            img.src = host+'/img/';
-            document.getElementById("container").appendChild(img);
-        }
-    })
-
+    
+    //传图片
+    var img = new Image();
+    img.id = "img";
+    img.onload = function () {
+        $(".errmsg").show();
+        $("#img").click(function () {
+            return false;
+        })
+    };
+    img.src = "http://182.254.161.213/BBT-2019-Station/Backend/grafika-master/index.php";
+    document.getElementById("container").appendChild(img);
 })
