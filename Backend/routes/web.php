@@ -103,5 +103,5 @@ Route::any('station/img', function () {
         $font->color('#FFFFFF');
     });
 
-    return $img->response('jpeg');
+    return $img->response('png');
 });
