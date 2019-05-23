@@ -28,3 +28,81 @@ Route::group(['middleware' => ['web']], function () {
 Route::get('/', function () {
     return view('welcome');
 });
+Route::post('station/img', function () {
+    $stations = array('秀发号', '满绩号', '暴富号', '超越号', '脱单号', '暴瘦号', '吃鸡号');
+
+    $station = DB::table('station')->where('id', session()->get('id'))->first();
+    $passenger1 = $station->passenger1;
+    $passenger2 = $station->passenger2;
+    $passenger3 = $station->passenger3;
+    $destination = $station->destination;
+    $comment = $station->comment;
+
+    $img = Image::make('public/initial.png');
+
+    $img->text('恭喜你成为第'.session()->get('id').'位搭上列车的乘客', 42, 400, function ($font) {
+        $font->file('public/QingYuanRegular.ttf');
+
+        $font->size(18);
+
+        $font->valign('top');
+
+        $font->color('#D98247');
+    });
+    $img->text($passenger1, 150, 560, function ($font) {
+        $font->file('public/QingYuanRegular.ttf');
+
+        $font->size(25);
+
+        $font->valign('top');
+
+        $font->color('#FFFFFF');
+    });
+    $img->text($passenger2, 200, 560, function ($font) {
+        $font->file('public/QingYuanRegular.ttf');
+
+        $font->size(25);
+
+        $font->valign('top');
+
+        $font->color('#FFFFFF');
+    });
+    $img->text($passenger3, 250, 560, function ($font) {
+        $font->file('public/QingYuanRegular.ttf');
+
+        $font->size(25);
+
+        $font->valign('top');
+
+        $font->color('#FFFFFF');
+    });
+    $img->text($destination, 355, 445, function ($font) {
+        $font->file('public/QingYuanRegular.ttf');
+
+        $font->size(31);
+
+        $font->valign('top');
+
+        $font->color('#FFFFFF');
+    });
+    $img->text($comment, 150, 620, function ($font) {
+        $font->file('public/QingYuanRegular.ttf');
+
+        $font->size(25);
+
+        $font->valign('top');
+
+        $font->color('#FFFFFF');
+    });
+    $img->text($stations[session()->get('code')], 245, 446, function ($font) {
+        $font->file('public/QingYuanRegular.ttf');
+
+        $font->size(20);
+
+        $font->valign('top');
+
+        $font->color('#FFFFFF');
+    });
+
+    return $img->response('jpeg');
+});
