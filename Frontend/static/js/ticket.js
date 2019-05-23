@@ -44,7 +44,7 @@ $(function () {
 
     $.ajax({
         type: "POST",
-        url: "http://182.254.161.213/BBT-2019-Station/Backend/grafika-master/index.php",
+        url: host+'/img/',
         xhrFields: {
             withCredentials: true
         },
@@ -62,7 +62,7 @@ $(function () {
                     return false;
                 })
             };
-            img.src = "http://182.254.161.213/BBT-2019-Station/Backend/grafika-master/index.php";
+            img.src = host+'/img/';
             document.getElementById("container").appendChild(img);
         }
     })

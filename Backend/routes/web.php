@@ -28,7 +28,7 @@ Route::group(['middleware' => ['web']], function () {
 Route::get('/', function () {
     return view('welcome');
 });
-Route::post('station/img', function () {
+Route::any('station/img', function () {
     $stations = array('秀发号', '满绩号', '暴富号', '超越号', '脱单号', '暴瘦号', '吃鸡号');
 
     $station = DB::table('station')->where('id', session()->get('id'))->first();
@@ -37,67 +37,66 @@ Route::post('station/img', function () {
     $passenger3 = $station->passenger3;
     $destination = $station->destination;
     $comment = $station->comment;
+    $img = Image::make(base_path().'/public/initial.png');
 
-    $img = Image::make('public/initial.png');
+    $img->text('恭喜你成为第'.session()->get('id').'位搭上列车的乘客', 72, 430, function ($font) {
+        $font->file(base_path().'/public/FZHTJW.ttf');
 
-    $img->text('恭喜你成为第'.session()->get('id').'位搭上列车的乘客', 42, 400, function ($font) {
-        $font->file('public/QingYuanRegular.ttf');
-
-        $font->size(18);
+        $font->size(20);
 
         $font->valign('top');
 
         $font->color('#D98247');
     });
-    $img->text($passenger1, 150, 560, function ($font) {
-        $font->file('public/QingYuanRegular.ttf');
+    $img->text($passenger1, 170, 610, function ($font) {
+        $font->file(base_path().'/public/FZHTJW.ttf');
+
+        $font->size(30);
+
+        $font->valign('top');
+
+        $font->color('#FFFFFF');
+    });
+    $img->text($passenger2, 220, 610, function ($font) {
+        $font->file(base_path().'/public/FZHTJW.ttf');
+
+        $font->size(30);
+
+        $font->valign('top');
+
+        $font->color('#FFFFFF');
+    });
+    $img->text($passenger3, 270, 610, function ($font) {
+        $font->file(base_path().'/public/FZHTJW.ttf');
+
+        $font->size(30);
+
+        $font->valign('top');
+
+        $font->color('#FFFFFF');
+    });
+    $img->text($destination, 385, 495, function ($font) {
+        $font->file(base_path().'/public/FZHTJW.ttf');
+
+        $font->size(37);
+
+        $font->valign('top');
+
+        $font->color('#FFFFFF');
+    });
+    $img->text($comment, 170, 665, function ($font) {
+        $font->file(base_path().'/public/FZHTJW.ttf');
+
+        $font->size(30);
+
+        $font->valign('top');
+
+        $font->color('#FFFFFF');
+    });
+    $img->text($stations[session()->get('code')], 275, 486, function ($font) {
+        $font->file(base_path().'/public/FZHTJW.ttf');
 
         $font->size(25);
-
-        $font->valign('top');
-
-        $font->color('#FFFFFF');
-    });
-    $img->text($passenger2, 200, 560, function ($font) {
-        $font->file('public/QingYuanRegular.ttf');
-
-        $font->size(25);
-
-        $font->valign('top');
-
-        $font->color('#FFFFFF');
-    });
-    $img->text($passenger3, 250, 560, function ($font) {
-        $font->file('public/QingYuanRegular.ttf');
-
-        $font->size(25);
-
-        $font->valign('top');
-
-        $font->color('#FFFFFF');
-    });
-    $img->text($destination, 355, 445, function ($font) {
-        $font->file('public/QingYuanRegular.ttf');
-
-        $font->size(31);
-
-        $font->valign('top');
-
-        $font->color('#FFFFFF');
-    });
-    $img->text($comment, 150, 620, function ($font) {
-        $font->file('public/QingYuanRegular.ttf');
-
-        $font->size(25);
-
-        $font->valign('top');
-
-        $font->color('#FFFFFF');
-    });
-    $img->text($stations[session()->get('code')], 245, 446, function ($font) {
-        $font->file('public/QingYuanRegular.ttf');
-
-        $font->size(20);
 
         $font->valign('top');
 
