@@ -1,4 +1,4 @@
-// var vconsole = new VConsole();
+var vconsole = new VConsole();
 var station = [
     "秀发号", "满绩号", "暴富号", "超越号", "脱单号", "暴瘦号", "吃鸡号",
 ]
@@ -27,6 +27,7 @@ $(function () {
     //展示信息
     show(ticket, function (res) {
         var res1 = res;
+        console.log(res1)
         // var res1 = typechange(res);
         if (res1.errcode == 0) {
             console.log(res1);
