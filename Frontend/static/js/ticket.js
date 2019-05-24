@@ -20,8 +20,9 @@ $(function () {
     // //返回列车号（还没测试 可能有bug）
     show(returnName, function (res) {
         // var res1 = typechange(res);
+        var code = parseInt(res.code);
         console.log(res);
-        $(".station-name").text(station[res.code]);
+        $(".station-name").text(station[code]);
     })
 
     //展示信息
