@@ -19,14 +19,15 @@ $(function () {
 
     // //返回列车号（还没测试 可能有bug）
     show(returnName, function (res) {
-        var res1 = typechange(res);
-        console.log(res1);
+        // var res1 = typechange(res);
+        console.log(res);
         $(".station-name").text(station[res1.code]);
     })
 
     //展示信息
     show(ticket, function (res) {
-        var res1 = typechange(res);
+        var res1 = res;
+        // var res1 = typechange(res);
         if (res1.errcode == 0) {
             console.log(res1);
             if (res1.passenger2 == null) {
