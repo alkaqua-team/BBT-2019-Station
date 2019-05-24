@@ -21,6 +21,7 @@ $(function () {
     show(returnName, function (res) {
         // var res1 = typechange(res);
         var code = parseInt(res.code);
+        console.log(code)
         console.log(res);
         $(".station-name").text(station[code]);
     })
