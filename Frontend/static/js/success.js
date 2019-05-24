@@ -71,6 +71,7 @@ $(function () {
             break;
         case 6:
             $(".success-pic").addClass("chicken");
+            break;
         default:
             console.log("number maybe wrong.")
     }
