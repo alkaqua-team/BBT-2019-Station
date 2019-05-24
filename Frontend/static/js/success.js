@@ -75,10 +75,17 @@ $(function () {
 
     ticketShow(savename, data, function (res) {
         console.log(res);
-        console.log("have it");
+        if(res.errcode == 0){
         $("#write-information").click(function () {
             return true;
         })
+        }else{
+            $("#write-information").click(function(){
+                alert("服务器繁忙~请重试噢~")
+                return false;
+            })
+        }
+        // console.log("have it");
     })
     $("#write-information").click(function () {
         window.location.href = "./index.html";
