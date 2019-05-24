@@ -1,3 +1,4 @@
+new VConsole();
 var station = [
     "秀发号", "满绩号", "暴富号", "超越号", "脱单号", "暴瘦号", "吃鸡号",
 ]
@@ -34,6 +35,7 @@ $(function () {
             if (res1.passenger3 == null) {
                 res1.passenger3 = "";
             }
+            console.log(res1);
             $(".countPassagers").text("恭喜你成为第" + res1.num + "位搭上列车的乘客");
             $(".destination").text(res1.destination);
             $(".passager-name").html(res1.passenger1 + "&nbsp" + res1.passenger2 + "&nbsp" + res1.passenger3);
