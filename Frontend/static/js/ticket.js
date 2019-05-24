@@ -21,7 +21,7 @@ $(function () {
     show(returnName, function (res) {
         // var res1 = typechange(res);
         console.log(res);
-        $(".station-name").text(station[res1.code]);
+        $(".station-name").text(station[res.code]);
     })
 
     //展示信息
