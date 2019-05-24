@@ -1,3 +1,4 @@
+html,
 body {
     margin: 0;
     padding: 0;
@@ -123,13 +124,14 @@ button {
     margin-bottom: 3%;
 }
 
-#img{
+#img {
     /* visibility: hidden; */
     /* z-index: -2; */
     opacity: 0;
     overflow: hidden;
     /* pointer-events: none; */
 }
-.vc-switch{
-    height: 10%;
+
+.vc-switch {
+    height: 20px;
 }
