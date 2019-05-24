@@ -39,7 +39,7 @@ Route::any('station/img', function () {
     $comment = $station->comment;
     $img = Image::make(base_path().'/public/initial.png');
 
-    $img->text('恭喜你成为第'.session()->get('id').'位搭上列车的乘客', 72, 430, function ($font) {
+    $img->text('恭喜你成为第'.session()->get('id').'位搭上列车的乘客', 50, 390, function ($font) {
         $font->file(base_path().'/public/FZHTJW.ttf');
 
         $font->size(20);
@@ -48,7 +48,7 @@ Route::any('station/img', function () {
 
         $font->color('#D98247');
     });
-    $img->text($passenger1, 170, 610, function ($font) {
+    $img->text($passenger1.'  '.$passenger2.'  '.$passenger3, 155, 563, function ($font) {
         $font->file(base_path().'/public/FZHTJW.ttf');
 
         $font->size(30);
@@ -57,25 +57,25 @@ Route::any('station/img', function () {
 
         $font->color('#FFFFFF');
     });
-    $img->text($passenger2, 220, 610, function ($font) {
-        $font->file(base_path().'/public/FZHTJW.ttf');
+    // $img->text($passenger2, 220, 610, function ($font) {
+    //     $font->file(base_path().'/public/FZHTJW.ttf');
 
-        $font->size(30);
+    //     $font->size(30);
 
-        $font->valign('top');
+    //     $font->valign('top');
 
-        $font->color('#FFFFFF');
-    });
-    $img->text($passenger3, 270, 610, function ($font) {
-        $font->file(base_path().'/public/FZHTJW.ttf');
+    //     $font->color('#FFFFFF');
+    // });
+    // $img->text($passenger3, 270, 610, function ($font) {
+    //     $font->file(base_path().'/public/FZHTJW.ttf');
 
-        $font->size(30);
+    //     $font->size(30);
 
-        $font->valign('top');
+    //     $font->valign('top');
 
-        $font->color('#FFFFFF');
-    });
-    $img->text($destination, 385, 495, function ($font) {
+    //     $font->color('#FFFFFF');
+    // });
+    $img->text($destination, 365, 445, function ($font) {
         $font->file(base_path().'/public/FZHTJW.ttf');
 
         $font->size(37);
@@ -84,7 +84,7 @@ Route::any('station/img', function () {
 
         $font->color('#FFFFFF');
     });
-    $img->text($comment, 170, 665, function ($font) {
+    $img->text($comment, 155, 630, function ($font) {
         $font->file(base_path().'/public/FZHTJW.ttf');
 
         $font->size(30);
@@ -93,7 +93,7 @@ Route::any('station/img', function () {
 
         $font->color('#FFFFFF');
     });
-    $img->text($stations[session()->get('code')], 275, 486, function ($font) {
+    $img->text($stations[session()->get('code')], 252, 440, function ($font) {
         $font->file(base_path().'/public/FZHTJW.ttf');
 
         $font->size(25);
