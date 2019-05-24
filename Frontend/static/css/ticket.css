@@ -129,9 +129,7 @@ button {
     /* z-index: -2; */
     opacity: 0;
     overflow: hidden;
+    height: 100%;
+    width:100%;
     /* pointer-events: none; */
-}
-
-.vc-switch {
-    height: 20px;
 }
