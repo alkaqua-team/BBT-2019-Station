@@ -45,7 +45,9 @@ img.onload = function () {
     $(".buttons").css("display", "flex")
 }
 $(function () {
-
+    $("#write-information").click(function () {
+        return false;
+    })
     //更改div样式
     switch (randomNum) {
         case 0:
@@ -74,6 +76,9 @@ $(function () {
     ticketShow(savename, data, function (res) {
         console.log(res);
         console.log("have it");
+        $("#write-information").click(function () {
+            return true;
+        })
     })
     $("#write-information").click(function () {
         window.location.href = "./index.html";
