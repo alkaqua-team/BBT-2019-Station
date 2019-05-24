@@ -1,6 +1,3 @@
-*{
-    height: 0;
-}
 html,
 body {
     margin: 0;
@@ -42,9 +39,10 @@ button {
 }
 
 .countPassagers {
+    width: 55%;
+    height: 3%;
     font-size: 12px;
     color: #D98247;
-    height: auto;
     position: absolute;
     left: 10%;
     top: 39.5%;
@@ -75,7 +73,8 @@ button {
 }
 
 .passager-name {
-    height: auto;
+    height: 4%;
+    /* height: auto; */
     width: 42%;
     position: absolute;
     left: 24%;
