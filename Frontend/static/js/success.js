@@ -1,3 +1,5 @@
+var vconsole = new VConsole();
+
 var pic1 = [
     "../static/pictures/3-2.png",
     "../static/pictures/3-3.png",
