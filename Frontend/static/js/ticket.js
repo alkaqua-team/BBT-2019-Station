@@ -1,4 +1,4 @@
-new VConsole();
+var vconsole = new VConsole();
 var station = [
     "秀发号", "满绩号", "暴富号", "超越号", "脱单号", "暴瘦号", "吃鸡号",
 ]
