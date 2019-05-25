@@ -187,8 +187,8 @@ button {
     margin: 0 auto;
     height: 31px;
     width: 115px;
-    position: absolute;
-    top: 60%;
+    position: relative;
+    top: 155px;
     left: 35%;
 }
 .err-shadow{
