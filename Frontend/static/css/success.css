@@ -111,10 +111,10 @@ body {
 
 .err-bg{
     background-image: url(../pictures/tip.png);
-    background-size: contain;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
-    height: 30%;
-    width: 74%;
+    height: 28%;
+    width: 72%;
     margin: 0 auto;
     top: 38%;
     position: relative;
