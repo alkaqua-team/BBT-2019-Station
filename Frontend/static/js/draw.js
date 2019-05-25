@@ -45,7 +45,7 @@ $(function () {
         $(".svg").css("display", "none");
     })
     $("#finish").click(function () {
-        var canvas = document.getElementById("canvas");
+        // var canvas = document.getElementById("canvas");
         var dataurl = canvas.toDataURL();
         var data = {
             "dataurl": dataurl
