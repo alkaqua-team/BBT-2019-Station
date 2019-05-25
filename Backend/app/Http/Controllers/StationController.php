@@ -223,7 +223,7 @@ class StationController extends Controller
     public function draw(Request $request)
     {
         return response()->json([
-            'errmsg' => '图画处理成功',
+            'errcode' => 0,
         ]);
     }
 }
