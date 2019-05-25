@@ -46,6 +46,9 @@ img.onload = function () {
     $(".buttons").css("display", "flex")
 }
 $(function () {
+    $("#write-information").click(function(){
+        return false;
+    })
     //更改div样式
     switch (randomNum) {
         case 0:
@@ -71,14 +74,18 @@ $(function () {
         default:
             console.log("number maybe wrong.")
     }
-        ticketShow(savename, data, function (res) {
-            console.log(res);
-            if (res.errcode == 0) {
-            } else {
-                //改成提示框
-                alert("服务器繁忙~请重试噢~")
-            }
-        })
+
+    ticketShow(savename, data, function (res) {
+        console.log(res);
+        if (res.errcode == 0) {
+            $("#write-information").click(function(){
+                return true;
+            })
+        } else {
+            //改成提示框
+            alert("服务器繁忙~请重试噢~")
+        }
+    })
 
     $("#write-information").click(function () {
         window.location.href = "./index.html";
