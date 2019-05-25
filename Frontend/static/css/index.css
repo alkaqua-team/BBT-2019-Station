@@ -210,7 +210,7 @@ input {
     height: 31px;
     width: 115px;
     position: relative;
-    top: 155px;
+    margin-top: 42%;
     left: 35%;
 }
 .err-shadow{
