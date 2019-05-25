@@ -127,7 +127,7 @@ button {
 }
 
 #img {
-    visibility: hidden;
+    /* visibility: hidden; */
     opacity: 0;
     overflow: hidden;
     height: 100%;
@@ -140,7 +140,7 @@ button {
     height: 100%;
     position: absolute;
     top:0;
-    display: none;
+    display: auto;
 }
 
 .err-bg{
