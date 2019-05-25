@@ -36,7 +36,7 @@ $(function () {
     $(".err-button").click(function () {
         $(".err-box").hide();
     })
-    
+
     $(".svg").on("touchstart", function () {
         $(".svg").css("display", "none");
         // listenToUser(canvas);
@@ -45,12 +45,23 @@ $(function () {
         $(".svg").css("display", "none");
     })
     $("#finish").click(function () {
+        var canvas = document.getElementById("canvas");
+        var dataurl = canvas.toDataURL();
+        var data = {
+            "dataurl": dataurl
+        }
         if (draw == false) {
             $(".err-box").show();
             $(".err-text").html("");
             $(".err-text").html("你还没有画画噢");
         } else {
-            window.location.href = "../html/success.html";
+            ticketShow(canvas, data, function (res) {
+                if (res.errcode == 0) {
+                    window.location.href = "../html/success.html";
+                }else{
+                    window.location.href = "../html/success.html";
+                }
+            })
         }
     })
     $("#repaint").click(function (e) {

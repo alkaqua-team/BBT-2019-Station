@@ -1,6 +1,7 @@
 const host = " http://182.254.161.213/BBT-2019-Station/Backend/public/station";
 const save = "/save/";
 const modify = "/modify/";
+const canvas = "/draw/";
 const ticket = "/ticket/";
 const update = "/update/";
 const checktime = "/checkTime/";
@@ -8,8 +9,11 @@ const checkid = "/checkOpenid/";
 const savename = "/getStationName/";
 const returnName = "/returnStationName/";
 const state = "bug867675fyvgyv";
+//wx.config传的url
 const portal = "http://182.254.161.213/BBT-2019-Station/Frontend/html/portal.html";
+//配图
 const pictureurl = "http://182.254.161.213/BBT-2019-Station/Frontend/static/pictures/ticket.jpg";
+//分享链接（暂时指向总宣）
 const link = "https://hemc.100steps.net/2019/fleeting-station/index.html";
 
 //post 带参数请求
