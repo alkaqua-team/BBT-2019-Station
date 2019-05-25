@@ -55,9 +55,9 @@ $(function () {
     img.onload = function () {
         $(".errmsg").show();
         $("#img").click(function () {
-            img.src = host + '/img/';
-            document.getElementById("container").appendChild(img);
-            // return true;
+            return true;
         })
+        img.src = host + '/img/';
+        document.getElementById("container").appendChild(img);
     };
 })
