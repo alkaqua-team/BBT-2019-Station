@@ -1,15 +1,33 @@
 var input = new Array();
 var judge = new Array();
 var inputbox = [
-    "passager-name1", "passager-name2", "passager-name3", "destination","message"
+    "passager-name1", "passager-name2", "passager-name3", "destination", "message"
 ];
 var errmsg = [
-    "errmsg_passenger1", "errmsg_passenger2", "errmsg_passenger3", "errmsg_destination","errmsg_comment"
+    "errmsg_passenger1", "errmsg_passenger2", "errmsg_passenger3", "errmsg_destination", "errmsg_comment"
 ];
 var checkdisplay = [
     "passager1", "passager2", "passager3", "destination"
 ]
 $(function () {
+    $(".err-button").click(function () {
+        $(".err-box").hide();
+    })
+    $(".tip").click(function(){
+        return false;
+    })
+    $(".arrow").click(function(){
+        return false;
+    })
+
+    // //活动时间检查
+    // var time = checkTime();
+    // if (time != 0) {
+    //     $(".err-box").show();
+    //     $(".err-text").html("活动时间<br>2019/5/28	到 2019/5/31");
+    //     $("#create-ticket").attr("disabled", true);
+    // }
+
     $("#add1").click(function () {
         if (block("passager2") == true) {
             $("#passager3").show();
@@ -50,7 +68,7 @@ $(function () {
         }
 
         //message的检查
-        judge[4] = message(inputbox[4],errmsg[4],input[4]);
+        judge[4] = message(inputbox[4], errmsg[4], input[4]);
 
         //向后台传数据
         if (judge[0] && judge[1] && judge[2] && judge[3] && judge[4]) {

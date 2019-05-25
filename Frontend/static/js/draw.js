@@ -24,17 +24,16 @@ var colors = [
 ];
 
 $(function () {
+    $(".err-button").click(function () {
+        $(".err-box").hide();
+    })
 
     // //活动时间检查
     // var time = checkTime();
     // if (time != 0) {
+    //     $(".err-box").show();
+    //     $(".err-text").html("活动时间<br>2019/5/28	到 2019/5/31");
     //     $("#finish").attr("disabled", true);
-    // }
-
-    // //微信授权检查
-    // if(!checkId()){
-    //     $("#finish").attr("disabled", true);
-    //     // 还未授权 提示
     // }
     
     $("#orange").addClass("select");
@@ -47,7 +46,9 @@ $(function () {
     })
     $("#finish").click(function () {
         if (draw == false) {
-            alert("你还没有画画噢")
+            $(".err-box").show();
+            $(".err-text").html("");
+            $(".err-text").html("你还没有画画噢");
         } else {
             window.location.href = "../html/success.html";
         }

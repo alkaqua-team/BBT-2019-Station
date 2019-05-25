@@ -171,3 +171,14 @@ body {
     background-color: black;
     opacity: 0.3;
 }
+
+.err-text{
+    margin: 0 auto;
+    height: 8%;
+    width: 60%;
+    position: relative;
+    top: 20%;
+    font-size: 17px;
+    letter-spacing:1px;
+    color:#51637F;
+}

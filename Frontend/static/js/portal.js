@@ -12,14 +12,18 @@ img.onload = function () {
     }, 2000)
 }
 $(function () {
-
-    //活动时间检查 等提示框
+    $(".err-button").click(function () {
+        $(".err-box").hide();
+    })
+    
+    // 活动时间检查 
     // var time = checkTime();
     // if (time == 0) {
-    $("#entrance").click(function () {
-        window.location.href = "../html/draw.html";
-    });
+        $("#entrance").click(function () {
+            window.location.href = "../html/draw.html";
+        });
     // } else {
-    //     $("button").attr("disabled", true);
+    //     $(".err-box").show();
+    //     $("#entrance").attr("disabled", true);
     // }
 });

@@ -100,3 +100,56 @@ body {
     height: 170pt;
     width: 122pt;
 }
+
+.err-box{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    display: none;
+}
+
+.err-bg{
+    background-image: url(../pictures/tip.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 30%;
+    width: 74%;
+    margin: 0 auto;
+    top: 38%;
+    position: relative;
+}
+.err-button{
+    background-color: #EA8C98;
+    color: #EAEAEA;
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    outline: none;
+    margin: 0 auto;
+    height: 31px;
+    width: 115px;
+    position: absolute;
+    top: 60%;
+    left: 35%;
+}
+.err-shadow{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    background-color: black;
+    opacity: 0.3;
+}
+
+.err-text{
+    margin: 0 auto;
+    height: 8%;
+    width: 60%;
+    position: relative;
+    top: 20%;
+    font-size: 17px;
+    letter-spacing:1px;
+    color:#51637F;
+}
