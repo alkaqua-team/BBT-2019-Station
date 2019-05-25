@@ -219,4 +219,11 @@ class StationController extends Controller
 
         return $img->response('png');
     }
+
+    public function draw(Request $request)
+    {
+        return response()->json([
+            'errcode' => 0,
+        ]);
+    }
 }
