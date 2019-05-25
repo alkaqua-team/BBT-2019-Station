@@ -19,10 +19,11 @@ $(function () {
 
     // //返回列车号（还没测试 可能有bug）
     show(returnName, function (res) {
+        var code = res.code;
         // var res1 = typechange(res);
-        var code = parseInt(res.code);
-        console.log(code)
-        console.log(res);
+        // var code = parseInt(res.code);
+        // console.log(code)
+        // console.log(res);
         $(".station-name").text(station[code]);
     })
 
@@ -55,7 +56,7 @@ $(function () {
     img.onload = function () {
         $(".errmsg").show();
         $("#img").click(function () {
-            return true;
+            return false;
         })
     };
         img.src = host + '/img/';

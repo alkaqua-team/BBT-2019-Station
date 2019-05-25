@@ -135,16 +135,17 @@ body {
     height: 100%;
     position: absolute;
     top:0;
+    display: none;
 }
 
 .err-bg{
     background-image: url(../pictures/tip.png);
     background-size: contain;
     background-repeat: no-repeat;
-    height: 36%;
-    width: 90%;
+    height: 30%;
+    width: 74%;
     margin: 0 auto;
-    top: 28%;
+    top: 38%;
     position: relative;
 }
 .err-button{
@@ -159,7 +160,7 @@ body {
     height: 31px;
     width: 115px;
     position: absolute;
-    top: 56%;
+    top: 60%;
     left: 35%;
 }
 .err-shadow{

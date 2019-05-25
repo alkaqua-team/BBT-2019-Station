@@ -17,7 +17,7 @@ function ticketShow(method, data, fn) {
         data: data,
         dataType: 'JSON',
         // xhrFields: {
-            withCredentials: true,
+        withCredentials: true,
         // },
         crossDomain: true,
         // withCredentials: true,
@@ -35,7 +35,7 @@ function show(method, fn) {
         type: "POST",
         url: host + method,
         // xhrFields: {
-            withCredentials: true,
+        withCredentials: true,
         // },
         crossDomain: true,
         contentType: "application/x-www-form-urlencoded",
