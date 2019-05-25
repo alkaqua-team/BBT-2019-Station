@@ -162,7 +162,16 @@ class StationController extends Controller
 
             $font->color('#D98247');
         });
-        $img->text($passenger1.'  '.$passenger2.'  '.$passenger3, 155, 563, function ($font) {
+        $img->text($passenger1.'  '.$passenger2, 155, 563, function ($font) {
+            $font->file(base_path().'/public/FZHTJW.ttf');
+
+            $font->size(30);
+
+            $font->valign('top');
+
+            $font->color('#FFFFFF');
+        });
+        $img->text($passenger3, 155, 597, function ($font) {
             $font->file(base_path().'/public/FZHTJW.ttf');
 
             $font->size(30);
