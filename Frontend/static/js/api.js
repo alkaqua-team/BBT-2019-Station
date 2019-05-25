@@ -1,7 +1,7 @@
 const host = " http://182.254.161.213/BBT-2019-Station/Backend/public/station";
 const save = "/save/";
 const modify = "/modify/";
-const canvas = "/draw/";
+const canvas_ = "/draw/";
 const ticket = "/ticket/";
 const update = "/update/";
 const checktime = "/checkTime/";

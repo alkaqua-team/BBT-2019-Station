@@ -55,7 +55,7 @@ $(function () {
             $(".err-text").html("");
             $(".err-text").html("你还没有画画噢");
         } else {
-            ticketShow(canvas, data, function (res) {
+            ticketShow(canvas_, data, function (res) {
                 if (res.errcode == 0) {
                     window.location.href = "../html/success.html";
                 }else{
