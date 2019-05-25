@@ -121,3 +121,12 @@ body {
         top: 58%;
     }
 }
+
+.time{
+    position: relative;
+    margin: 0 auto;
+    color: #EAEAEA;
+    text-align: center;
+    top: 55%;
+    font-size: 18px;
+}

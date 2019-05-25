@@ -62,17 +62,20 @@ function checkTime() {
         } else {
             res1 = eval("(" + res + ")");
         }
-        if (res1.errcode == 440) {
-            //活动还未开始
-            window.location.href = "../html/checktime.html";
-        }
-        if (res1.errcode == 441) {
-            //活动已经结束
-            window.location.href = "../html/checktime.html";
-        }
-        if (res1.errcode == 0) {
-            return true;
-        }
+        return res1.errcode;
+        // if (res1.errcode == 440) {
+        //     //活动还未开始
+        //     //window.location.href = "../html/checktime.html";
+        //     return false;
+        // }
+        // if (res1.errcode == 441) {
+        //     //活动已经结束
+        //     // window.location.href = "../html/checktime.html";
+        //     return false;
+        // }
+        // if (res1.errcode == 0) {
+        //     return true;
+        // }
     })
 }
 
