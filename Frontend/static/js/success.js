@@ -71,17 +71,17 @@ $(function () {
         default:
             console.log("number maybe wrong.")
     }
-
-    $("#write-information").click(function () {
         ticketShow(savename, data, function (res) {
             console.log(res);
             if (res.errcode == 0) {
-                window.location.href = "./index.html";
             } else {
                 //改成提示框
                 alert("服务器繁忙~请重试噢~")
             }
         })
+
+    $("#write-information").click(function () {
+        window.location.href = "./index.html";
     })
     $("#reselect").click(function (e) {
         e.preventDefault();
