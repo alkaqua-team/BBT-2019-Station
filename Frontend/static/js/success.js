@@ -1,4 +1,4 @@
-var vconsole = new VConsole();
+// var vconsole = new VConsole();
 
 var pic1 = [
     "../static/pictures/3-2.png",

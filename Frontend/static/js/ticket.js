@@ -1,4 +1,4 @@
-var vconsole = new VConsole();
+// var vconsole = new VConsole();
 var station = [
     "秀发号", "满绩号", "暴富号", "超越号", "脱单号", "暴瘦号", "吃鸡号",
 ]
@@ -64,11 +64,12 @@ $(function () {
     //传图片
     var img = new Image();
     img.id = "img";
+    img.attr("v-on","click.prevent");
     img.onload = function () {
         $(".errmsg").show();
-        $("#img").click(function () {
-            return false;
-        })
+        // $("#img").click(function () {
+        //     return false;
+        // })
     };
         img.src = host + '/img/';
         document.getElementById("container").appendChild(img);
