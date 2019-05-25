@@ -64,7 +64,7 @@ $(function () {
     //传图片
     var img = new Image();
     img.id = "img";
-    img.attr("v-on","click.prevent");
+    $("#img").attr("v-on","click.prevent");
     img.onload = function () {
         $(".errmsg").show();
         // $("#img").click(function () {
