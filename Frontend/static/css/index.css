@@ -192,8 +192,8 @@ input {
     background-image: url(../pictures/tip.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    height: 189px;
-    width: 270px;
+    height: 28%;
+    width: 72%;
     margin: 0 auto;
     top: 38%;
     position: relative;
@@ -210,7 +210,7 @@ input {
     height: 31px;
     width: 115px;
     position: absolute;
-    top: 59%;
+    top: 60%;
     left: 35%;
 }
 .err-shadow{
