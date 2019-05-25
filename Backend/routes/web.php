@@ -21,87 +21,11 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('station/ticket', ['uses' => 'StationController@ticket']);
     Route::post('station/update', ['uses' => 'StationController@update']);
     Route::post('station/checkTime', ['uses' => 'StationController@checkTime']);
-    Route::any('station/checkOpenid', ['uses' => 'StationController@checkOpenid']);
+    Route::get('station/checkOpenid', ['uses' => 'StationController@checkOpenid']);
     Route::post('station/getStationName', ['uses' => 'StationController@getStationName']);
     Route::post('station/returnStationName', ['uses' => 'StationController@returnStationName']);
+    Route::any('station/img', ['uses' => 'StationController@returnImg']);
 });
 Route::get('/', function () {
     return view('welcome');
-});
-Route::any('station/img', function () {
-    $stations = array('秀发号', '满绩号', '暴富号', '超越号', '脱单号', '暴瘦号', '吃鸡号');
-
-    $station = DB::table('station')->where('id', session()->get('id'))->first();
-    $passenger1 = $station->passenger1;
-    $passenger2 = $station->passenger2;
-    $passenger3 = $station->passenger3;
-    $destination = $station->destination;
-    $comment = $station->comment;
-    $img = Image::make(base_path().'/public/initial.png');
-
-    $img->text('恭喜你成为第'.session()->get('id').'位搭上列车的乘客', 50, 390, function ($font) {
-        $font->file(base_path().'/public/FZHTJW.ttf');
-
-        $font->size(20);
-
-        $font->valign('top');
-
-        $font->color('#D98247');
-    });
-    $img->text($passenger1.'  '.$passenger2.'  '.$passenger3, 155, 563, function ($font) {
-        $font->file(base_path().'/public/FZHTJW.ttf');
-
-        $font->size(30);
-
-        $font->valign('top');
-
-        $font->color('#FFFFFF');
-    });
-    // $img->text($passenger2, 220, 610, function ($font) {
-    //     $font->file(base_path().'/public/FZHTJW.ttf');
-
-    //     $font->size(30);
-
-    //     $font->valign('top');
-
-    //     $font->color('#FFFFFF');
-    // });
-    // $img->text($passenger3, 270, 610, function ($font) {
-    //     $font->file(base_path().'/public/FZHTJW.ttf');
-
-    //     $font->size(30);
-
-    //     $font->valign('top');
-
-    //     $font->color('#FFFFFF');
-    // });
-    $img->text($destination, 365, 445, function ($font) {
-        $font->file(base_path().'/public/FZHTJW.ttf');
-
-        $font->size(37);
-
-        $font->valign('top');
-
-        $font->color('#FFFFFF');
-    });
-    $img->text($comment, 155, 630, function ($font) {
-        $font->file(base_path().'/public/FZHTJW.ttf');
-
-        $font->size(30);
-
-        $font->valign('top');
-
-        $font->color('#FFFFFF');
-    });
-    $img->text($stations[session()->get('code')], 252, 440, function ($font) {
-        $font->file(base_path().'/public/FZHTJW.ttf');
-
-        $font->size(25);
-
-        $font->valign('top');
-
-        $font->color('#FFFFFF');
-    });
-
-    return $img->response('png');
 });

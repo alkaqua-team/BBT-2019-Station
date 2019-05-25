@@ -106,37 +106,31 @@ class StationController extends Controller
 
     public function checkOpenid(Request $request)
     {
-        if ($request->isMethod('post')) {
-            if ($request->session()->has('openid')) {
-                return response()->json([
-                'errcode' => 0,
-                'errmsg' => '已授权',
-            ]);
-            } else {
-                return response()->json([
-                'errcode' => 540,
-                'errmsg' => '未授权',
-            ]);
-            }
-        }
-        if ($request->isMethod('get')) {
-            $params = $request->all();
-            $token = $params['token'];
-            $sign = $params['sign'];
-            $origin_token = $token;
-            $token = json_decode(base64_decode($token), true);
-            if (md5(sha1($origin_token.'')) !== $sign || empty($token['openid'])) {
-                return redirect('http://182.254.161.213/BBT-2019-Station/Frontend/html/index.html');
-            }
-            $request->session()->put('openid', $token['openid']);
-
+        $params = $request->all();
+        $token = $params['token'];
+        $sign = $params['sign'];
+        $origin_token = $token;
+        $token = json_decode(base64_decode($token), true);
+        if (md5(sha1($origin_token.'afnweof!@#@#$sdf1334dcsS')) !== $sign || empty($token['openid'])) {
             return redirect('http://182.254.161.213/BBT-2019-Station/Frontend/html/index.html');
         }
+        $request->session()->put('openid', $token['openid']);
+
+        return redirect('http://182.254.161.213/BBT-2019-Station/Frontend/html/index.html');
     }
 
     public function getStationName(Request $request)
     {
         session()->put('code', $request->input('code'));
+        if (session()->has('code')) {
+            return response()->json([
+            'errcode' => 0,
+        ]);
+        } else {
+            return response()->json([
+            'errcode' => 1,
+        ]);
+        }
     }
 
     public function returnStationName(Request $request)
@@ -144,5 +138,84 @@ class StationController extends Controller
         return response()->json([
             'code' => session()->get('code'),
         ]);
+    }
+
+    public function returnImg(Request $request)
+    {
+        $stations = array('秀发号', '满绩号', '暴富号', '超越号', '脱单号', '暴瘦号', '吃鸡号');
+
+        $station = DB::table('station')->where('id', session()->get('id'))->first();
+        $passenger1 = $station->passenger1;
+        $passenger2 = $station->passenger2;
+        $passenger3 = $station->passenger3;
+        $destination = $station->destination;
+        $comment = $station->comment;
+        $img = Image::make(base_path().'/public/initial.png');
+
+        $img->text('恭喜你成为第'.session()->get('id').'位搭上列车的乘客', 50, 390, function ($font) {
+            $font->file(base_path().'/public/FZHTJW.ttf');
+
+            $font->size(20);
+
+            $font->valign('top');
+
+            $font->color('#D98247');
+        });
+        $img->text($passenger1.'  '.$passenger2.'  '.$passenger3, 155, 563, function ($font) {
+            $font->file(base_path().'/public/FZHTJW.ttf');
+
+            $font->size(30);
+
+            $font->valign('top');
+
+            $font->color('#FFFFFF');
+        });
+        // $img->text($passenger2, 220, 610, function ($font) {
+        //     $font->file(base_path().'/public/FZHTJW.ttf');
+
+        //     $font->size(30);
+
+        //     $font->valign('top');
+
+        //     $font->color('#FFFFFF');
+        // });
+        // $img->text($passenger3, 270, 610, function ($font) {
+        //     $font->file(base_path().'/public/FZHTJW.ttf');
+
+        //     $font->size(30);
+
+        //     $font->valign('top');
+
+        //     $font->color('#FFFFFF');
+        // });
+        $img->text($destination, 365, 445, function ($font) {
+            $font->file(base_path().'/public/FZHTJW.ttf');
+
+            $font->size(37);
+
+            $font->valign('top');
+
+            $font->color('#FFFFFF');
+        });
+        $img->text($comment, 155, 630, function ($font) {
+            $font->file(base_path().'/public/FZHTJW.ttf');
+
+            $font->size(30);
+
+            $font->valign('top');
+
+            $font->color('#FFFFFF');
+        });
+        $img->text($stations[session()->get('code')], 252, 440, function ($font) {
+            $font->file(base_path().'/public/FZHTJW.ttf');
+
+            $font->size(25);
+
+            $font->valign('top');
+
+            $font->color('#FFFFFF');
+        });
+
+        return $img->response('png');
     }
 }
