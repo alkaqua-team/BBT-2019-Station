@@ -10,9 +10,7 @@ document.oncopy = function () {
 }
 
 $(function () {
-    $(".err-button").click(function () {
-        $(".err-box").hide();
-    })
+
 
     // //活动时间检查
     // var time = checkTime();

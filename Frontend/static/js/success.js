@@ -33,7 +33,6 @@ function randomNumber(max) {
     return Math.floor(Math.random() * Math.floor(max));
 }
 var randomNum = randomNumber(7);
-//传列车号
 var data = {
     "code": randomNum
 }
@@ -46,10 +45,6 @@ img.onload = function () {
     $(".buttons").css("display", "flex")
 }
 $(function () {
-    $(".err-button").click(function () {
-        $(".err-box").hide();
-    })
-
     // //活动时间检查
     // var time = checkTime();
     // if (time != 0) {
@@ -58,8 +53,11 @@ $(function () {
     //     $("#write-information").attr("disabled", true);
     //     $("#reselect").attr("disabled", true);
     // }
+    $(".err-button").click(function () {
+        $(".err-box").hide();
+    })
 
-    $("#write-information").click(function(){
+    $("#write-information").click(function () {
         return false;
     })
     //更改div样式
@@ -88,15 +86,18 @@ $(function () {
             console.log("number maybe wrong.")
     }
 
+    //传列车号
     ticketShow(savename, data, function (res) {
         console.log(res);
         if (res.errcode == 0) {
-            $("#write-information").click(function(){
+            $("#write-information").click(function () {
                 return true;
             })
         } else {
             //改成提示框
-            alert("服务器繁忙~请重试噢~")
+            $(".err-box").show();
+            $(".err-text").html("");
+            $(".err-text").html("服务器繁忙~请重试噢~");
         }
     })
 

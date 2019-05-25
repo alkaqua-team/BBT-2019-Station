@@ -1,8 +1,10 @@
+//禁用微信橡皮筋功能
 document.body.addEventListener('touchmove', function (e) {
     e.preventDefault();
 }, {
     passive: false
 });
+
 const height = document.documentElement.clientHeight;
 const width = document.documentElement.clientWidth;
 $("#canvas").css("position", "absolute");
@@ -24,10 +26,6 @@ var colors = [
 ];
 
 $(function () {
-    $(".err-button").click(function () {
-        $(".err-box").hide();
-    })
-
     // //活动时间检查
     // var time = checkTime();
     // if (time != 0) {
@@ -35,8 +33,10 @@ $(function () {
     //     $(".err-text").html("活动时间<br>2019/5/28	到 2019/5/31");
     //     $("#finish").attr("disabled", true);
     // }
+    $(".err-button").click(function () {
+        $(".err-box").hide();
+    })
     
-    $("#orange").addClass("select");
     $(".svg").on("touchstart", function () {
         $(".svg").css("display", "none");
         // listenToUser(canvas);
@@ -53,6 +53,14 @@ $(function () {
             window.location.href = "../html/success.html";
         }
     })
+    $("#repaint").click(function (e) {
+        e.preventDefault();
+        ctx.clearRect(0, 0, width * 2, height * 2);
+        draw = false;
+        listenToUser(canvas)
+    })
+
+    $("#orange").addClass("select");
     $("#orange").click(function () {
         color = "#F7A44F";
         clear();
@@ -78,18 +86,12 @@ $(function () {
         clear();
         $("#blue2").addClass("select");
     })
-    $("#repaint").click(function (e) {
-        e.preventDefault();
-        ctx.clearRect(0, 0, width * 2, height * 2);
-        draw = false;
-        listenToUser(canvas)
-    })
 })
+
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 canvas.height = 0.41 * height;
 canvas.width = width * 0.93;
-
 
 ctx.beginPath();
 

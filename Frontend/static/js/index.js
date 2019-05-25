@@ -10,15 +10,8 @@ var checkdisplay = [
     "passager1", "passager2", "passager3", "destination"
 ]
 $(function () {
-    $(".err-button").click(function () {
-        $(".err-box").hide();
-    })
-    $(".tip").click(function(){
-        return false;
-    })
-    $(".arrow").click(function(){
-        return false;
-    })
+    $(".tip").attr("disabled", true);
+    $(".arrow").attr("disabled", true);
 
     // //活动时间检查
     // var time = checkTime();
@@ -27,6 +20,9 @@ $(function () {
     //     $(".err-text").html("活动时间<br>2019/5/28	到 2019/5/31");
     //     $("#create-ticket").attr("disabled", true);
     // }
+    $(".err-button").click(function () {
+        $(".err-box").hide();
+    })
 
     $("#add1").click(function () {
         if (block("passager2") == true) {
