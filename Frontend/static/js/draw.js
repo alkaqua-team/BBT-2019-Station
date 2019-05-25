@@ -25,17 +25,17 @@ var colors = [
 
 $(function () {
 
-    //活动时间检查
-    var time = checkTime();
-    if (time != 0) {
-        $("#finish").attr("disabled", true);
-    }
+    // //活动时间检查
+    // var time = checkTime();
+    // if (time != 0) {
+    //     $("#finish").attr("disabled", true);
+    // }
 
-    //微信授权检查
-    if(!checkId()){
-        $("#finish").attr("disabled", true);
-        // 还未授权 提示
-    }
+    // //微信授权检查
+    // if(!checkId()){
+    //     $("#finish").attr("disabled", true);
+    //     // 还未授权 提示
+    // }
     
     $("#orange").addClass("select");
     $(".svg").on("touchstart", function () {

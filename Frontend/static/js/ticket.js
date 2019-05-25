@@ -57,7 +57,7 @@ $(function () {
         $("#img").click(function () {
             return true;
         })
+    };
         img.src = host + '/img/';
         document.getElementById("container").appendChild(img);
-    };
 })
