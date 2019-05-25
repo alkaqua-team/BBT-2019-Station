@@ -16,10 +16,11 @@ function ticketShow(method, data, fn) {
         url: host + method,
         data: data,
         dataType: 'JSON',
-        xhrFields: {
-            withCredentials: true
-        },
+        // xhrFields: {
+            withCredentials: true,
+        // },
         crossDomain: true,
+        // withCredentials: true,
         contentType: "application/x-www-form-urlencoded",
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -33,9 +34,9 @@ function show(method, fn) {
     $.ajax({
         type: "POST",
         url: host + method,
-        xhrFields: {
-            withCredentials: true
-        },
+        // xhrFields: {
+            withCredentials: true,
+        // },
         crossDomain: true,
         contentType: "application/x-www-form-urlencoded",
         headers: {
@@ -53,7 +54,7 @@ function weixin(redirect, state) {
     })
 }
 
-//检查是否在活动时间（true  在活动时间内）
+//检查是否在活动时间
 function checkTime() {
     show(checktime, function (res) {
         var res1;
@@ -63,19 +64,6 @@ function checkTime() {
             res1 = eval("(" + res + ")");
         }
         return res1.errcode;
-        // if (res1.errcode == 440) {
-        //     //活动还未开始
-        //     //window.location.href = "../html/checktime.html";
-        //     return false;
-        // }
-        // if (res1.errcode == 441) {
-        //     //活动已经结束
-        //     // window.location.href = "../html/checktime.html";
-        //     return false;
-        // }
-        // if (res1.errcode == 0) {
-        //     return true;
-        // }
     })
 }
 

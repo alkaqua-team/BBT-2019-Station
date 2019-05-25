@@ -1,8 +1,6 @@
-//var checktime = checkTime();
 var img = new Image();
-var fn;
 img.src = "../static/pictures/1-1.png";
-img.onload = function(){
+img.onload = function () {
     $(".cloud").css("display", "block");
     $(".entrance").css("display", "block");
     setTimeout(function () {
@@ -14,13 +12,14 @@ img.onload = function(){
     }, 2000)
 }
 $(function () {
-    var time = checkTime();
-    console.log(time);
+
+    //活动时间检查 等提示框
+    // var time = checkTime();
+    // if (time == 0) {
     $("button").click(function () {
         window.location.href = "../html/draw.html";
     });
+    // } else {
+    //     $("button").attr("disabled", true);
+    // }
 });
-
-
-//活动时间检查
-//是否授权检查

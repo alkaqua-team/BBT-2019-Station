@@ -40,16 +40,12 @@ var data = {
 var img = new Image();
 img.src = "../static/pictures/3-1.png";
 img.onload = function () {
-
     $(".success-pic").css("background-image", "url(" + pic1[randomNum] + ")")
     $(".success-text").css("background-image", "url(" + pic2[randomNum] + ")")
     $(".introduction").text(text[randomNum]);
     $(".buttons").css("display", "flex")
 }
 $(function () {
-    $("#write-information").click(function () {
-        return false;
-    })
     //更改div样式
     switch (randomNum) {
         case 0:
@@ -76,22 +72,16 @@ $(function () {
             console.log("number maybe wrong.")
     }
 
-    ticketShow(savename, data, function (res) {
-        console.log(res);
-        if(res.errcode == 0){
-        $("#write-information").click(function () {
-            return true;
-        })
-        }else{
-            $("#write-information").click(function(){
-                alert("服务器繁忙~请重试噢~")
-                return false;
-            })
-        }
-        // console.log("have it");
-    })
     $("#write-information").click(function () {
-        window.location.href = "./index.html";
+        ticketShow(savename, data, function (res) {
+            console.log(res);
+            if (res.errcode == 0) {
+                window.location.href = "./index.html";
+            } else {
+                //改成提示框
+                alert("服务器繁忙~请重试噢~")
+            }
+        })
     })
     $("#reselect").click(function (e) {
         e.preventDefault();
