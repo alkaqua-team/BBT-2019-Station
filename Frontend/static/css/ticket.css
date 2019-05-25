@@ -47,7 +47,6 @@ button {
     left: 10%;
     top: 39.5%;
     overflow: hidden;
-    z-index: 233;
 }
 
 .destination {
@@ -78,7 +77,7 @@ button {
     width: 42%;
     position: absolute;
     left: 24%;
-    top: 53%;
+    top: 53.5%;
     font-size: 11px;
     color: #FFFFFF;
     word-break: break-all;
@@ -88,7 +87,7 @@ button {
     width: 64%;
     height: 8%;
     position: absolute;
-    bottom: 34.5%;
+    bottom: 34%;
     right: 12%;
     font-size: 11px;
     color: #FFFFFF;
@@ -127,12 +126,10 @@ button {
 }
 
 #img {
-    /* visibility: hidden; */
     opacity: 0;
     overflow: hidden;
     height: 100%;
     width:100%;
-    /* pointer-events: none; */
 }
 
 .err-box{

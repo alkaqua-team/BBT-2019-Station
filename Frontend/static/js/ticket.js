@@ -64,13 +64,19 @@ $(function () {
     //传图片
     var img = new Image();
     img.id = "img";
-    // $("#img").attr("v-on","click.prevent");
     img.onload = function () {
         $(".errmsg").show();
-        // $("#img").click(function () {
-        //     return false;
-        // })
     };
         img.src = host + '/img/';
         document.getElementById("container").appendChild(img);
 })
+
+//7 缩小 12
+function text(str){
+    if(str.length>=7){
+        $(".destination").css("font-size","12px");
+    }
+    if(str.length<7){
+        $(".destination").css("font-size","19px");
+    }
+}
