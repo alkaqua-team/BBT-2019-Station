@@ -113,8 +113,8 @@ body {
     background-image: url(../pictures/tip.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    height: 28%;
-    width: 72%;
+    height: 189px;
+    width: 270px;
     margin: 0 auto;
     top: 38%;
     position: relative;
@@ -131,7 +131,7 @@ body {
     height: 31px;
     width: 115px;
     position: absolute;
-    top: 60%;
+    top: 59%;
     left: 35%;
 }
 .err-shadow{
