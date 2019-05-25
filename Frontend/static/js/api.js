@@ -25,11 +25,11 @@ function ticketShow(method, data, fn) {
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
-        // statusCode:{
-        //     401: function(){
-        //         window.location.href="https://hemc.100steps.net/2018/fireman/auth.php?redirect=" + redirect + "&state=" + state
-        //     }
-        // },
+        statusCode:{
+            401: function(){
+                window.location.href="https://hemc.100steps.net/2018/fireman/auth.php?redirect=" + redirect + "&state=" + state
+            }
+        },
         success: fn,
     })
 }
@@ -47,11 +47,11 @@ function show(method, fn) {
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
-        // statusCode:{
-        //     401: function(){
-        //         window.location.href="https://hemc.100steps.net/2018/fireman/auth.php?redirect=" + redirect + "&state=" + state
-        //     }
-        // },
+        statusCode:{
+            401: function(){
+                window.location.href="https://hemc.100steps.net/2018/fireman/auth.php?redirect=" + redirect + "&state=" + state
+            }
+        },
         success: fn,
     })
 }
