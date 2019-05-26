@@ -74,11 +74,12 @@ button {
     position: absolute;
     color: #FFFFFF;
     word-break: break-all;
-    overflow: scroll;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .message-input {
-    width: 57%;
+    width: 50%;
     height: 8%;
     position: absolute;
     bottom: 35%;
@@ -86,7 +87,8 @@ button {
     font-size: 11px;
     color: #FFFFFF;
     word-break: break-all;
-    overflow: scroll;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 #return {
