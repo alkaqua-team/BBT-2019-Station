@@ -175,3 +175,7 @@ button {
     letter-spacing:1px;
     color:#51637F;
 }
+
+.input{
+    min-height:calc(100% + 1px);
+}
