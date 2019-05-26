@@ -7,7 +7,8 @@ body {
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none；
+    user-select: none;
+    position: fixed;
 }
 
 .buttons {
@@ -69,12 +70,8 @@ button {
 
 .passager-name {
     height: 4%;
-    /* height: auto; */
     width: 42%;
     position: absolute;
-    left: 24%;
-    top: 53%;
-    font-size: 11px;
     color: #FFFFFF;
     word-break: break-all;
     overflow: scroll;
