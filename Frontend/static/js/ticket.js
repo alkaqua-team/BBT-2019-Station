@@ -1,3 +1,10 @@
+//禁用微信橡皮筋功能
+document.body.addEventListener('touchmove', function (e) {
+    e.preventDefault();
+}, {
+    passive: false
+});
+
 // var vconsole = new VConsole();
 var station = [
     "秀发号", "满绩号", "暴富号", "超越号", "脱单号", "暴瘦号", "吃鸡号",
