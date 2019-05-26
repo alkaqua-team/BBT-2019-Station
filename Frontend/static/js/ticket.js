@@ -72,16 +72,16 @@ $(function () {
     img.onload = function () {
         $(".errmsg").show();
     };
-        img.src = host + '/img/';
-        document.getElementById("container").appendChild(img);
+    img.src = host + '/img/';
+    document.getElementById("container").appendChild(img);
 })
 
 //7 缩小 12
-function text(str){
-    if(str.length>=7){
-        $(".destination").css("font-size","12px");
+function text(str) {
+    if (str.length >= 7) {
+        $(".destination").css("font-size", "12px");
     }
-    if(str.length<7){
-        $(".destination").css("font-size","19px");
+    if (str.length < 7) {
+        $(".destination").css("font-size", "19px");
     }
 }

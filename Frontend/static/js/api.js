@@ -95,7 +95,7 @@ function checkTime() {
 //         }
 //         if (res1.errcode == 540) {
 //             // 未授权 引导用户到认证页面
-//             //weixin(host + checkid, state)
+            // weixin(host + checkid, state)
 //             alert("未授权");
 //         }
 //         if (res1.errcode == 0) {
