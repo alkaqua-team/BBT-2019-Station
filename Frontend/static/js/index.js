@@ -9,6 +9,11 @@ var errmsg = [
 var checkdisplay = [
     "passager1", "passager2", "passager3", "destination"
 ]
+var img = new Image();
+img.src = "../static/pictures/4-1.png";
+img.onload = function(){
+    $(".containerr").css("display","flex")
+}
 $(function () {
     $(".tip").attr("disabled", true);
     $(".arrow").attr("disabled", true);

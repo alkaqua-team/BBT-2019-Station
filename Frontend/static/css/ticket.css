@@ -61,14 +61,14 @@ button {
 }
 
 .QRcode {
-    background-image: url("../pictures/5-3.png");
+    background-image: url(../pictures/5-3.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    width: 47pt;
-    height: 47pt;
+    width: 35pt;
+    height: 35pt;
     position: absolute;
-    right: 12%;
-    bottom: 30%;
+    right: 11%;
+    bottom: 28%;
 }
 
 .passager-name {
@@ -84,11 +84,11 @@ button {
 }
 
 .message-input {
-    width: 64%;
+    width: 57%;
     height: 8%;
     position: absolute;
     bottom: 35%;
-    right: 12%;
+    right: 19%;
     font-size: 11px;
     color: #FFFFFF;
     word-break: break-all;

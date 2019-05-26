@@ -21,7 +21,7 @@ html {
 }
 
 .containerr {
-    display: flex;
+    display: none;
     flex-direction: column;
     padding-right: 34px;
     padding-left: 34px;
@@ -65,13 +65,13 @@ input {
 .create {
     outline: none;
     height: 28.5px;
-    width: 115px;
+    width: 118px;
     background-color: #EA8C98;
     color: #EAEAEA;
     font-size: 15px;
     border-radius: 15px;
     margin: 5% auto;
-    flex: 0 0 28.5px;
+    /* flex: 0 0 28.5px; */
     bottom: 10px;
     text-align: center;
 }
