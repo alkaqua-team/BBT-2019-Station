@@ -58,6 +58,7 @@ button {
     font-size: 19px;
     color: #FFFFFF;
     word-break: break-all;
+    overflow: hidden;
 }
 
 .QRcode {
@@ -81,6 +82,7 @@ button {
     font-size: 11px;
     color: #FFFFFF;
     word-break: break-all;
+    overflow: scroll;
 }
 
 .message-input {
@@ -92,6 +94,7 @@ button {
     font-size: 11px;
     color: #FFFFFF;
     word-break: break-all;
+    overflow: scroll;
 }
 
 #return {
