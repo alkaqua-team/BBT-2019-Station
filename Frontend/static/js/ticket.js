@@ -9,12 +9,12 @@ document.body.addEventListener('touchmove', function (e) {
 var station = [
     "秀发号", "满绩号", "暴富号", "超越号", "脱单号", "暴瘦号", "吃鸡号",
 ]
-document.onselectstart = function () {
-    return false;
-}
-document.oncopy = function () {
-    return false;
-}
+// document.onselectstart = function () {
+//     return false;
+// }
+// document.oncopy = function () {
+//     return false;
+// }
 
 //获取设备高度宽度
 const height = document.documentElement.clientHeight;
