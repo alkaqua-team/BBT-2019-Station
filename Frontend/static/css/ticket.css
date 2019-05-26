@@ -50,12 +50,7 @@ button {
 }
 
 .destination {
-    height: 5%;
-    width: 33%;
-    top: 43%;
-    right: 14%;
     position: absolute;
-    font-size: 19px;
     color: #FFFFFF;
     word-break: break-all;
     overflow: hidden;

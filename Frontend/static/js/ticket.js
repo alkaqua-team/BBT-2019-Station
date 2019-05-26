@@ -16,6 +16,29 @@ document.oncopy = function () {
     return false;
 }
 
+//获取设备高度宽度
+const height = document.documentElement.clientHeight;
+const width = document.documentElement.clientWidth;
+
+//动态设置div高度和大小
+
+//目的地
+$(".destination").css("top",height*0.44);
+$(".destination").css("left",width*0.517);
+$(".destination").css("font-size",width*0.06);
+
+//列车名
+$(".station-name").css("top",height*0.436);
+$(".station-name").css("left",width*0.39);
+$(".station-name").css("font-size",width*0.0346);
+
+//乘客名
+$(".passager-name").css("top",height*0.532);
+$(".passager-name").css("left",width*0.245);
+$(".passager-name").css("font-size",width*0.04);
+
+
+
 $(function () {
 
 
