@@ -37,7 +37,10 @@ $(".passager-name").css("top",height*0.532);
 $(".passager-name").css("left",width*0.245);
 $(".passager-name").css("font-size",width*0.04);
 
-
+//留言
+$(".message-input").css("top",height*0.574);
+$(".message-input").css("left",width*0.245);
+$(".message-input").css("font-size",width*0.04);
 
 $(function () {
 
