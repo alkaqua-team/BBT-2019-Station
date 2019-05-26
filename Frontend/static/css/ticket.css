@@ -76,6 +76,7 @@ button {
     /* word-break: break-all; */
     overflow: scroll;
     -webkit-overflow-scrolling: touch;
+    min-height:26px;
 }
 
 .message-input {
@@ -86,6 +87,7 @@ button {
     /* word-break: break-all; */
     overflow: scroll;
     -webkit-overflow-scrolling: touch;
+    min-height:54px;
 }
 
 #return {
