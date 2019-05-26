@@ -153,6 +153,8 @@ class StationController extends Controller
         $comment = $station->comment;
         $img = Image::make(base_path().'/public/initial.png');
 
+        $len = strlen($comment);
+
         $img->text('恭喜你成为第'.session()->get('id').'位搭上列车的乘客', 50, 390, function ($font) {
             $font->file(base_path().'/public/FZHTJW.ttf');
 
@@ -165,7 +167,7 @@ class StationController extends Controller
         $img->text($passenger1.'  '.$passenger2, 155, 563, function ($font) {
             $font->file(base_path().'/public/FZHTJW.ttf');
 
-            $font->size(30);
+            $font->size(25);
 
             $font->valign('top');
 
@@ -174,7 +176,7 @@ class StationController extends Controller
         $img->text($passenger3, 155, 597, function ($font) {
             $font->file(base_path().'/public/FZHTJW.ttf');
 
-            $font->size(30);
+            $font->size(25);
 
             $font->valign('top');
 
@@ -201,21 +203,36 @@ class StationController extends Controller
         $img->text($destination, 365, 445, function ($font) {
             $font->file(base_path().'/public/FZHTJW.ttf');
 
-            $font->size(37);
-
-            $font->valign('top');
-
-            $font->color('#FFFFFF');
-        });
-        $img->text($comment, 155, 630, function ($font) {
-            $font->file(base_path().'/public/FZHTJW.ttf');
-
             $font->size(30);
 
             $font->valign('top');
 
             $font->color('#FFFFFF');
         });
+        if ($len < 20) {
+            $img->text($comment, 155, 630, function ($font) {
+                $font->file(base_path().'/public/FZHTJW.ttf');
+
+                $font->size(25);
+
+                $font->valign('top');
+
+                $font->color('#FFFFFF');
+            });
+        } else {
+            $array = str_split($comment, 20);
+            for ($i = 0; $i < count($array); ++$i) {
+                $img->text($array[$i], 155, 630 + $i * 30, function ($font) {
+                    $font->file(base_path().'/public/FZHTJW.ttf');
+
+                    $font->size(25);
+
+                    $font->valign('top');
+
+                    $font->color('#FFFFFF');
+                });
+            }
+        }
         $img->text($stations[session()->get('code')], 252, 440, function ($font) {
             $font->file(base_path().'/public/FZHTJW.ttf');
 
