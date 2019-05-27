@@ -36,11 +36,13 @@ $(".station-name").css("font-size",width*0.0346);
 $(".passager-name").css("top",height*0.532);
 $(".passager-name").css("left",width*0.245);
 $(".passager-name").css("font-size",width*0.04);
+$(".passager-name").css("line-height",width*0.04+ "px");
 
 //留言
 $(".message-input").css("top",height*0.574);
 $(".message-input").css("left",width*0.245);
 $(".message-input").css("font-size",width*0.04);
+$(".message-input").css("line-height",width*0.04+ "px");
 
 $(function () {
 
