@@ -135,7 +135,7 @@ body {
     height: 100%;
     position: absolute;
     top:0;
-    display: none;
+    /* display: none; */
 }
 
 .err-bg{
@@ -147,8 +147,11 @@ body {
     margin: 0 auto;
     top: 38%;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 .err-button{
+    left: 72px;
     background-color: #EA8C98;
     color: #EAEAEA;
     font-size: 16px;
@@ -156,12 +159,11 @@ body {
     border-radius: 15px;
     text-align: center;
     outline: none;
-    margin: 0 auto;
     height: 31px;
     width: 115px;
-    position: relative;
-    margin-top: 33%;
-    left: 35%;
+    margin: 0 auto;
+    position: absolute;
+    top: 145px;
 }
 .err-shadow{
     width: 100%;
@@ -173,12 +175,11 @@ body {
 }
 
 .err-text{
-    margin: 0 auto;
-    height: 8%;
-    width: 60%;
+    width: auto;
     position: relative;
-    top: 20%;
+    top: 79px;
+    left: 24px;
     font-size: 17px;
-    letter-spacing:1px;
-    color:#51637F;
+    letter-spacing: 1px;
+    color: #51637F;
 }
