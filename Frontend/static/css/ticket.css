@@ -3,12 +3,11 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-    /* -webkit-user-select: none;
+    -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none; */
-    /* position: fixed; */
+    user-select: none；
 }
 
 .buttons {
@@ -24,7 +23,7 @@ body {
     background-image: url("../pictures/5-1.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 
@@ -51,7 +50,12 @@ button {
 }
 
 .destination {
+    height: 4%;
+    width: 33%;
+    top: 43%;
+    right: 14%;
     position: absolute;
+    font-size: 19px;
     color: #FFFFFF;
     word-break: break-all;
     overflow: hidden;
@@ -70,24 +74,27 @@ button {
 
 .passager-name {
     height: 4%;
+    /* height: auto; */
     width: 42%;
     position: absolute;
+    left: 24%;
+    top: 53%;
+    font-size: 11px;
     color: #FFFFFF;
-    /* word-break: break-all; */
+    word-break: break-all;
     overflow: scroll;
-    -webkit-overflow-scrolling: touch;
-    min-height:26px;
 }
 
 .message-input {
-    width: 50%;
+    width: 57%;
     height: 8%;
     position: absolute;
+    bottom: 35%;
+    right: 19%;
+    font-size: 11px;
     color: #FFFFFF;
-    /* word-break: break-all; */
+    word-break: break-all;
     overflow: scroll;
-    -webkit-overflow-scrolling: touch;
-    min-height:54px;
 }
 
 #return {
@@ -100,6 +107,11 @@ button {
 
 .station-name {
     position: absolute;
+    left: 37%;
+    width: 12%;
+    height: 3%;
+    top: 43%;
+    font-size: 12px;
     color: #FFFFFF;
     word-break: break-all;
     text-align: center;
@@ -123,6 +135,3 @@ button {
     width:100%;
 }
 
-.input{
-    min-height:calc(100% + 1px);
-}
