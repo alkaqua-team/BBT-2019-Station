@@ -20,15 +20,16 @@ $(function () {
         $(".err-box").hide();
     })
 
-    活动时间检查 (此处先注释用于内测)
-    var time = checkTime();
-    if (time == 0) {
+    // 活动时间检查 (此处先注释用于内测)
+    // var time = checkTime();
+    // if (time == 0) {
     $("#entrance").click(function () {
+        $("#entrance").attr("disabled", false);
         window.location.href = "../html/draw.html";
     });
-    } else {
-        $(".err-box").show();
-        //禁用按钮
-        $("#entrance").attr("disabled", true);
-    }
+    // } else {
+    //     $(".err-box").show();
+    //     //禁用按钮
+    //     $("#entrance").attr("disabled", true);
+    // }
 });

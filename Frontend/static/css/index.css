@@ -82,11 +82,6 @@ input {
     background-color: transparent;
     float: right;
     border-radius: 50%;
-    width: 23px;
-    height: 23px;
-    background-image: url("../pictures/7-2.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
     outline: none;
     position: relative;
 }
@@ -179,4 +174,10 @@ input {
 #errmsg_comment {
     margin-bottom: 12%;
 }
-
+.add_{
+    width: 23px;
+    height: 23px;
+    background-image: url("../pictures/7-2.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
