@@ -26,13 +26,17 @@ var colors = [
 ];
 
 $(function () {
-    // //活动时间检查
-    // var time = checkTime();
-    // if (time != 0) {
-    //     $(".err-box").show();
-    //     $(".err-text").html("活动时间<br>2019/5/28	到 2019/5/31");
-    //     $("#finish").attr("disabled", true);
-    // }
+
+    //微信分享
+    wxshare();
+
+    //活动时间检查
+    var time = checkTime();
+    if (time != 0) {
+        $(".err-box").show();
+        $(".err-text").html("活动时间<br>2019/5/28	到 2019/5/31");
+        $("#finish").attr("disabled", true);
+    }
     $(".err-button").click(function () {
         $(".err-box").hide();
     })

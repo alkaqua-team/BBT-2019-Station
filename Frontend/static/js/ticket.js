@@ -10,6 +10,10 @@ document.oncopy = function () {
 }
 
 $(function () {
+
+    //微信分享
+    wxshare();
+
     //插入背景  
     var bg = new Image();
     bg.id = "background";
@@ -19,17 +23,17 @@ $(function () {
     bg.src = host + "/bg/";
     document.getElementById("container").before(bg);
 
-    // //活动时间检查
-    // var time = checkTime();
-    // if (time != 0) {
-    //     $(".err-box").show();
-    //     $(".err-text").html("活动时间<br>2019/5/28	到 2019/5/31");
-    //     $("#update").attr("disabled", true);
-    //     $("#return").attr("disabled", true);
-    //     $("#img").click(function () {
-    //         return false;
-    //     })
-    // }
+    //活动时间检查
+    var time = checkTime();
+    if (time != 0) {
+        $(".err-box").show();
+        $(".err-text").html("活动时间<br>2019/5/28	到 2019/5/31");
+        $("#update").attr("disabled", true);
+        $("#return").attr("disabled", true);
+        $("#img").click(function () {
+            return false;
+        })
+    }
 
     $("#update").click(function () {
         window.location.href = "update.html";

@@ -7,24 +7,28 @@ var errmsg = [
     "errmsg_passenger1", "errmsg_passenger2", "errmsg_passenger3", "errmsg_destination", "errmsg_comment"
 ];
 var checkdisplay = [
-    "passager1", "passager2", "passager3", "destination"
+    "passager1", "passager2", "passager3", "destination","message"
 ]
 var img = new Image();
 img.src = "./static/pictures/4-1.png";
-img.onload = function(){
-    $(".containerr").css("display","flex")
+img.onload = function () {
+    $(".containerr").css("display", "flex")
 }
 $(function () {
+
+    //微信分享
+    wxshare();
+
     $(".tip").attr("disabled", true);
     $(".arrow").attr("disabled", true);
 
-    // //活动时间检查
-    // var time = checkTime();
-    // if (time != 0) {
-    //     $(".err-box").show();
-    //     $(".err-text").html("活动时间<br>2019/5/28	到 2019/5/31");
-    //     $("#update-ticket").attr("disabled", true);
-    // }
+    //活动时间检查
+    var time = checkTime();
+    if (time != 0) {
+        $(".err-box").show();
+        $(".err-text").html("活动时间<br>2019/5/28	到 2019/5/31");
+        $("#update-ticket").attr("disabled", true);
+    }
     $(".err-button").click(function () {
         $(".err-box").hide();
     })
@@ -73,13 +77,13 @@ $(function () {
             input[i] = getval(inputbox[i]);
             console.log("loop")
         }
-        for (var i = 0; i < 4; i++) {
+        for (var i = 0; i < 5; i++) {
             judge[i] = checkinput(checkdisplay[i], inputbox[i], errmsg[i], input[i]);
             console.log(judge[i])
             console.log("loop again")
         }
 
-        judge[4] = message(inputbox[4], errmsg[4], input[4]);
+        // judge[4] = message(inputbox[4], errmsg[4], input[4]);
 
 
         //向后台传数据

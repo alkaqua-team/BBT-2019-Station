@@ -25,11 +25,11 @@ var text = [
     "还在苦难霉运？速速登上超越号，获得幸运女神的眷顾，前往超越次元的幸运之地叭！",
     "红彤彤的箭矢已拉开弓弦！脱单号即将出发，前往爱情海的彼岸。请无论单身与否，带上你的伴侣or一颗真心登上列车收获幸福。",
     "炎炎夏日不敢穿性感火辣的衣服！赶紧登上暴瘦号！！一起燃烧卡路里，最后对镜子前的自己说一句，怪美的！？",
-    "吃鸡号的汽笛已经响起！带上你的朋友伙伴，网吧开黑五连坐，未来天天吃鸡，大吉大利！！"
+    "吃鸡号的汽笛已经响起！带上你的朋友伙伴，开黑五连坐，未来天天吃鸡，大吉大利！"
 ]
 
-var style =[
-    "hair","mark","rich","pass","love","thin","chicken"
+var style = [
+    "hair", "mark", "rich", "pass", "love", "thin", "chicken"
 ]
 
 //随机生成0-6的数字（用于随机生成图片）
@@ -49,14 +49,18 @@ img.onload = function () {
     $(".buttons").css("display", "flex")
 }
 $(function () {
-    // //活动时间检查
-    // var time = checkTime();
-    // if (time != 0) {
-    //     $(".err-box").show();
-    //     $(".err-text").html("活动时间<br>2019/5/28	到 2019/5/31");
-    //     $("#write-information").attr("disabled", true);
-    //     $("#reselect").attr("disabled", true);
-    // }
+
+    //微信分享
+    wxshare();
+
+    //活动时间检查
+    var time = checkTime();
+    if (time != 0) {
+        $(".err-box").show();
+        $(".err-text").html("活动时间<br>2019/5/28	到 2019/5/31");
+        $("#write-information").attr("disabled", true);
+        $("#reselect").attr("disabled", true);
+    }
     $(".err-button").click(function () {
         $(".err-box").hide();
     })
