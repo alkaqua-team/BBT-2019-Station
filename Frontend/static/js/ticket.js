@@ -10,7 +10,14 @@ document.oncopy = function () {
 }
 
 $(function () {
-
+    //插入背景  
+    var bg = new Image();
+    bg.id = "background";
+    bg.onload = function () {
+        console.log("finish");
+    }
+    bg.src = host + "/bg/";
+    document.getElementById("container").before(bg);
 
     // //活动时间检查
     // var time = checkTime();
@@ -65,8 +72,8 @@ $(function () {
     img.onload = function () {
         $(".errmsg").show();
     };
-        img.src = host + '/img/';
-        document.getElementById("container").appendChild(img);
+    img.src = host + '/img/';
+    document.getElementById("container").appendChild(img);
 })
 
 // //7 缩小 12
