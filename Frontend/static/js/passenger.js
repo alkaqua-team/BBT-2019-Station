@@ -60,7 +60,8 @@ $(function () {
 
         //乘客信息填写
         for (var i = 0; i < 5; i++) {
-            input[i] = getval(inputbox[i]);
+            // input[i] = getval(inputbox[i]);
+            input[i] = $("#"+ inputbox[i]).val();
             console.log("loop")
         }
         for (var i = 0; i < 5; i++) {
